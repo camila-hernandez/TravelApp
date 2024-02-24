@@ -68,14 +68,14 @@ END //
 
 ## How to set up own screens
 
-Step 1: Create **_.jsx and _**.css
+Step 1: Create **_.jsx and _**.css (e.g. HomePage.jsx, HomePage.css)
 Step 2: Write your code while keep align with HomePage outline (16:9 Ratio Portrait Box)
 Step 3: To see your code in React
 
 - App.jsx - import your screen and add your screens name in return + comment all but one screen
   \*if your react website is white, close terminal, open new terminal, cd travel-app, npm run dev, open website
 
-  To test --> Comment out MeowPage and Comment in HomePage
+  To test that you can see real changes --> Run React, Open website, then Comment out MeowPage and Comment in HomePage
 
 ### Explanation of each folder
 
@@ -84,6 +84,8 @@ The node module folder is a storage folder that holds your React package along w
 The src folder stores in all the files and components used in your react application ranging from the App.js, index.js, App.css just as seen in the image above.
 
 The package-lock.json file locks the versions of dependencies your React project uses, and this helps in managing dependencies in your React project.
+
+# Below is just extra info that is not relevant to our project, but might be helpful
 
 ## Tips for React Beginners
 

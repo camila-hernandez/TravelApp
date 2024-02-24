@@ -22,9 +22,12 @@ Install 3:
 #### Step 2. Open terminal and type in
 
 > node -v
-> Result should be v21.6.2 (AKA you installed Node.js correctly)
+
+Result should be v21.6.2 (AKA you installed Node.js correctly)
+
 > npm -v
-> Result should be 10.4.0 (AKA you installed npm correctly)
+
+Result should be 10.4.0 (AKA you installed npm correctly)
 
 #### Step 3. Create an empty directory, where you will eventually put the react app in.
 
@@ -32,20 +35,19 @@ I am using "481TravelAppGit"
 
 ## Steps to Run
 
-Step 0. Go to 481TravelAppGit and open terminal.
+#### Step 0. Go to 481TravelAppGit and open terminal.
 
-(ONLY DO THIS STEP ONCE)
-Step 1. Clone the repository: First, clone this repository to your local machine using Git.
+#### Step 1. Clone the repository: First, clone this repository to your local machine using Git.
+
+ONLY DO STEP 1 ONCE
 
 > git clone [ https://github.com/JJMyoshi/TravelApp.git ]
 
-Step 2. CD to the folder that contains the React App
+#### Step 2. CD to the folder that contains the React App
 
 > cd travel-app
 
-Result: there will be a node_modules in the directory 'travel-app'
-
-Step 3. Start the application: Run the application using:
+#### Step 3. Start the application: Run the application using:
 
 > npm run dev
 > MAKE SURE YOU'RE IN THE DIRECTORY travel-app !!!!! OR IT WILL NOT RUN!
@@ -58,6 +60,7 @@ NOTE 1: When you make changes + save, it should reflect in the website!
 NOTE 2: if your react crashes,run this in new terminal
 
 > cd travel-app
+
 > npm run dev
 
 END //

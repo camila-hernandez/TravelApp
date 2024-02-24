@@ -1,0 +1,25 @@
+.content-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Rotate the box back by -90 degrees to correct text */
+    width: calc(100vh * 9 / 16); /* Adjust the width to maintain 16:9 aspect ratio in landscape mode */
+    height: 100vh; /* Use 100vh for height to match browser window */
+    background-color: #fff; /* White background inside the box */
+    color: #000; /* Black text color */
+    font-size: 2rem; /* Adjust the font size as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .meow-button {
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    background-color: #007bff; /* Blue button color */
+    color: #fff; /* White text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  

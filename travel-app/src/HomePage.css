@@ -3,8 +3,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); /* Rotate the box back by -90 degrees to correct text */
-    width: calc(100vh * 9 / 16); /* Adjust the width to maintain 16:9 aspect ratio in landscape mode */
-    height: 100vh; /* Use 100vh for height to match browser window */
+    width: 405px; /* Fixed width in pixels */
+    height: 720px; /* Fixed height in pixels (calculated to maintain 16:9 aspect ratio) */
     background-color: #fff; /* White background inside the box */
     color: #000; /* Black text color */
     font-size: 2rem; /* Adjust the font size as needed */

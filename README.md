@@ -12,12 +12,13 @@ This React application visualizes a travel app that allows users to view events 
 
 Install 1: Node.js: Download & Install Node.js (Google Search)
 
-Install 2: npm (Node Package Manager): It comes bundled with Node.js.
-run the following -->
+Install 2: npm (Node Package Manager):
 
 > npm install -g npm@latest
 
-Install 3:
+Install 3: npm again (just in case)
+
+> npm install
 
 #### Step 2. Open terminal and type in
 
@@ -31,7 +32,7 @@ Result should be 10.4.0 (AKA you installed npm correctly)
 
 #### Step 3. Create an empty directory, where you will eventually put the react app in.
 
-I am using "481TravelAppGit"
+Example Name: I am using "481TravelAppGit"
 
 ## Steps to Run
 

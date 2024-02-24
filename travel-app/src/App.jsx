@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import HomePage from './HomePage';
+import MeowPage from './MeowPage';
 
 function App() {
   // Event handler function
@@ -10,7 +11,8 @@ function App() {
 
   return (
     <div className="app-container">
-      <HomePage handleClick={handleClick} />
+      {/* <HomePage handleClick={handleClick} /> */}
+      <MeowPage/>
     </div>
   );
 }

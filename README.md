@@ -13,14 +13,18 @@ This React application visualizes a travel app that allows users to view events 
 Install 1: Node.js: Download & Install Node.js (Google Search)
 
 Install 2: npm (Node Package Manager): It comes bundled with Node.js.
-run the following --> npm install -g npm@latest
+run the following -->
+
+> npm install -g npm@latest
+
+Install 3:
 
 #### Step 2. Open terminal and type in
 
-node -v
-Result should be v21.6.2 (AKA you installed Node.js correctly)
-npm -v
-Result should be 10.4.0 (AKA you installed npm correctly)
+> node -v
+> Result should be v21.6.2 (AKA you installed Node.js correctly)
+> npm -v
+> Result should be 10.4.0 (AKA you installed npm correctly)
 
 #### Step 3. Create an empty directory, where you will eventually put the react app in.
 
@@ -30,31 +34,31 @@ I am using "481TravelAppGit"
 
 Step 0. Go to 481TravelAppGit and open terminal.
 
+(ONLY DO THIS STEP ONCE)
 Step 1. Clone the repository: First, clone this repository to your local machine using Git.
 
-git clone [ https://github.com/JJMyoshi/TravelApp.git ]
+> git clone [ https://github.com/JJMyoshi/TravelApp.git ]
 
 Step 2. CD to the folder that contains the React App
 
-cd travel-app
-
-Step 3. Install dependencies: Run the following command to install the necessary dependencies.
-
-npm install
+> cd travel-app
 
 Result: there will be a node_modules in the directory 'travel-app'
 
-Step 4. Start the application: Run the application using:
+Step 3. Start the application: Run the application using:
 
-npm run dev
-MAKE SURE YOU'RE IN THE DIRECTORY travel-app !!!!! OR IT WILL NOT RUN!
+> npm run dev
+> MAKE SURE YOU'RE IN THE DIRECTORY travel-app !!!!! OR IT WILL NOT RUN!
 
 This will start the development server and open the application in your default web browser.
 
 If it doesn't open automatically, you can manually visit link provided.
 
-NOTE:
-When you make changes + save, it should reflect in the website!
+NOTE 1: When you make changes + save, it should reflect in the website!
+NOTE 2: if your react crashes,run this in new terminal
+
+> cd travel-app
+> npm run dev
 
 END //
 

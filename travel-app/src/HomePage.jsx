@@ -1,10 +1,12 @@
 import React from 'react';
 import './HomePage.css';
 
-function HomePage() {
+function HomePage({ handleClick }) {
   return (
     <div className="content-box">
-      <button className="something-button">Something</button>
+      <button className="something-button" onClick={handleClick}>
+        Something
+      </button>
     </div>
   );
 }

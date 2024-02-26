@@ -6,6 +6,11 @@ import Counter from "./components/Counter";
 import MobileContainer from "./components/MobileContainer";
 import InnerContainer from "./components/InnerContainer";
 import InnerContainerB from "./components/InnerContainerB";
+import {
+  BrowserRouter,
+  Routes, //replaces "Switch" used till v5
+  Route,
+} from "react-router-dom";
 
 function App() {
 
@@ -14,20 +19,19 @@ function App() {
   
   return (
     <div className="App">
+      <BrowserRouter>
       <MobileContainer>
         <InnerContainer>
           <Hello name="Hehe" message="Hi There"/> 
-          <Hello name="Jow"/> 
-          <Message />
-        
-          <Counter/>
+
         </InnerContainer>
         <InnerContainerB>
 
-          <Message />
+
           <Counter/>
         </InnerContainerB>
       </MobileContainer>
+      </BrowserRouter>
     </div>
   );
 }

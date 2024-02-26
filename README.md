@@ -60,8 +60,7 @@ If it doesn't open automatically, you can manually visit link provided.
 NOTE 1: When you make changes + save, it should reflect in the website!
 NOTE 2: if your react crashes,run this in new terminal
 
-> cd travel-app
-
+CTRL-C to stop 
 > npm run dev
 
 END //

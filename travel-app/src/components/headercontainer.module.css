@@ -1,6 +1,4 @@
-/* InnerContainer.module.css */
-
-.innerContainer {
+.headerContainer {
     width: 402px;
     height: 50px; /* Set the height for the first InnerContainer to 50px */
     background-color: firebrick; /* Set a background color for the first InnerContainer */

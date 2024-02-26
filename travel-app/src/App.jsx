@@ -9,6 +9,7 @@ import {
   Routes, //replaces "Switch" used till v5
   Route,
 } from "react-router-dom";
+import FooterContainer from './components/innerContainer/FooterContainer';
 
 function App() {
 
@@ -28,6 +29,9 @@ function App() {
 
           <Counter/>
         </BodyContainer>
+        <FooterContainer>
+          <Hello name = "Meow"/>
+        </FooterContainer>
       </OuterContainer>
       </BrowserRouter>
     </div>

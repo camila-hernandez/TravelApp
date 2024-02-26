@@ -1,7 +1,7 @@
 import React from "react";
 import {useHistory} from "react-router-dom"; 
 
-function LoginPage () {
+function loginPage () {
     let history = useHistory();
 
 

@@ -1,10 +1,8 @@
 import './App.css'
-import Hello from "./components/Hello";
-import Login from "./components/Login";
-import Message from "./components/Message";
-import Counter from "./components/Counter";
+import Hello from "./componentsTEST/Hello";
+import Counter from "./componentsTEST/Counter";
 import MobileContainer from "./components/MobileContainer";
-import InnerContainer from "./components/InnerContainer";
+import HeaderContainer from "./components/InnerContainer";
 import InnerContainerB from "./components/InnerContainerB";
 import {
   BrowserRouter,
@@ -21,10 +19,10 @@ function App() {
     <div className="App">
       <BrowserRouter>
       <MobileContainer>
-        <InnerContainer>
+        <HeaderContainer>
           <Hello name="Hehe" message="Hi There"/> 
 
-        </InnerContainer>
+        </HeaderContainer>
         <InnerContainerB>
 
 

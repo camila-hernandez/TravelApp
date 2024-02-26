@@ -1,9 +1,9 @@
 import './App.css'
 import Hello from "./componentsTEST/Hello";
 import Counter from "./componentsTEST/Counter";
-import MobileContainer from "./components/MobileContainer";
-import HeaderContainer from "./components/HeaderContainer";
-import InnerContainerB from "./components/InnerContainerB";
+import OuterContainer from "./components/OuterContainer";
+import HeaderContainer from "./components/innerContainer/HeaderContainer";
+import BodyContainer from "./components/innerContainer/BodyContainer";
 import {
   BrowserRouter,
   Routes, //replaces "Switch" used till v5
@@ -18,17 +18,17 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <MobileContainer>
+      <OuterContainer>
         <HeaderContainer>
           <Hello name="Hehe" message="Hi There"/> 
 
         </HeaderContainer>
-        <InnerContainerB>
+        <BodyContainer>
 
 
           <Counter/>
-        </InnerContainerB>
-      </MobileContainer>
+        </BodyContainer>
+      </OuterContainer>
       </BrowserRouter>
     </div>
   );

@@ -1,6 +1,6 @@
-import styles from "./MobileContainer.module.css"
+import styles from "./outerContainer.module.css"
 
-export default function MobileContainer({children}) {
+export default function OuterContainer({children}) {
     return (
         <div className = {styles.mobileContainer}>
             {children}

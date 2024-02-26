@@ -1,3 +1,16 @@
-.innerContainer{
-    background-color: blueviolet;
-}
+/* InnerContainer.module.css */
+
+.innerContainer {
+    width: 402px;
+    height: 100px;
+    background-color: firebrick; /* Set a background color for the first InnerContainer */
+    /* Add any other styling properties you need for your InnerContainer */
+  }
+  
+  .innerContainerB {
+    width: 402px;
+    height: 620px;
+    background-color: lightgreen; /* Set a background color for the second InnerContainer */
+    /* Add any other styling properties you need for your InnerContainerB */
+  }
+  

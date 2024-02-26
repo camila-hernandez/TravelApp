@@ -1,12 +1,13 @@
-import React from 'react';
-import './HomePage.css';
 
-function HomePage() {
+import React from 'react';
+
+function MeowPage() {
   return (
-    <div className="content-box">
-      <button className="meow-button">meow</button>
+    <div>
+      <h1>Meow Page</h1>
+      {/* Meow Page content */}
     </div>
   );
 }
 
-export default HomePage;
+export default MeowPage;

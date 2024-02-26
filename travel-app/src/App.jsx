@@ -1,19 +1,16 @@
 import React from 'react';
-import './App.css';
+import { BrowserRouter as Router, Route, Link, useHistory } from 'react-router-dom';
 import HomePage from './HomePage';
 import MeowPage from './MeowPage';
 
-function App() {
-  // Event handler function
-  const handleClick = () => {
-    alert('Button clicked!');
-  };
-
+const App = () => {
   return (
-    <div className="app-container">
-      {/* <HomePage handleClick={handleClick} /> */}
-      <MeowPage/>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/meow" element ={ <MeowPage />} />
+      </Routes>
+    </Router>
   );
 }
 

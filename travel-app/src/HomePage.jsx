@@ -1,12 +1,18 @@
+// HomePage.jsx
 import React from 'react';
-import './HomePage.css';
+import { useHistory } from 'react-router-dom';
 
-function HomePage({ handleClick }) {
+function HomePage() {
+  const history = useHistory();
+
+  const handleClick = () => {
+    history.push('/meow');
+  };
+
   return (
-    <div className="content-box">
-      <button className="something-button" onClick={handleClick}>
-        Something
-      </button>
+    <div>
+      <h1>Home Page</h1>
+      <button onClick={handleClick}>Go to Meow Page</button>
     </div>
   );
 }

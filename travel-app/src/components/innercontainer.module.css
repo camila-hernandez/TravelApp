@@ -2,15 +2,15 @@
 
 .innerContainer {
     width: 402px;
-    height: 100px;
+    height: 50px; /* Set the height for the first InnerContainer to 50px */
     background-color: firebrick; /* Set a background color for the first InnerContainer */
     /* Add any other styling properties you need for your InnerContainer */
-  }
-  
-  .innerContainerB {
+}
+
+.innerContainerB {
     width: 402px;
     height: 620px;
     background-color: lightgreen; /* Set a background color for the second InnerContainer */
     /* Add any other styling properties you need for your InnerContainerB */
-  }
-  
+    margin-top: 50px; /* Set margin-top to 50px to position it below the first InnerContainer */
+}

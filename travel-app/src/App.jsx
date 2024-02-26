@@ -20,7 +20,7 @@ function App() {
       <BrowserRouter>
       <OuterContainer>
         <HeaderContainer>
-          <Hello name="Hehe" message="Hi There"/> 
+          <Hello name="Hehe"/> 
 
         </HeaderContainer>
         <BodyContainer>

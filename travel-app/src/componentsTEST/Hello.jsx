@@ -10,7 +10,6 @@ function Hello( {name, message }){
 
     return <div>
         <h3> Hello {name} </h3> 
-        <h3> Wow! {message} </h3>
     </div>
 }
 

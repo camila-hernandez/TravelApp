@@ -1,16 +1,11 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Link, useHistory } from 'react-router-dom';
-import HomePage from './HomePage';
-import MeowPage from './MeowPage';
+import './App.css'
+import Hello from"./components/Hello";
 
-const App = () => {
+function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/meow" element ={ <MeowPage />} />
-      </Routes>
-    </Router>
+    <div className="App">
+      <Hello /> 
+    </div>
   );
 }
 

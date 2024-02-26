@@ -1,0 +1,19 @@
+/* MobileContainer.module.css */
+
+body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Set the body height to 100% of the viewport height */
+    background-color: 1px solid grey; /* Set a background color for the entire body, which will be visible outside the white box */
+  }
+  
+  .mobileContainer {
+    width: 402px;
+    height: 720px;
+    background-color: white;
+    color: black;
+    /* Add any other styling properties you need for your MobileContainer */
+  }
+  

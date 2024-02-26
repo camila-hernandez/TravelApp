@@ -4,9 +4,13 @@ function displayMessage(){
     return "WOW";
 }
 
-function Hello(){
+function Hello( {name, message }){
+
+    // const {name, message} = props; 
+
     return <div>
-        <h1> Hello from a pomponent</h1> <h1> Wow!</h1>
+        <h1> Hello {name} </h1> 
+        <h1> Wow! {message} </h1>
     </div>
 }
 

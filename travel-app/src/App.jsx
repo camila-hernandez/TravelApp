@@ -24,8 +24,8 @@ import SeeCalendarDetails from "./pages/description/seeCalendarDetails";
 import SeeEventDetails from "./pages/description/seeEventDetails";
 
 // // Events
-import eventSearch from "./pages/events/eventSearch";
-import eventPage from "./pages/events/eventPage";
+import EventSearch from "./pages/events/eventSearch";
+import EventPage from "./pages/events/eventPage";
 
 // HomeTab 
 import HelpPage from "./pages/homeTab/helpPage";
@@ -42,12 +42,37 @@ function App() {
 
           {/* Top Header */}
           <HeaderContainer>  
-            
+            <AccountOptionsPages/> 
           </HeaderContainer>
 
           {/* Body Container */}
           <BodyContainer>
+            
+            {/* Account */}
+            <AccountOptionsPages/>
+            <CreateAccount/> 
+            <ForgotPassword/>
+            <LoginPage/>
+
+            {/* Calendar */}
+            <CalendarPage/>
+
+            {/* Descriptions */} 
+            <AddCustomEvent/>
+            <AddYYCEvent/> 
+            <ModifyDeleteEvent/> 
+            <SeeCalendarDetails/> 
+            <SeeEventDetails/> 
+
+            {/* Events */}
+            <EventSearch/>
+            <EventPage/>
+
+            {/* Home */} 
+            <HelpPage/>
             <HomePage/>
+            <TutorialPage/>
+            
           </BodyContainer>
           
           {/* Bottom Footer */}

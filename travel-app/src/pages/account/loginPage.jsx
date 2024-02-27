@@ -1,17 +1,12 @@
-import React from "react";
-import {useHistory} from "react-router-dom"; 
+export default function loginPage() {
 
-function loginPage () {
-    let history = useHistory();
+    function handleClick(){
+        console.log("BUtton Clicked");   
+    }
 
-
-    return (
-        <div>
-            <input type="text" placeholder = "Username" />
-            <input type="text" placeholder = "Password" />
-            <button onClick={ () => {
-                history.push('/profile');
-            }}> Login </button>
-        </div>
-    )
+    return <div> 
+        <button onClick = {handleClick}>
+            Click Here To Get A message
+        </button>
+    </div>
 }

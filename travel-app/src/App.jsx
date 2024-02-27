@@ -7,7 +7,12 @@ import HeaderContainer from "./components/innerContainer/HeaderContainer";
 import BodyContainer from "./components/innerContainer/BodyContainer";
 import FooterContainer from './components/innerContainer/FooterContainer';
 
-// // Account 
+// Footer / Header Related Imports 
+import HeaderMessage from "./components/innerContainer/HeaderMessage";
+
+
+
+// Account 
 import AccountOptionsPages from "./pages/account/accountOptionsPage";
 import CreateAccount from "./pages/account/createAccount";
 import ForgotPassword from "./pages/account/forgotPassword";
@@ -42,36 +47,36 @@ function App() {
 
           {/* Top Header */}
           <HeaderContainer>  
-            <AccountOptionsPages/> 
+            <HeaderMessage header_title={"Test Test"}/> 
           </HeaderContainer>
 
           {/* Body Container */}
           <BodyContainer>
             
             {/* Account */}
-            <AccountOptionsPages/>
+            {/* <AccountOptionsPages/>
             <CreateAccount/> 
             <ForgotPassword/>
-            <LoginPage/>
+            <LoginPage/> */}
 
             {/* Calendar */}
-            <CalendarPage/>
+            {/* <CalendarPage/> */}
 
             {/* Descriptions */} 
-            <AddCustomEvent/>
+            {/* <AddCustomEvent/>
             <AddYYCEvent/> 
             <ModifyDeleteEvent/> 
             <SeeCalendarDetails/> 
-            <SeeEventDetails/> 
+            <SeeEventDetails/>  */}
 
             {/* Events */}
-            <EventSearch/>
-            <EventPage/>
+            {/* <EventSearch/>
+            <EventPage/> */}
 
             {/* Home */} 
-            <HelpPage/>
+            {/* <HelpPage/> */}
             <HomePage/>
-            <TutorialPage/>
+            {/* <TutorialPage/> */}
             
           </BodyContainer>
           

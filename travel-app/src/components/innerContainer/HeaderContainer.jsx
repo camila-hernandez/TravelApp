@@ -8,7 +8,7 @@ function HeaderContainer({ children }) {
     <div className={styles.headerContainer}>
      <button className={styles.header_innerContainer_LEFT}>BACK</button>
       <div className={styles.header_innerContainer_MIDDLE}>{children}</div>
-      <div className={styles.header_innerContainer_RIGHT}></div>
+      <div className={styles.header_innerContainer_RIGHT}>Cowtown!</div>
     </div>
   );
 }

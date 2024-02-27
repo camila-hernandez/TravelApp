@@ -7,7 +7,10 @@ import HeaderContainer from "./components/innerContainer/HeaderContainer";
 import BodyContainer from "./components/innerContainer/BodyContainer";
 import FooterContainer from './components/innerContainer/FooterContainer';
 
-// // Account 
+// Footer / Header Related Imports 
+import HeaderTitle from "./components/innerContainer/HeaderTitle";
+
+// Account 
 import AccountOptionsPages from "./pages/account/accountOptionsPage";
 import CreateAccount from "./pages/account/createAccount";
 import ForgotPassword from "./pages/account/forgotPassword";
@@ -24,13 +27,20 @@ import SeeCalendarDetails from "./pages/description/seeCalendarDetails";
 import SeeEventDetails from "./pages/description/seeEventDetails";
 
 // // Events
-import eventSearch from "./pages/events/eventSearch";
-import eventPage from "./pages/events/eventPage";
+import EventSearch from "./pages/events/eventSearch";
+import EventPage from "./pages/events/eventPage";
 
 // HomeTab 
 import HelpPage from "./pages/homeTab/helpPage";
 import HomePage from "./pages/homeTab/homePage";
 import TutorialPage from "./pages/homeTab/tutorialPage";
+
+// Room for Additional Imports here
+
+
+
+
+
 
 
 function App() {
@@ -42,19 +52,45 @@ function App() {
 
           {/* Top Header */}
           <HeaderContainer>  
-            
+            <HeaderTitle header_title={"Test Test"}/> 
           </HeaderContainer>
 
           {/* Body Container */}
           <BodyContainer>
+            
+            {/* UNCOMMENT THE SECTION YOU WANT TO WORK ON */}
+            
+            {/* SECTION: Account */}
+            {/* <AccountOptionsPages/>
+            <CreateAccount/> 
+            <ForgotPassword/>
+            <LoginPage/> */}
+
+            {/* SECTION: Calendar */}
+            {/* <CalendarPage/> */}
+
+            {/* SECTION: Descriptions */} 
+            {/* <AddCustomEvent/>
+            <AddYYCEvent/> 
+            <ModifyDeleteEvent/> 
+            <SeeCalendarDetails/> 
+            <SeeEventDetails/>  */}
+
+            {/* SECTION: Events */}
+            {/* <EventSearch/>
+            <EventPage/> */}
+
+            {/* SECTION: Home */} 
+            {/* <HelpPage/> */}
             <HomePage/>
+            {/* <TutorialPage/> */}
+            
           </BodyContainer>
           
           {/* Bottom Footer */}
           <FooterContainer>
             
           </FooterContainer>
-
         </OuterContainer>
       </BrowserRouter>
     </div>

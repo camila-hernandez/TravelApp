@@ -53,27 +53,29 @@ function App() {
           {/* Body Container */}
           <BodyContainer>
             
-            {/* Account */}
+            {/* UNCOMMENT THE SECTION YOU WANT TO WORK ON */}
+            
+            {/* SECTION: Account */}
             {/* <AccountOptionsPages/>
             <CreateAccount/> 
             <ForgotPassword/>
             <LoginPage/> */}
 
-            {/* Calendar */}
+            {/* SECTION: Calendar */}
             {/* <CalendarPage/> */}
 
-            {/* Descriptions */} 
+            {/* SECTION: Descriptions */} 
             {/* <AddCustomEvent/>
             <AddYYCEvent/> 
             <ModifyDeleteEvent/> 
             <SeeCalendarDetails/> 
             <SeeEventDetails/>  */}
 
-            {/* Events */}
+            {/* SECTION: Events */}
             {/* <EventSearch/>
             <EventPage/> */}
 
-            {/* Home */} 
+            {/* SECTION: Home */} 
             {/* <HelpPage/> */}
             <HomePage/>
             {/* <TutorialPage/> */}

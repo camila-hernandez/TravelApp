@@ -8,7 +8,7 @@ import BodyContainer from "./components/innerContainer/BodyContainer";
 import FooterContainer from './components/innerContainer/FooterContainer';
 
 // Footer / Header Related Imports 
-import HeaderMessage from "./components/innerContainer/HeaderMessage";
+import HeaderTitle from "./components/innerContainer/HeaderTitle";
 
 
 
@@ -47,7 +47,7 @@ function App() {
 
           {/* Top Header */}
           <HeaderContainer>  
-            <HeaderMessage header_title={"Test Test"}/> 
+            <HeaderTitle header_title={"Test Test"}/> 
           </HeaderContainer>
 
           {/* Body Container */}

@@ -1,19 +1,12 @@
-/* MobileContainer.module.css */
-
-body {
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh; /* Set the body height to 100% of the viewport height */
-    background-color: 1px solid grey; /* Set a background color for the entire body, which will be visible outside the white box */
-  }
-  
-  .mobileContainer {
-    width: 402px;
-    height: 720px;
-    background-color: white;
-    color: black;
-    /* Add any other styling properties you need for your MobileContainer */
-  }
-  
+.outerContainer {
+ 
+  position: absolute;
+  width: calc(100vh * 9 / 16); /* Adjust the width to maintain 16:9 aspect ratio in landscape mode */
+  height: calc(100vh * 1 / 16); /* Use 100vh for height to match browser window */
+  background-color: #fff; /* White background inside the box */
+  color: #000; /* Black text color */
+  font-size: 2rem; /* Adjust the font size as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

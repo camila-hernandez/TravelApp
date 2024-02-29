@@ -1,6 +1,6 @@
 import "./eventPage.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { faMagnifyingGlass, faArrowDownShortWide} from "@fortawesome/free-solid-svg-icons";
 
 export default function eventPage() {
   return (
@@ -9,6 +9,12 @@ export default function eventPage() {
         <input type="text" class="searchTerm" placeholder="Search..." />
         <button type="submit" class="searchButton">
           <FontAwesomeIcon icon={faMagnifyingGlass} className="searchIcon" />
+        </button>
+      </div>
+      <div class="filter-button-container">
+        <button type="submit" class="filter-button">
+            Filter&nbsp;
+            <FontAwesomeIcon icon={faArrowDownShortWide} />
         </button>
       </div>
       <div class="event-container">

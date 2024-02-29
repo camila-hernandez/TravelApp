@@ -149,3 +149,15 @@
     font-size: small;
 } 
 
+.filter-button-container {
+    display: flex;
+    justify-content: flex-start;
+    margin: 20px;
+}
+
+.filter-button{
+    color: #501B1D;
+    background-color: white;
+    font-size: 15px;
+}
+

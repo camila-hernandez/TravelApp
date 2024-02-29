@@ -11,15 +11,10 @@ body {
 .headerContainer {
     width: 100%;
     height: 50px;
-    background-color: #2E1114;
+    background-color: #333;
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-
-  .headerContainer h3{
-    font-family: 'DM-Sans', sans-serif;
-    font-size: large;
   }
   
 .header_innerContainer_LEFT {
@@ -45,8 +40,7 @@ background-color: black;
 .bodyContainer {
     width: 402px;
     height: calc(100vh - 100px); /* Adjusted height to fill the remaining space */
-    background-color: #501B1D;
-    color:#501B1D;
+    background-color: lightgray;
 }
 
 

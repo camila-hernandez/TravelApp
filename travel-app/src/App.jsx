@@ -77,12 +77,12 @@ function App() {
             <SeeEventDetails/>  */}
 
             {/* SECTION: Events */}
-            {/* <EventSearch/>
-            <EventPage/> */}
+            {/* /* <EventSearch/> */}
+            <EventPage/>
 
             {/* SECTION: Home */} 
             {/* <HelpPage/> */}
-            <HomePage/>
+            {/* <HomePage/> */}
             {/* <TutorialPage/> */}
             
           </BodyContainer>

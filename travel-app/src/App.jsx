@@ -52,7 +52,7 @@ function App() {
 
           {/* Top Header */}
           <HeaderContainer>  
-            <HeaderTitle header_title={"Test Test"}/> 
+            <HeaderTitle header_title={"Cowtown Eh-scapes!"}/> 
           </HeaderContainer>
 
           {/* Body Container */}
@@ -77,12 +77,12 @@ function App() {
             <SeeEventDetails/>  */}
 
             {/* SECTION: Events */}
-            {/* <EventSearch/>
-            <EventPage/> */}
+             {/* <EventSearch/> */}
+            <EventPage/>
 
             {/* SECTION: Home */} 
             {/* <HelpPage/> */}
-            <HomePage/>
+            {/* <HomePage/> */}
             {/* <TutorialPage/> */}
             
           </BodyContainer>

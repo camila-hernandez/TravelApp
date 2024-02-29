@@ -29,6 +29,7 @@ import SeeEventDetails from "./pages/description/seeEventDetails";
 // // Events
 import EventSearch from "./pages/events/eventSearch";
 import EventPage from "./pages/events/eventPage";
+import EventSort from "./pages/events/eventSort"
 
 // HomeTab 
 import HelpPage from "./pages/homeTab/helpPage";
@@ -52,7 +53,7 @@ function App() {
 
           {/* Top Header */}
           <HeaderContainer>  
-            <HeaderTitle header_title={"Test Test"}/> 
+            <HeaderTitle header_title={"Cowtown Eh-scapes!"}/> 
           </HeaderContainer>
 
           {/* Body Container */}
@@ -77,8 +78,9 @@ function App() {
             <SeeEventDetails/>  */}
 
             {/* SECTION: Events */}
-            {/* /* <EventSearch/> */}
-            <EventPage/>
+             {/* <EventSearch/> */}
+            {/* <EventPage/> */}
+            <EventSort/>
 
             {/* SECTION: Home */} 
             {/* <HelpPage/> */}

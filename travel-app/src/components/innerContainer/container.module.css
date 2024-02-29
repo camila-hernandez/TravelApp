@@ -13,7 +13,7 @@ body {
   height: 50px;
   background-color: #2e1114;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -24,7 +24,10 @@ body {
 
 .header_innerContainer_LEFT {
   padding: 5px;
-  background-color: black;
+  background-color: white;
+  color: #501b1d;
+  font-weight: 700;
+  margin-left: 10px;
 }
 
 .header_innerContainer_LEFT:hover {
@@ -32,7 +35,7 @@ body {
 }
 
 .header_innerContainer_MIDDLE {
-  padding: 5px;
+  padding-left: 60px;
 }
 
 .header_innerContainer_RIGHT {
@@ -50,7 +53,7 @@ body {
 .footerContainer {
   width: 100%;
   height: 50px;
-  background-color: #333;
+  background-color: #2e1114;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -71,5 +74,6 @@ body {
 }
 
 .footerButton:hover {
-  background-color: red;
+  background-color: white;
+  color: #501b1d;
 }

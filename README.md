@@ -1,5 +1,18 @@
 # CPSC481
 
+# EDIT - INSTALL THE FOLLOWING
+
+> npm install --save @fortawesome/react-fontawesome
+
+> npm install --save @fortawesome/free-solid-svg-icons
+
+> npm install react-modal
+
+
+
+
+
+
 ## Overview
 
 This React application visualizes a travel app that allows users to view events in Calgary (YYC) and book the event into their personal calendars (permitting they have an account).
@@ -64,19 +77,7 @@ CTRL-C to stop
 
 > npm run dev
 
-### STEP 4. Error Fixing
 
-#### INSTALL THE FOLLOWING
-
-CTRL C to stop
-
-> npm install --save @fortawesome/react-fontawesome
-
-> npm install --save @fortawesome/free-solid-svg-icons
-
-run program again
-
-END //
 
 ## How to set up own screens
 

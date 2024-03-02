@@ -14,10 +14,9 @@ export default function changePassword() {
             <div className="changePassword-box-email">
                 <input type="text" className="changePassword-box-password1" placeholder="New Password" />
             </div>
-
-
-            <div className="changePassword-box-email">
-                <input type="text" className="changePassword-box-password1" placeholder="New Password" />
+  
+            <div class="changePassword-field-password1">
+                <input type="text" class="changePassword-box-password1" placeholder="New Password" />
             </div>
 
             <div className="changePassword-field-sendLink">

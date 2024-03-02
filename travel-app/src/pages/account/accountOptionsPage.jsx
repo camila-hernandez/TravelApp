@@ -1,12 +1,9 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import "./accountPage.css";
+
 export default function accountOptionsPage() {
-
-    function handleClick(){
-        console.log("BUtton Clicked");   
-    }
-
     return <div> 
-        <button onClick = {handleClick}>
-            Click Here To Get A message
-        </button>
+
     </div>
 }

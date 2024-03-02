@@ -13,6 +13,7 @@ import HeaderTitle from "./components/innerContainer/HeaderTitle";
 // Account 
 import AccountOptionsPages from "./pages/account/accountOptionsPage";
 import CreateAccount from "./pages/account/createAccount";
+import ChangePassword from "./pages/account/changePassword";
 import ForgotPassword from "./pages/account/forgotPassword";
 import LoginPage from "./pages/account/loginPage";
 
@@ -62,10 +63,11 @@ function App() {
             {/* UNCOMMENT THE SECTION YOU WANT TO WORK ON */}
             
             {/* SECTION: Account */}
-            {/* <AccountOptionsPages/>
-            <CreateAccount/> 
-            <ForgotPassword/>
-            <LoginPage/> */}
+            <AccountOptionsPages/>
+            {/* <CreateAccount/>  */}
+            {/* <ChangePassword/> */}
+            {/* <ForgotPassword/> */}
+            {/* <LoginPage/> */}
 
             {/* SECTION: Calendar */}
             {/* <CalendarPage/> */}
@@ -80,7 +82,7 @@ function App() {
             {/* SECTION: Events */}
              {/* <EventSearch/> */}
             {/* <EventPage/> */}
-            <EventSort/>
+            {/* <EventSort/> */}
 
             {/* SECTION: Home */} 
             {/* <HelpPage/> */}

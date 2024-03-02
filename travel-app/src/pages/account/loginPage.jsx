@@ -15,7 +15,7 @@ export default function loginPage() {
         </div>
         
         <div class="login-field-email">
-            <input type="text" class="emailField" placeholder="Email" />
+            <input type="text" class="login-box-email" placeholder="Email" />
         </div>
 
         <div class="login-field-password">

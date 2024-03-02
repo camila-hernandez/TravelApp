@@ -11,7 +11,7 @@ export default function changePassword() {
                 <h3>Please Enter New Password</h3>
             </div>
 
-            <div class="changePassword-box-email">
+            <div class="changePassword-field-password1">
                 <input type="text" class="changePassword-box-password1" placeholder="New Password" />
             </div>
 

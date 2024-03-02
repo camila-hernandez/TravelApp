@@ -1,0 +1,63 @@
+/* LOGIN PAGE  */
+
+.email-field {
+    /* width: 90%; */
+    /* display: inline-flex; */
+    color: #501B1D;
+}
+
+.emailField{
+    color: #501B1D;
+}
+
+.password-field {
+    /* width: 90%; */
+    /* display: inline-flex; */
+}
+
+.passwordField{
+    color: #501B1D;
+}
+
+.login-field {
+    /* width: 90%; */
+    /* display: inline-flex; */
+    margin-top: 10px;
+}
+
+.login-button{
+    color: #501B1D;
+}
+
+.forgot-password-button{
+    color: #501B1D;
+}
+
+.sign-up-field{
+    color: #501B1D;
+}
+
+.sign-up-text{
+    color: white;
+}
+
+.sign-up-button{
+    color: #501B1D;
+}
+
+/* FORGOT PASSWORD PAGE  */
+
+.forgotpassword-container{
+    color: #501B1D;
+}
+
+.forgot-email-field{
+    color: #501B1D;
+}
+
+.reset-password-button{
+    color: #501B1D;
+}
+
+
+

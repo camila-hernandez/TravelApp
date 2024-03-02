@@ -1,12 +1,23 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import "./accountPage.css";
+
 export default function forgotPassword() {
 
-    function handleClick(){
-        console.log("BUtton Clicked");   
-    }
-
     return <div> 
-        <button onClick = {handleClick}>
-            Click Here To Get A message
-        </button>
-    </div>
-}
+            <div class = "login-container">
+                
+                {/* WHERE LOGO HERE  */}
+    
+                <div class="email-field">
+                    <input type="text" class="emailField" placeholder="Email" />
+                </div>
+                <div class="forgot-password-button">
+                    <button>
+                    RESET PASSWORD
+                    </button>
+                </div>
+            </div>
+    
+        </div>
+    }

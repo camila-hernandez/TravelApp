@@ -62,10 +62,10 @@ function App() {
             {/* UNCOMMENT THE SECTION YOU WANT TO WORK ON */}
             
             {/* SECTION: Account */}
-            {/* <AccountOptionsPages/>
-            <CreateAccount/> 
+            {/* <AccountOptionsPages/> */}
+            {/* <CreateAccount/>  */}
             <ForgotPassword/>
-            <LoginPage/> */}
+            {/* <LoginPage/> */}
 
             {/* SECTION: Calendar */}
             {/* <CalendarPage/> */}
@@ -80,7 +80,7 @@ function App() {
             {/* SECTION: Events */}
              {/* <EventSearch/> */}
             {/* <EventPage/> */}
-            <EventSort/>
+            {/* <EventSort/> */}
 
             {/* SECTION: Home */} 
             {/* <HelpPage/> */}

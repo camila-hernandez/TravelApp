@@ -5,22 +5,22 @@ import "./accountPage.css";
 export default function changePassword() {
 
     return <div> 
-        <div class = "changePassword-container">
+        <div className = "changePassword-container">
 
-            <div class="changePassword-field-description">
+            <div className="changePassword-field-description">
                 <h3>Please Enter New Password</h3>
             </div>
 
-            <div class="changePassword-box-email">
-                <input type="text" class="changePassword-box-password1" placeholder="New Password" />
+            <div className="changePassword-box-email">
+                <input type="text" className="changePassword-box-password1" placeholder="New Password" />
             </div>
 
 
-            <div class="changePassword-box-email">
-                <input type="text" class="changePassword-box-password1" placeholder="New Password" />
+            <div className="changePassword-box-email">
+                <input type="text" className="changePassword-box-password1" placeholder="New Password" />
             </div>
 
-            <div class="changePassword-field-sendLink">
+            <div className="changePassword-field-sendLink">
                 <button>
                 CHANGE PASSWORD
                 </button>

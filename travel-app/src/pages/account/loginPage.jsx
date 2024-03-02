@@ -6,39 +6,39 @@ import whereLogo from '../../assets/WhereLogoGreen.png';
 
 export default function loginPage() {
     return <div> 
-        <div class = "login-container">
+        <div className = "login-container">
             
-        <div class="login-field-logo">
+        <div className="login-field-logo">
             <img src={whereLogo} alt="whereLogo" className="whereLogo" 
             style={{ width: '100px', height: 'auto' }}
             />
         </div>
         
-        <div class="login-field-email">
-            <input type="text" class="emailField" placeholder="Email" />
+        <div className="login-field-email">
+            <input type="text" className="emailField" placeholder="Email" />
         </div>
 
-        <div class="login-field-password">
-            <input type="text" class="passwordField" placeholder="Password" />
+        <div className="login-field-password">
+            <input type="text" className="passwordField" placeholder="Password" />
         </div>
 
-        <div class="login-field-loginbutton">
-            <button class= "login-button">
+        <div className="login-field-loginbutton">
+            <button className= "login-button">
             LOGIN
             </button>
         </div>
 
-        <div class="login-field-forgotPassword">
+        <div className="login-field-forgotPassword">
             <button>
             Forgot Password
             </button>
         </div>
 
-        <div class="login-field-signUp">
-            <div class = "sign-up-text">
+        <div className="login-field-signUp">
+            <div className = "sign-up-text">
                 Dont have an account?   
             </div>
-            <div class = "sign-up-button">
+            <div className = "sign-up-button">
                 <button>
                 Sign Up
                 </button>

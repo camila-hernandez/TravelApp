@@ -35,7 +35,6 @@ import EventSort from "./pages/events/eventSort"
 // HomeTab 
 import HelpPage from "./pages/homeTab/helpPage";
 import HomePage from "./pages/homeTab/homePage";
-import TutorialPage from "./pages/homeTab/tutorialPage";
 
 // Room for Additional Imports here
 
@@ -54,7 +53,7 @@ function App() {
 
           {/* Top Header */}
           <HeaderContainer>  
-            <HeaderTitle header_title={"Cowtown Eh-scapes!"}/> 
+            <HeaderTitle header_title={"Where Calgary"}/> 
           </HeaderContainer>
 
           {/* Body Container */}
@@ -63,9 +62,9 @@ function App() {
             {/* UNCOMMENT THE SECTION YOU WANT TO WORK ON */}
             
             {/* SECTION: Account */}
-            <AccountOptionsPages/>
+            {/* <AccountOptionsPages/> */}
             {/* <CreateAccount/>  */}
-            {/* <ChangePassword/> */}
+            <ChangePassword/>
             {/* <ForgotPassword/> */}
             {/* <LoginPage/> */}
 
@@ -87,7 +86,6 @@ function App() {
             {/* SECTION: Home */} 
             {/* <HelpPage/> */}
             {/* <HomePage/> */}
-            {/* <TutorialPage/> */}
             
           </BodyContainer>
           

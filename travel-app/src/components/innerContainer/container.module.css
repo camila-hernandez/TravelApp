@@ -27,7 +27,6 @@ body {
   background-color: white;
   color: #501b1d;
   font-weight: 700;
-  margin-left: 10px;
 }
 
 .header_innerContainer_LEFT:hover {
@@ -36,11 +35,13 @@ body {
 
 .header_innerContainer_MIDDLE {
   padding-left: 60px;
+  align-items: center;
 }
 
 .header_innerContainer_RIGHT {
   padding: 5px;
   background-color: #333;
+  margin-right: 10px;
 }
 
 .bodyContainer {

@@ -1,63 +1,25 @@
-/* LOGIN PAGE  */
+/* accountOption */
 
-.email-field {
-    /* width: 90%; */
-    /* display: inline-flex; */
-    color: #501B1D;
-}
-
-.emailField{
-    color: #501B1D;
-}
-
-.password-field {
-    /* width: 90%; */
-    /* display: inline-flex; */
-}
-
-.passwordField{
-    color: #501B1D;
-}
-
-.login-field {
-    /* width: 90%; */
-    /* display: inline-flex; */
-    margin-top: 10px;
-}
-
-.login-button{
-    color: #501B1D;
-}
-
-.forgot-password-button{
-    color: #501B1D;
-}
-
-.sign-up-field{
-    color: #501B1D;
-}
-
-.sign-up-text{
+.accountOptions-container{
     color: white;
 }
 
-.sign-up-button{
-    color: #501B1D;
+.accountOptions-field-details{
+    color: white;
 }
 
-/* FORGOT PASSWORD PAGE  */
-
-.forgotpassword-container{
-    color: #501B1D;
+.accountOptions-field-changePassword{
+    color: white;
 }
 
-.forgot-email-field{
-    color: #501B1D;
+.accountOptions-field-deleteAccount{
+    color: white;
 }
 
-.reset-password-button{
-    color: #501B1D;
+.accountOptions-field-logOut{
+color: white;
 }
+
 
 
 /* changePASSWORD */
@@ -66,33 +28,23 @@
     color: white;
 }
 
-.enterOldPassword-field{
+.changePassword-field-description{
+    color: white;
+    text-emphasis-color: white;
+}
+
+.changePassword-field-password1{
     color: white;
 }
 
-.enterOldPassword{
+.changePassword-field-password2{
     color: white;
 }
 
-.enterNewPassword1-field{
+.changePassword-field-sendLink{
     color: white;
 }
 
-.enterNewPassword1{
-    color: white;
-}
-
-.enterNewPassword2-field{
-    color: white;
-}
-
-.enterNewPassword2{
-    color: white;
-}
-
-.change-password-button{
-    color: white;
-}
 
 
 /* CREATE ACCOUNT */
@@ -102,34 +54,68 @@
     color: white;
 }
 
-.enter-new-email-field{
+.createAccount-field-email{
     color: white;
 }
 
-.newAccountEmailField{
+.createAccount-box-email{
     color: white;
 }
 
-.enter-new-password-field{
+.createAccount-field-password1{
     color: white;
 }
 
-.newAccountPassword1{
+.createAccount-box-password1{
     color: white;
 }
 
-.confirm-new-password-field{
+.createAccount-field-password2{
     color: white;
 }
 
-.newAccountPassword2{
+.createAccount-box-password2{
     color: white;
 }
 
-.captcha-field{
+.createAccount-field-robot{
     color: white;
 }
 
-.create-account-field{
+.createAccount-createAccountbutton{
     color: white;
 }
+
+
+/* FORGOT PASSWORD PAGE  */
+
+.forgotPassword-container{
+    color: #501B1D;
+}
+
+.forgotPassword-field-text{
+    color: white;
+}
+
+.forgotPassword-field-email{
+    color: white;
+}
+
+.forgotPassword-box-email{
+    color: white;
+}
+
+.forgotPassword-field-button{
+    color: white;
+}
+
+
+
+/* LOGIN PAGE  */
+
+
+
+.sign-up-text{
+    color: white;
+}
+

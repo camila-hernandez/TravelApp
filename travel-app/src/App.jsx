@@ -54,7 +54,7 @@ function App() {
 
           {/* Top Header */}
           <HeaderContainer>  
-            <HeaderTitle header_title={"Cowtown Eh-scapes!"}/> 
+            <HeaderTitle header_title={"Where Calgary"}/> 
           </HeaderContainer>
 
           {/* Body Container */}
@@ -63,7 +63,7 @@ function App() {
             {/* UNCOMMENT THE SECTION YOU WANT TO WORK ON */}
             
             {/* SECTION: Account */}
-            <AccountOptionsPages/>
+            {/* <AccountOptionsPages/> */}
             {/* <CreateAccount/>  */}
             {/* <ChangePassword/> */}
             {/* <ForgotPassword/> */}
@@ -85,7 +85,7 @@ function App() {
             {/* <EventSort/> */}
 
             {/* SECTION: Home */} 
-            {/* <HelpPage/> */}
+            <HelpPage/>
             {/* <HomePage/> */}
             {/* <TutorialPage/> */}
             

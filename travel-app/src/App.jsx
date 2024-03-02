@@ -35,7 +35,6 @@ import EventSort from "./pages/events/eventSort"
 // HomeTab 
 import HelpPage from "./pages/homeTab/helpPage";
 import HomePage from "./pages/homeTab/homePage";
-import TutorialPage from "./pages/homeTab/tutorialPage";
 
 // Room for Additional Imports here
 
@@ -65,7 +64,7 @@ function App() {
             {/* SECTION: Account */}
             {/* <AccountOptionsPages/> */}
             {/* <CreateAccount/>  */}
-            {/* <ChangePassword/> */}
+            <ChangePassword/>
             {/* <ForgotPassword/> */}
             {/* <LoginPage/> */}
 
@@ -85,9 +84,8 @@ function App() {
             {/* <EventSort/> */}
 
             {/* SECTION: Home */} 
-            <HelpPage/>
+            {/* <HelpPage/> */}
             {/* <HomePage/> */}
-            {/* <TutorialPage/> */}
             
           </BodyContainer>
           

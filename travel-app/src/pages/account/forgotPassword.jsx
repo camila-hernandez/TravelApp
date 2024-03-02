@@ -6,19 +6,23 @@ import whereLogo from '../../assets/WhereLogoGreen.png';
 export default function forgotPassword() {
 
     return <div> 
-            <div class = "forgotpassword-container">
-                
-                {/* WHERE LOGO HERE  */}
-    
-                <div class="forgot-email-field">
-                    <input type="text" class="emailField" placeholder="Email" />
+            <div class = "forgotPassword-container">
+
+                <div class="forgotPassword-field-text">
+                    <h4>Forgot Password? </h4>
+                    <h4>Enter email below</h4>
                 </div>
-                <div class="reset-password-button">
+
+                <div class="forgotPassword-field-email">
+                    <input type="text" class="forgotPassword-box-email" placeholder="Email" />
+                </div>
+    
+                <div class="forgotPassword-field-button">
                     <button>
                     RESET PASSWORD
                     </button>
                 </div>
+
             </div>
-    
         </div>
     }

@@ -118,6 +118,11 @@ color: white;
     align-items: center;
 }
 
+.whereLogo {
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+
 .emailField,
 .passwordField {
     width: 100%;
@@ -127,5 +132,27 @@ color: white;
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-bottom: 15px;
+}
+
+.forgot-password-link {
+    font-size: 14px;
+    color: white;
+    margin-left: 130px;
+}
+
+.login-button {
+    font-size: 14px;
+    font-weight: bold;
+    width: 100%;
+    padding: 10px 105px 10px 105px;
+    margin-top: 25px;
+}
+
+.sign-up-link,
+.sign-up-text {
+    font-size: 14px;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
 }
 

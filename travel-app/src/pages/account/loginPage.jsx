@@ -23,27 +23,25 @@ export default function loginPage() {
             <input type="password" className="passwordField" placeholder="Password" />
         </div>
 
+        <div className="login-field-forgotPassword">
+            <a href="/forgot-password" className="forgot-password-link">
+                Forgot Password?
+            </a>
+        </div>
+
         <div className="login-field-loginbutton">
             <button className= "login-button">
             LOGIN
             </button>
         </div>
 
-        <div className="login-field-forgotPassword">
-            <button>
-            Forgot Password
-            </button>
-        </div>
-
         <div className="login-field-signUp">
-            <div className = "sign-up-text">
-                Don't have an account? <b>Sign Up</b>
-            </div>
-            <div className = "sign-up-button">
-                <button>
+           <div className = "sign-up-text">
+                Don't have an account?
+           </div>
+            <a href="/sign-up" className="sign-up-link">
                 Sign Up
-                </button>
-            </div>
+            </a>
         </div>
 
     </div>

@@ -25,24 +25,49 @@ color: white;
 /* changePASSWORD */
 
 .changePassword-container{
+    color: #501B1D;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.change-password-header {
     color: white;
+    font-size: 28px;
+    font-weight: 400;
+    margin-top: 50px;
+}
+
+.change-password-instructions {
+    color: white;
+    font-size: 14px;
+    margin-top: 70px;
+    margin-bottom: 25px;
 }
 
 .changePassword-field-description{
     color: white;
     text-emphasis-color: white;
+
 }
 
-.changePassword-field-password1{
-    color: white;
-}
+.current-password-box-password1,
+.changePassword-box-password1 {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 10px 80px 10px 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
 
-.changePassword-field-password2{
-    color: white;
 }
 
 .changePassword-field-sendLink{
+    font-size: 14px;
     color: white;
+    padding: 10px;
+    margin-top: 20px;
 }
 
 

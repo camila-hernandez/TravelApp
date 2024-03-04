@@ -10,9 +10,23 @@ export default function forgotPassword() {
 
                 <div className="forgotPassword-field-text">
                     <h4>Forgot Password? </h4>
-                    <h4>Enter email below</h4>
                 </div>
 
+                <div className="enterEmail-text">
+                <p>
+                    Enter the email address
+                    <br />
+                    associated with your account.
+                </p>
+                </div>
+
+                <div className="emailLink-text">
+                    <p>
+                        We will email you a link to reset
+                        <br />
+                        your password.
+                    </p>
+                </div>
                 <div className="forgotPassword-field-email">
                     <input type="text" className="forgotPassword-box-email" placeholder="Email" />
                 </div>

@@ -51,6 +51,34 @@ export default function CreateAccount() {
     <div>
       <div className="createAccount-container">
         {/* WHERE LOGO HERE */}
+
+        <div className="sign-up-header">
+            <h4>
+                Sign Up
+            </h4>
+        </div>
+
+        <div className="detail-headers">
+            <p>
+                Enter your first name:
+            </p>
+        </div>
+        <div className="enterFirstName-box">
+                    <input type="text" className="first-name-textfield" placeholder="First Name" />
+                </div>
+        <div className="detail-headers">
+            <p>
+                Enter your last name:
+            </p>
+        </div>
+        <div className="enterLastName-box">
+            <input type="text" className="last-name-textfield" placeholder="Last Name" />
+        </div>
+        <div className="detail-headers">
+            <p>
+                Enter your email address:
+            </p>
+        </div>
         <div className="enter-new-email-field">
           <input
             type="text"
@@ -60,6 +88,11 @@ export default function CreateAccount() {
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
+        <div className="detail-headers">
+                    <p>
+                        Enter your password:
+                    </p>
+                </div>
         <div className="enter-new-password-field">
           <input
             type="password"
@@ -68,6 +101,11 @@ export default function CreateAccount() {
             value={password1}
             onChange={(e) => setPassword1(e.target.value)}
           />
+        </div>
+        <div className="detail-headers">
+            <p>
+                Re-enter your password:
+            </p>
         </div>
         <div className="confirm-new-password-field">
           <input
@@ -81,7 +119,7 @@ export default function CreateAccount() {
         <div className="captcha-field">
           {/* Replace the text with a checkbox */}
           <input type="checkbox" id="robotCheckbox" />
-          <label htmlFor="robotCheckbox">I am not a robot</label>
+          <label htmlFor="robotCheckbox">    I am not a robot</label>
         </div>
         <div className="create-account-field">
           <button onClick={handleCreateAccount}>CREATE ACCOUNT</button>

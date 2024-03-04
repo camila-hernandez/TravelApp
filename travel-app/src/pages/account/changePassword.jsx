@@ -7,16 +7,29 @@ export default function changePassword() {
     return <div> 
         <div className = "changePassword-container">
 
-            <div className="changePassword-field-description">
-                <h3>Please Enter New Password</h3>
+            <div className="change-password-header">
+                <h4>
+                    Change Password
+                </h4>
             </div>
 
+            <div className="change-password-instructions">
+                <p>
+                    To change your password, enter your current password
+                    <br />
+                    and your new password below.
+                </p>
+            </div>
+
+            <div className="current-password-box-email">
+                            <input type="password" className="current-password-box-password1" placeholder="Current Password" />
+            </div>
             <div className="changePassword-box-email">
-                <input type="text" className="changePassword-box-password1" placeholder="New Password" />
+                <input type="password" className="changePassword-box-password1" placeholder="New Password" />
             </div>
   
             <div class="changePassword-field-password1">
-                <input type="text" class="changePassword-box-password1" placeholder="New Password" />
+                <input type="password" class="changePassword-box-password1" placeholder="Confirm Password" />
             </div>
 
             <div className="changePassword-field-sendLink">

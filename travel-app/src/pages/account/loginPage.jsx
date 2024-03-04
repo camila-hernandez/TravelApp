@@ -5,15 +5,15 @@ import whereLogo from '../../assets/WhereLogoGreen.png';
 
 
 export default function loginPage() {
-    return <div> 
+    return <div>
         <div className = "login-container">
-            
+
         <div className="login-field-logo">
-            <img src={whereLogo} alt="whereLogo" className="whereLogo" 
+            <img src={whereLogo} alt="whereLogo" className="whereLogo"
             style={{ width: '100px', height: 'auto' }}
             />
         </div>
-        
+
 
         <div className="login-field-email">
             <input type="text" className="emailField" placeholder="Email" />
@@ -37,7 +37,7 @@ export default function loginPage() {
 
         <div className="login-field-signUp">
             <div className = "sign-up-text">
-                Dont have an account?   
+                Don't have an account? <b>Sign Up</b>
             </div>
             <div className = "sign-up-button">
                 <button>

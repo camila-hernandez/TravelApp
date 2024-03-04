@@ -64,9 +64,9 @@ function App() {
             {/* SECTION: Account */}
             {/* <AccountOptionsPages/> */}
             {/* <CreateAccount/>  */}
-            <ChangePassword/>
+{/*             <ChangePassword/> */}
             {/* <ForgotPassword/> */}
-            {/* <LoginPage/> */}
+            <LoginPage/>
 
             {/* SECTION: Calendar */}
             {/* <CalendarPage/> */}
@@ -80,7 +80,7 @@ function App() {
 
             {/* SECTION: Events */}
              {/* <EventSearch/> */}
-            {/* <EventPage/> */}
+{/*             <EventPage/> */}
             {/* <EventSort/> */}
 
             {/* SECTION: Home */} 

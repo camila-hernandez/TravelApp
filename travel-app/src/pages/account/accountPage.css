@@ -76,39 +76,50 @@ color: white;
 
 
 .createAccount-container{
-    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.createAccount-field-email{
+.sign-up-header {
     color: white;
+    font-size: 28px;
+    font-weight: 400;
+    margin-top: 50px;
+    margin-bottom: 25px;
 }
 
-.createAccount-box-email{
+.detail-headers {
     color: white;
+    font-size: 14px;
+    margin-right: 100px;
+    margin-bottom: 2.5px;
+}
+.first-name-textfield,
+.last-name-textfield,
+.newAccountEmailField,
+.newAccountPassword1,
+.newAccountPassword2 {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 10px 80px 10px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
 }
 
-.createAccount-field-password1{
+.captcha-field{
     color: white;
+    font-size: 14px;
 }
 
-.createAccount-box-password1{
-    color: white;
-}
-
-.createAccount-field-password2{
-    color: white;
-}
-
-.createAccount-box-password2{
-    color: white;
-}
-
-.createAccount-field-robot{
-    color: white;
-}
-
-.createAccount-createAccountbutton{
-    color: white;
+.create-account-field{
+    font-size: 14px;
+    font-weight: bold;
+    width: 100%;
+    padding: 10px 105px 10px 105px;
+    margin-top: 25px;
 }
 
 

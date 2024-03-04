@@ -63,8 +63,8 @@ function App() {
             
             {/* SECTION: Account */}
             {/* <AccountOptionsPages/> */}
-            {/* <CreateAccount/>  */}
-            <ChangePassword/>
+            <CreateAccount/>
+{/*             <ChangePassword/> */}
 {/*             <ForgotPassword/> */}
 {/*             <LoginPage/> */}
 

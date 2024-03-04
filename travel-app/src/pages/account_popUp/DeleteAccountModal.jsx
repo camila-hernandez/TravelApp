@@ -25,6 +25,12 @@ const DeleteAccountModal = ({ isOpen, onClose, onConfirm }) => {
           flexDirection: 'column',
           justifyContent: 'center', // Center text vertically
         },
+
+        buttonContainer: {
+            display: 'flex',
+            justifyContent: 'space-around',
+            marginTop: '20px',
+        }
       }}
     >
       <h2>ARE YOU SURE YOU WISH TO DELETE YOUR ACCOUNT?</h2>

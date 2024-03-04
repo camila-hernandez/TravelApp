@@ -45,25 +45,26 @@ export default function AccountOptionsPage() {
       <div className="accountOptions-field-details">
         <button>
           <h3> Account Details</h3>
+          <br />
           <h4> Email: john.smith@ucalgary.ca</h4>
         </button>
       </div>
 
-      <div className="accountOptions-field-changePassword" style={spaceBetweenStyle}>
+      <div className="accountOptions-field-changePassword">
         <button>
           Change Password
         </button>
       </div>
 
-      <div className="accountOptions-field-deleteAccount" style={spaceBetweenStyle}>
+      <div className="accountOptions-field-deleteAccount">
         <button onClick={openDeleteModal}>
           Delete Account
         </button>
       </div>
 
-      <div className=".accountOptions-field-logOut" style={spaceBetweenStyle}>
+      <div className=".accountOptions-field-logOut">
         <button onClick={openLogOutModal}>
-          LOG OUT
+          <b>LOG OUT</b>
         </button>
       </div>
 

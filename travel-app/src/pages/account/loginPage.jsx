@@ -20,7 +20,7 @@ export default function loginPage() {
         </div>
 
         <div className="login-field-password">
-            <input type="text" className="passwordField" placeholder="Password" />
+            <input type="password" className="passwordField" placeholder="Password" />
         </div>
 
         <div className="login-field-loginbutton">

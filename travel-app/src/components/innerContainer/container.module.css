@@ -13,36 +13,37 @@ body {
   height: 50px;
   background-color: #2e1114;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between; /* Use space-between to push left to the left, middle to the center, and right to the right */
   align-items: center;
 }
 
 .headerContainer h3 {
   font-family: "DM-Sans", sans-serif;
   font-size: large;
+  color: white; /* Adjust text color as needed */
 }
 
 .header_innerContainer_LEFT {
   padding: 5px;
   background-color: white;
-  color: #501b1d;
+  color: #2e1114;
   font-weight: 700;
 }
 
 .header_innerContainer_LEFT:hover {
-  background-color: red;
+  background-color: #501b1d;
 }
 
 .header_innerContainer_MIDDLE {
-  padding-left: 60px;
-  align-items: center;
+  padding: 5px; /* Adjust padding as needed */
 }
 
 .header_innerContainer_RIGHT {
   padding: 5px;
-  background-color: #333;
-  margin-right: 10px;
+  background-color: #2e1114;
+  color: #2e1114; /* Adjust text color as needed */
 }
+
 
 .bodyContainer {
   width: 402px;

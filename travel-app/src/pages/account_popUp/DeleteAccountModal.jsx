@@ -12,12 +12,13 @@ const DeleteAccountModal = ({ isOpen, onClose, onConfirm }) => {
       left: '50%',
       transform: 'translate(-50%, -50%)',
       width: '300px',
-      height: '200px',
-      backgroundColor: 'darkgoldenrod', // Light gray background
+      height: '175px',
+      backgroundColor: 'white', // Light gray background
       textAlign: 'center',
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',
+      color: 'black',
     },
     buttonContainer: {
       display: 'flex',
@@ -30,7 +31,7 @@ const DeleteAccountModal = ({ isOpen, onClose, onConfirm }) => {
       backgroundColor: 'red', // Blue
       color: '#fff', // White
       border: 'none',
-      fontSize: '20px',
+      fontSize: '12px',
       borderRadius: '5px',
       cursor: 'pointer',
     },
@@ -39,8 +40,7 @@ const DeleteAccountModal = ({ isOpen, onClose, onConfirm }) => {
       padding: '10px',
       backgroundColor: 'black', // Gray
       color: '#fff', // White
-
-      fontSize: '20px',
+      fontSize: '12px',
       borderRadius: '5px',
       cursor: 'pointer',
     },

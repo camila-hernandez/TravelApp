@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import InvalidEmailModal from '../account_popUp/InvalidEmailModal'; // Adjust the path as needed
 import InvalidPasswordModal from '../account_popUp/InvalidPasswordModal'; // Adjust the path as needed
+import UnmatchingPasswordModal from '../account_popUp/UnmatchingPasswordModal'; // Import the new modal
 import "./accountPage.css";
 
 export default function CreateAccount() {
@@ -9,6 +10,7 @@ export default function CreateAccount() {
   const [password2, setPassword2] = useState("");
   const [isInvalidEmailModalOpen, setInvalidEmailModalOpen] = useState(false);
   const [isInvalidPasswordModalOpen, setInvalidPasswordModalOpen] = useState(false);
+  const [isUnmatchingPasswordModalOpen, setUnmatchingPasswordModalOpen] = useState(false);
 
   const handleCreateAccount = () => {
     // Check for invalid email
@@ -23,8 +25,18 @@ export default function CreateAccount() {
       return;
     }
 
+    // Check for matching passwords
+    if (password1 !== password2) {
+      setUnmatchingPasswordModalOpen(true);
+      return;
+    }
+
     // Continue with account creation logic
     console.log('Account created!');
+  };
+
+  const closeUnmatchingPasswordModal = () => {
+    setUnmatchingPasswordModalOpen(false);
   };
 
   const isValidEmail = (email) => {
@@ -130,6 +142,7 @@ export default function CreateAccount() {
       {/* Modals */}
       <InvalidEmailModal isOpen={isInvalidEmailModalOpen} onClose={closeInvalidEmailModal} />
       <InvalidPasswordModal isOpen={isInvalidPasswordModalOpen} onClose={closeInvalidPasswordModal} />
+      <UnmatchingPasswordModal isOpen={isUnmatchingPasswordModalOpen} onClose={closeUnmatchingPasswordModal} />
     </div>
   );
 }

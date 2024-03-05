@@ -18,8 +18,9 @@ const InvalidEmailModal = ({ isOpen, onClose }) => {
           left: '50%',
           transform: 'translate(-50%, -50%)',
           width: '300px',
-          height: '250px',
-          backgroundColor: 'darkgoldenrod', // Change color as needed
+          height: '200px',
+          backgroundColor: 'white', // Change color as needed
+          color: 'black',
           textAlign: 'center',
           display: 'flex',
           flexDirection: 'column',
@@ -30,7 +31,7 @@ const InvalidEmailModal = ({ isOpen, onClose }) => {
     >
       <h2>INVALID EMAIL</h2>
       <p>Please enter a valid email address.</p>
-      <div style={{ margin: '20px 0' }}>
+      <div style={{ margin: '10px 0' }}>
         <button
           onClick={onClose}
           style={{

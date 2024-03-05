@@ -62,8 +62,8 @@ function App() {
             {/* UNCOMMENT THE SECTION YOU WANT TO WORK ON */}
             
             {/* SECTION: Account */}
-            <AccountOptionsPages/>
-            {/* <CreateAccount/> */}
+            {/* <AccountOptionsPages/> */}
+            <CreateAccount/>
 {/*             <ChangePassword/> */}
 {/*             <ForgotPassword/> */}
 {/*             <LoginPage/> */}

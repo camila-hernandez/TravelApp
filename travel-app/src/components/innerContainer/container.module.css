@@ -31,7 +31,7 @@ body {
 }
 
 .header_innerContainer_LEFT:hover {
-  background-color: #501b1d;
+  background-color: 501b1d;
 }
 
 .header_innerContainer_MIDDLE {
@@ -78,4 +78,21 @@ body {
 .footerButton:hover {
   background-color: white;
   color: #501b1d;
+}
+
+.footerContainer {
+  width: 100%;
+  height: 50px;
+  background-color: #2e1114;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+}
+
+.homeButton,
+.calendarButton,
+.eventsButton,
+.accountButton {
+
 }

@@ -1,30 +1,56 @@
 /* accountOption */
-
-.accountOptions-container{
-    color: #501B1D;
+.accountOptions-container {
+    color: grey;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.accountOptions-field-details{
-    color: #501B1D;
+.details-container {
+    background-color: grey; /* Change color as needed */
+    padding: 10px; /* Adjust padding as needed */
+    border-radius: 5px; /* Optional: add border-radius for rounded corners */
+    font-size: 23px;
+}
+
+.accountOptions-field-details {
+    color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 50px;
-    font-size: 16px;
-    margin-bottom: 50px;
+    margin-top: 30px;
+    margin-bottom: 25px;
 }
 
 .accountOptions-field-changePassword,
 .accountOptions-field-deleteAccount,
 .accountOptions-field-logOut {
-    font-size: 14px;
-    color: blue;
     padding: 10px;
     margin-bottom: 10px;
 }
+
+/* Updated styles for the "Change Password" button */
+.accountOptions-field-changePassword button,
+.accountOptions-field-deleteAccount button {
+    width: 300px;
+    font-size: 20px;
+    align-self: center;
+}
+
+.accountOptions-field-logOut button {
+    width: 300px;
+    font-size: 20px;
+    align-self: center;
+    background-color: darkred; /* Change color as needed */
+}
+
+.accountOptions-field-changePassword button:hover,
+.accountOptions-field-deleteAccount button:hover,
+.accountOptions-field-logOut button:hover {
+    background-color: white; /* Change color on hover, adjust as needed */
+    color: black;
+  }
+
 
 /* changePASSWORD */
 
@@ -89,16 +115,18 @@
     color: white;
     font-size: 28px;
     font-weight: 400;
-    margin-top: 50px;
-    margin-bottom: 25px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .detail-headers {
     color: white;
     font-size: 14px;
-    margin-right: 100px;
+    margin-right: 0; /* Remove or set to 0 if you want left alignment */
     margin-bottom: 2.5px;
+    text-align: left;
 }
+
 .first-name-textfield,
 .last-name-textfield,
 .newAccountEmailField,
@@ -113,18 +141,47 @@
     margin-bottom: 15px;
 }
 
-.captcha-field{
-    color: white;
-    font-size: 14px;
-}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #333; /* Dark grey color */
+    padding: 6px; /* Adjust padding as needed */
+    border-radius: 0px; /* Optional: add border-radius for rounded corners */
+    font-size: 12px;
+  }
 
-.create-account-field{
-    font-size: 14px;
-    font-weight: bold;
-    width: 100%;
-    padding: 10px 105px 10px 105px;
-    margin-top: 25px;
-}
+  .captcha-field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+/* Optional: add margin between the fields */
+  }
+  
+  .captcha-field label {
+    color: white; /* Set text color for the label */
+  }
+  
+  .captcha-field input {
+    margin-right: 5px; /* Optional: add space between checkbox and label */
+  }
+  
+  .create-account-field button {
+    background-color: #2e1114; /* Dark red color, adjust as needed */
+    color: white; /* Set text color for the button */
+    padding: 15px 30px; /* Adjust padding as needed */
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+    border-radius: 3px; /* Optional: add border-radius for rounded corners */
+    font-size: 16px; /* Adjust the font size as needed */
+  }
+  
+  .create-account-field button:hover {
+    background-color: red; /* Change color on hover, adjust as needed */
+  }
 
 
 /* FORGOT PASSWORD PAGE  */

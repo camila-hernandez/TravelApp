@@ -60,7 +60,7 @@ export default function CreateAccount() {
 
         <div className="detail-headers">
             <p>
-                Enter your first name:
+                Enter Your First Name
             </p>
         </div>
         <div className="enterFirstName-box">
@@ -68,7 +68,7 @@ export default function CreateAccount() {
                 </div>
         <div className="detail-headers">
             <p>
-                Enter your last name:
+                Enter Your Last Name
             </p>
         </div>
         <div className="enterLastName-box">
@@ -76,7 +76,7 @@ export default function CreateAccount() {
         </div>
         <div className="detail-headers">
             <p>
-                Enter your email address:
+                Enter Your Email Address
             </p>
         </div>
         <div className="enter-new-email-field">
@@ -90,7 +90,7 @@ export default function CreateAccount() {
         </div>
         <div className="detail-headers">
                     <p>
-                        Enter your password:
+                        Enter Your Password
                     </p>
                 </div>
         <div className="enter-new-password-field">
@@ -104,7 +104,7 @@ export default function CreateAccount() {
         </div>
         <div className="detail-headers">
             <p>
-                Re-enter your password:
+                Re-enter Your Password
             </p>
         </div>
         <div className="confirm-new-password-field">
@@ -116,10 +116,11 @@ export default function CreateAccount() {
             onChange={(e) => setPassword2(e.target.value)}
           />
         </div>
-        <div className="captcha-field">
-          {/* Replace the text with a checkbox */}
-          <input type="checkbox" id="robotCheckbox" />
-          <label htmlFor="robotCheckbox">    I am not a robot</label>
+        <div className="container">
+          <div className="captcha-field">
+            <input type="checkbox" id="robotCheckbox" />
+            <label htmlFor="robotCheckbox">I am not a robot</label>
+          </div>
         </div>
         <div className="create-account-field">
           <button onClick={handleCreateAccount}>CREATE ACCOUNT</button>

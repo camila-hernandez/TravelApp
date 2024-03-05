@@ -1,6 +1,7 @@
 // InvalidPasswordModal.jsx
 import React from 'react';
 import Modal from 'react-modal';
+import "./popup.css";
 
 const InvalidPasswordModal = ({ isOpen, onClose }) => {
   return (
@@ -19,7 +20,7 @@ const InvalidPasswordModal = ({ isOpen, onClose }) => {
           transform: 'translate(-50%, -50%)',
           width: '300px',
           height: '200px',
-          backgroundColor: 'orange', // Change color as needed
+          backgroundColor: 'darkgoldenrod', // Change color as needed
           textAlign: 'center',
           display: 'flex',
           flexDirection: 'column',
@@ -30,7 +31,12 @@ const InvalidPasswordModal = ({ isOpen, onClose }) => {
       <h2>INVALID PASSWORD</h2>
       <p>Password must be at least 8 characters long.</p>
       <div style={{ margin: '20px 0' }}>
-        <button onClick={onClose}>Close</button>
+       <button 
+         onClick={onClose}
+         className="close-button" // Add the class name here
+       >
+        Close 
+        </button>
       </div>
     </Modal>
   );

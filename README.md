@@ -1,12 +1,14 @@
 # CPSC481
 
-# EDIT - INSTALL THE FOLLOWING
+
+## EDIT FOR AFTER OVERVIEW - INSTALL THE FOLLOWING
 
 > npm install --save @fortawesome/react-fontawesome
 
 > npm install --save @fortawesome/free-solid-svg-icons
 
 > npm install react-modal
+
 
 
 

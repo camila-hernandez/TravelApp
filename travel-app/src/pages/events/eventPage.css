@@ -161,3 +161,41 @@
     font-size: 15px;
 }
 
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Darkened background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+  }
+  
+  .confirmation-message {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  .confirmation-message p {
+    margin-bottom: 10px;
+    color: #501B1D;
+  }
+  
+  .confirmation-box button {
+    margin: 0 10px;
+  }
+
+  .confirm-button {
+    color: #ffffff;
+    background-color: #501B1D;
+  }
+
+  .confirmation-box {
+    height: 70px;
+    width: 250px;
+  }

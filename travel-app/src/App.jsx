@@ -78,9 +78,9 @@ function App() {
             <SeeEventDetails/>  */}
 
             {/* SECTION: Events */}
-             {/* <EventSearch/> */}
+             <EventSearch/>
             {/* <EventPage/> */}
-            <EventSort/>
+            {/* <EventSort/> */}
 
             {/* SECTION: Home */} 
             {/* <HelpPage/> */}

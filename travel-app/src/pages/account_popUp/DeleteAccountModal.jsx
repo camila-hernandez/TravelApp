@@ -13,7 +13,7 @@ const DeleteAccountModal = ({ isOpen, onClose, onConfirm }) => {
       transform: 'translate(-50%, -50%)',
       width: '300px',
       height: '200px',
-      backgroundColor: '#f0f0f0', // Light gray background
+      backgroundColor: 'darkgoldenrod', // Light gray background
       textAlign: 'center',
       display: 'flex',
       flexDirection: 'column',
@@ -27,18 +27,20 @@ const DeleteAccountModal = ({ isOpen, onClose, onConfirm }) => {
     confirmButton: {
       margin: '10px 0',
       padding: '10px',
-      backgroundColor: '#007bff', // Blue
+      backgroundColor: 'red', // Blue
       color: '#fff', // White
       border: 'none',
+      fontSize: '20px',
       borderRadius: '5px',
       cursor: 'pointer',
     },
     cancelButton: {
       margin: '10px 0',
       padding: '10px',
-      backgroundColor: '#6c757d', // Gray
+      backgroundColor: 'black', // Gray
       color: '#fff', // White
-      border: 'none',
+
+      fontSize: '20px',
       borderRadius: '5px',
       cursor: 'pointer',
     },
@@ -54,10 +56,10 @@ const DeleteAccountModal = ({ isOpen, onClose, onConfirm }) => {
       <h2>ARE YOU SURE YOU WISH TO DELETE YOUR ACCOUNT?</h2>
       <div style={customStyles.buttonContainer}>
         <button style={customStyles.confirmButton} onClick={onConfirm}>
-          Confirm
+          DELETE
         </button>
         <button style={customStyles.cancelButton} onClick={onClose}>
-          Cancel
+          CANCEL
         </button>
       </div>
     </Modal>

@@ -63,20 +63,20 @@ function App() {
             
             {/* SECTION: Account */}
             {/* <AccountOptionsPages/> */}
-            <CreateAccount/>
+            {/* <CreateAccount/> */}
 {/*             <ChangePassword/> */}
-{/*             <ForgotPassword/> */}
-{/*             <LoginPage/> */}
+            {/* <ForgotPassword/> */}
+            {/* <LoginPage/> */}
 
             {/* SECTION: Calendar */}
             {/* <CalendarPage/> */}
 
-            {/* SECTION: Descriptions */} 
-            {/* <AddCustomEvent/>
-            <AddYYCEvent/> 
-            <ModifyDeleteEvent/> 
-            <SeeCalendarDetails/> 
-            <SeeEventDetails/>  */}
+            {/* SECTION: Descriptions  */}
+            <AddCustomEvent/>
+            {/* <AddYYCEvent/>  */}
+            {/* <ModifyDeleteEvent/>  */}
+            {/* <SeeCalendarDetails/>  */}
+            {/* <SeeEventDetails/>  */}
 
             {/* SECTION: Events */}
              {/* <EventSearch/> */}

@@ -1,7 +1,7 @@
 import React from 'react';
 import Modal from 'react-modal';
 
-const LogOutModal = ({ isOpen, onClose, onConfirm }) => {
+const UnmatchingPasswordModal = ({ isOpen, onClose }) => {
   const customStyles = {
     overlay: {
       backgroundColor: 'rgba(0, 0, 0, 0.5)',
@@ -13,35 +13,25 @@ const LogOutModal = ({ isOpen, onClose, onConfirm }) => {
       transform: 'translate(-50%, -50%)',
       width: '300px',
       height: '200px',
-      backgroundColor: 'white', // Light gray background
+      backgroundColor: 'white', // Change color as needed
       color: 'black',
       textAlign: 'center',
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',
-      fontSize: '30px'
+      fontSize: '17px', // Adjust the font size as needed
     },
     buttonContainer: {
       display: 'flex',
       justifyContent: 'space-around',
-      marginTop: '20px',
+      marginTop: '10px',
     },
-    confirmButton: {
+    closeButton: {
       margin: '10px 0',
       padding: '10px',
-      backgroundColor: 'green', // Blue
+      backgroundColor: 'black', // Gray
       color: '#fff', // White
-      border: 'none',
-      fontSize: '20px',
-      borderRadius: '5px',
-      cursor: 'pointer',
-    },
-    cancelButton: {
-      margin: '10px 0',
-      padding: '10px',
-      backgroundColor: '#6c757d', // Gray
-      color: '#fff', // White
-      fontSize: '20px',
+      fontSize: 'px',
       border: 'none',
       borderRadius: '5px',
       cursor: 'pointer',
@@ -52,20 +42,17 @@ const LogOutModal = ({ isOpen, onClose, onConfirm }) => {
     <Modal
       isOpen={isOpen}
       onRequestClose={onClose}
-      contentLabel="Log Out Modal"
+      contentLabel="Unmatching Password Modal"
       style={customStyles}
     >
-      <h2>LOG OUT?</h2>
+      <h2>PASSWORDS DO NOT MATCH</h2>
       <div style={customStyles.buttonContainer}>
-        <button style={customStyles.confirmButton} onClick={onConfirm}>
-          CONFIRM
-        </button>
-        <button style={customStyles.cancelButton} onClick={onClose}>
-          CANCEL
+        <button style={customStyles.closeButton} onClick={onClose}>
+          Close
         </button>
       </div>
     </Modal>
   );
 };
 
-export default LogOutModal;
+export default UnmatchingPasswordModal;

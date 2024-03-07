@@ -8,6 +8,9 @@ export default function forgotPassword() {
     return <div> 
             <div className = "forgotPassword-container">
 
+
+                {/* Overlay */}
+                <div className="overlay"></div>
                 <div className="forgotPassword-field-text">
                     <h4>Forgot Password? </h4>
                 </div>

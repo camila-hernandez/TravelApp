@@ -64,7 +64,7 @@ function App() {
             {/* SECTION: Account */}
             {/* <AccountOptionsPages/> */}
             {/* <CreateAccount/> */}
-{/*             <ChangePassword/> */}
+            <ChangePassword/>
             {/* <ForgotPassword/> */}
             {/* <LoginPage/> */}
 
@@ -72,7 +72,7 @@ function App() {
             {/* <CalendarPage/> */}
 
             {/* SECTION: Descriptions  */}
-            <AddCustomEvent/>
+            {/* <AddCustomEvent/> */}
             {/* <AddYYCEvent/>  */}
             {/* <ModifyDeleteEvent/>  */}
             {/* <SeeCalendarDetails/>  */}

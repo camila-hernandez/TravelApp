@@ -33,7 +33,13 @@ export default function HelpPage() {
     <div className="helpPage-containerA" style={containerStyle}>
 
       <div className="contain-Description">
-         WHERE CALGARY is your complete and up-to-guide on the best things to see and do during your stay in Calgary, all in the palm of your hand 
+         <br></br>
+         <h2>
+          <p>WHERE CALGARY is your complete and up-to-guide on the best things happening in Calgary - all in the palm of your hand.</p>
+          <br></br>
+          <p>Whether you're a local or a visitor, let WHERE CALGARY be your go-to source for making the most of your time in this vibrant city. </p>
+        </h2>
+        <br></br>
       </div>
 
       <div className="contain-Home" style={spaceBetweenStyle}>
@@ -41,23 +47,36 @@ export default function HelpPage() {
             style={{ width: '25px', height: 'auto' }}
             />
         <h2> Home Screen </h2>
-        Weather reports
+        Access up-to-date weather forecasts from WeatherNetwork and easily plan your day. Tap the weather icon for detailed forecasts and conditions. Need assistance? Find help instantly with the convenient help button."
       </div>
 
       <div className="contain-CalgaryGuide" style={spaceBetweenStyle}>
         <img src={EventsLogo} alt="EventsLogo" className="EventsLogo" 
             style={{ width: '25px', height: 'auto' }}
             />
-        <h2> Your Calgary Guide </h2>
-        Here you will find everything from the best places to eat to local shopping and activities 
+        <h2> Find Events </h2>
+        <p>
+        Here "Explore the heart of Calgary, Alberta, right at your fingertips! Uncover 
+        a treasure trove of information, ranging from the finest dining spots to 
+        hidden gems for local shopping and engaging activities. Whether you're a food 
+        enthusiast, a dedicated shopper, or an adventure seeker, our curated guide has
+         got you covered.
+         </p>
       </div>
 
       <div className="contain-Calendar" style={spaceBetweenStyle}>
       <img src={CalendarLogo} alt="CalendarLogo" className="CalendarLogo" 
             style={{ width: '25px', height: 'auto' }}
             />
-        <h2> Your Calgary Guide </h2>
-        Add YYC Events to your own personalized calendar. To view and edit your events, tap the calendar button on the bottom navigation bar
+        <h2> Calendar </h2>
+      
+        <p>Enhance your schedule with YYC Events by integrating them into your personalized
+          calendar. Discover exciting local happenings and effortlessly manage your plans.
+           To view and edit your events, simply tap the calendar button located on the 
+           bottom navigation bar. Stay organized and never miss out on the vibrant events 
+           around you. </p>
+
+        
       </div>
 
       <div className="contain-Account" style={spaceBetweenStyle}>
@@ -65,7 +84,9 @@ export default function HelpPage() {
             style={{ width: '25px', height: 'auto' }}
             />
         <h2> Account </h2>
-        Account
+        Take control of your account with ease. Safeguard your privacy by logging out securely, fortify 
+        your account with a password change, or make a decisive choice with the option to
+         delete your account.
       </div>
 
       <div className="contain-CustomerService" style={spaceBetweenStyle}>
@@ -73,7 +94,11 @@ export default function HelpPage() {
             style={{ width: '25px', height: 'auto' }}
             />
         <h2> Customer Service </h2>
-        Blah Blah
+        <p>"Encountering issues or have questions? We're here to help! </p>
+        <p>Reach out to our
+        dedicated customer service team at 123-123-2345 or whereCalgary@gmail.com for prompt assistance. 
+        </p>
+        <p>Your solution is just a call away!</p>
       </div>
 
       <div className="contain-PrivacyPolicy" style={spaceBetweenStyle}>
@@ -81,7 +106,13 @@ export default function HelpPage() {
             style={{ width: '25px', height: 'auto' }}
             />
         <h2> Privacy Policy </h2>
-        blah blah
+        <p> 
+        "Your privacy matters to us. Our Privacy Policy outlines how we collect, use,
+         and protect your personal information. Rest assured, your data is handled 
+         with the utmost care and transparency. For a detailed understanding of our 
+         privacy practices, please visit https://wherecalgary.ca/privacy. 
+         We prioritize the security of your information and are committed to 
+         maintaining your trust. /</p>
       </div>
 
       <div className="contain-BuildVersion" style={spaceBetweenStyle}>
@@ -89,10 +120,10 @@ export default function HelpPage() {
             style={{ width: '25px', height: 'auto' }}
             />
         <h2> Version </h2>
-        <u style={{ display: 'block' }}>Build Version: 1.0</u>
-        <u style={{ display: 'block' }}>App Version: 1.0</u>
-        <u style={{ display: 'block' }}>Data Version: 1.0</u>
-
+        <p style={{ display: 'block' }}>Build Version: 2.0</p>
+        <p style={{ display: 'block' }}>App Version: 1.3.1</p>
+        <p style={{ display: 'block' }}>Data Version: 1.2</p>
+        <br></br>
 
       </div>
     </div>

@@ -26,17 +26,17 @@
 }
 
 .header-container {
-  background-color: blue; 
+  background-color: #154c79; 
   height: 50px; 
 }
 
 .body-container {
-  background-color: orange; 
+  background-color:#eeeee4; 
   height: 600px; 
 }
 
 .footer-container {
-  background-color:lightblue;
+  background-color: #abdbe3;
   height: 50px; 
   font-size: 13px;
 }

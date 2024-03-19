@@ -1,7 +1,3 @@
-
-
-/* App.css */
-
 /* Style for the outer container */
 .outer-container {
   background-color: black; /* Black background outside the box */
@@ -21,6 +17,7 @@
   display: flex; /* Add display flex to align items */
   flex-direction: column; /* Stack items vertically */
 }
+
 /* Style for the header */
 .header {
   width: 384px; /* Set width to 384px */
@@ -29,7 +26,7 @@
   padding: 0; /* Remove padding */
 }
 
-
+/* Style for the main section */
 .main {
   flex: 1; /* Make the main section take remaining space */
   overflow-y: auto; /* Enable vertical scrolling if needed */
@@ -37,22 +34,24 @@
   padding: 0; /* Remove padding */
 }
 
-/* styles.css */
-
+/* Style for the footer */
 .footer {
   background-color: red; /* Change the background color */
   margin: 0; /* Remove margin */
   padding: 0; /* Remove padding */
 }
 
+/* Style for footer links */
+.footer-link {
+  color: white; /* Set text color */
+  text-decoration: none; /* Remove default underline */
+  padding: 10px; /* Add padding for spacing */
+}
 
-
-
-
-
-
-
-/* App.css */
+/* Style for footer links on hover */
+.footer-link:hover {
+  text-decoration: underline; /* Underline text on hover */
+}
 
 /* Style for the buttons container */
 .card {
@@ -61,7 +60,7 @@
   align-items: center;
 }
 
-
+/* Style for the buttons */
 .card button {
   height: 50px; /* Set height to 50px */
   width: calc(384px / 4);
@@ -72,9 +71,8 @@
   color: white;
 }
 
+/* Style for button hover */
 .card button:hover {
   background-color: white;
   color: #501b1d;
 }
-
-

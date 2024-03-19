@@ -1,14 +1,13 @@
-// Screen1.jsx
+// pages/Page_Home.jsx
 import React from 'react';
 import '../App.css'; // Import your CSS file for styling
-
-function page_Home({ headerText }) {
+const Page_Home = () => {
   return (
-    <div className="screen-container">
-      <h2>Screen 1 Content</h2>
-      <p>{headerText}</p>
+    <div>
+      {/* Your home page content goes here */}
+      <h1>Welcome to Home Page</h1>
     </div>
   );
-}
+};
 
-export default page_Home;
+export default Page_Home;

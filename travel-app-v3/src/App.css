@@ -1,78 +1,74 @@
-/* Style for the outer container */
+/* CONTAINER RELATED CSS */
+
 .outer-container {
   background-color: black; /* Black background outside the box */
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  padding: 0; /* Remove padding */
 }
 
-/* Style for the inner container */
 .mobile-container {
+  width: 384px;
+  height: 700px;
+  padding: 0; /* Remove padding */
   background-color: grey; /* White background inside the box */
-  width: 384px; /* Set width to 384px */
-  height: 700px; /* Set height to 700px */
-  padding: 0; /* Remove padding */
-  display: flex; /* Add display flex to align items */
-  flex-direction: column; /* Stack items vertically */
+  display: flex;
+  flex-direction: column;
 }
 
-/* Style for the header */
-.header {
-  width: 384px; /* Set width to 384px */
-  height: 50px; /* Set height to 100px */
-  background-color: lightblue; /* Example background color */
-  padding: 0; /* Remove padding */
-}
-
-/* Style for the main section */
-.main {
-  flex: 1; /* Make the main section take remaining space */
-  overflow-y: auto; /* Enable vertical scrolling if needed */
-  height: 600px; /* Set height to 100px */
-  padding: 0; /* Remove padding */
-}
-
-/* Style for the footer */
-.footer {
-  background-color: red; /* Change the background color */
+.header-container,
+.body-container,
+.footer-container {
+  width: 384px; 
+  padding: 0; 
   margin: 0; /* Remove margin */
-  padding: 0; /* Remove padding */
 }
 
-/* Style for footer links */
-.footer-link {
-  color: white; /* Set text color */
-  text-decoration: none; /* Remove default underline */
-  padding: 10px; /* Add padding for spacing */
+.header-container {
+  background-color: blue; 
+  height: 50px; 
 }
 
-/* Style for footer links on hover */
-.footer-link:hover {
-  text-decoration: underline; /* Underline text on hover */
+.body-container {
+  background-color: orange; 
+  height: 600px; 
 }
 
-/* Style for the buttons container */
-.card {
+.footer-container {
+  background-color:lightblue;
+  height: 50px; 
+  font-size: 13px;
+}
+
+
+/* ALL BUTTONS  */
+/* Style for button hover */
+.footer-button button:hover {
+  background-color: white;
+  color: black;
+}
+
+/* FOOTER RELATED  */
+/* Style for the buttons */
+.footer-button {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* Style for the buttons */
-.card button {
-  height: 50px; /* Set height to 50px */
-  width: calc(384px / 4);
-  padding: 0; /* Remove padding */
-  margin: 0; /* Remove margin */
-  border: none;
-  background-color: brown;
-  color: white;
+.footer-button button {
+  width: calc(384px/4); /* Adjust width as needed */
+  height: 50px;
+  background-color: transparent;
+  border: 1px solid white; /* White border */
+  color: black;
+  font-size: 13px;
+  cursor: pointer;
 }
 
-/* Style for button hover */
-.card button:hover {
-  background-color: white;
-  color: #501b1d;
+.footer-button-with-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

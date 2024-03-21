@@ -23,24 +23,24 @@ export default function page_Home() {
       };
 
     return (
-    <div class="helpPage-container" style = {containerStyle}> 
+    <div className="helpPage-container" style = {containerStyle}> 
 
-        <div class="logo-field">
+        <div className="logo-field">
             <img src={whereLogo} alt="whereLogo" className="whereLogo" 
             style={{ width: '100px', height: 'auto' }}
             />
         </div>
-        <div class="weather-image-field">
+        <div className="weather-image-field">
             <img src={weatherImage} alt="weatherImage" className="weatherImage" 
             style={{ width: '350px', height: 'auto' }}
             />
         </div>
-        <div class="weather-button-field">
+        <div className="weather-button-field">
             <button>
                 WeatherNetwork.ca
             </button>
         </div>
-        <div class="help-field" style={spaceBetweenStyle}>
+        <div className="help-field" style={spaceBetweenStyle}>
             <button style = {helpButtonStyle}>
                 Help
             </button>

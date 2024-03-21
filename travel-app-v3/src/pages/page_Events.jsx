@@ -6,12 +6,31 @@ import PageEventsSearch from './page_Events_filter'; // Import the component con
 
 export default function Page_Events() {
   const [showSearchContainer, setShowSearchContainer] = useState(false);
+  const [showEventsWrapper, setShowEventsWrapper] = useState(true); // Initially set to true
+  const [eventsWrapperMaxHeight, setEventsWrapperMaxHeight] = useState('525px'); // Default max-height
+  const [eventsWrapperOverflow, setEventsWrapperOverflow] = useState('auto'); // Default overflow
+  const [locationFilter, setLocationFilter] = useState(null); // State to store the selected location filter
+
+  const events = [
+    { date: '13', month: 'April', title: 'Open Mic Event', time: '8:00pm - 8:30pm', location: 'Koi Bar | Calgary, AB' },
+    { date: '14', month: 'April', title: 'Calgary Tower Tour', time: '2:00pm - 3:00pm', location: 'Calgary Tower | Calgary, AB' },
+    // Add more events here...
+  ];
 
   const toggleSearchContainer = () => {
     setShowSearchContainer(prevState => !prevState);
   };
 
+  const toggleEventsWrapper = () => {
+    setShowEventsWrapper(prevState => !prevState);
+    // Update max-height and overflow based on showEventsWrapper state
+    setEventsWrapperMaxHeight(prevState => (prevState === '525px' ? '150px' : '525px'));
+    setEventsWrapperOverflow(prevState => (prevState === 'auto' ? 'hidden' : 'auto'));
+  };
 
+  const handleLocationFilter = (location) => {
+    setLocationFilter(location);
+  };
 
   return (
     <div>
@@ -28,108 +47,32 @@ export default function Page_Events() {
         </button>
       </div>
       {/* Conditionally render the search container based on state */}
-      {showSearchContainer && <PageEventsSearch />}
-      <div className="events-wrapper">
-        <div className="event-container">
-            <div className="event-date">
+      {showSearchContainer && <PageEventsSearch handleLocationFilter={handleLocationFilter} />}
+      <div className="events-wrapper" style={{ maxHeight: eventsWrapperMaxHeight, overflow: eventsWrapperOverflow }}>
+        {events.map((event, index) => {
+          // Apply location filter if set
+          if (locationFilter && !event.location.includes(locationFilter)) {
+            return null; // Skip rendering this event if it doesn't match the location filter
+          }
+          return (
+            <div className="event-container" key={index}>
+              <div className="event-date">
                 <div className="date-number">
-                    <h1>13</h1>
+                  <h1>{event.date}</h1>
                 </div>
                 <div className="month">
-                    <h2>April</h2>
+                  <h2>{event.month}</h2>
                 </div>
+              </div>
+              <div className="event-title">
+                <h1>{event.title}</h1>
+                <p>{event.time}</p>
+                <p>{event.location}</p>
+              </div>
+              <button className="details-button">View</button>
             </div>
-            <div className="event-title">
-                <h1>Open Mic Event</h1>
-                <p>8:00pm - 8:30pm</p>
-                <p>Koi Bar | Calgary, AB</p>
-            </div>
-            <button className="details-button">View</button>
-        </div>
-        <div className="event-container">
-            <div className="event-date">
-                <div className="date-number">
-                    <h1>14</h1>
-                </div>
-                <div className="month">
-                    <h2>April</h2>
-                </div>
-            </div>
-            <div className="event-title">
-                <h1>Calgary Tower Tour</h1>
-                <p>2:00pm - 3:00pm</p>
-                <p>Calgary Tower | Calgary, AB</p>
-            </div>
-            <button className="details-button">View</button>
-        </div>
-        <div className="event-container">
-            <div className="event-date">
-                <div className="date-number">
-                    <h1>16</h1>
-                </div>
-                <div className="month">
-                    <h2>April</h2>
-                </div>
-            </div>
-            <div className="event-title">
-                <h1>Calgary Flames Game</h1>
-                <p>7:00pm - 10:00pm</p>
-                <p>Scotiabank Saddledome | Calgary, AB</p>
-            </div>
-            <button className="details-button">View</button>
-        </div>
-        {/* Repeat the event-container for each event */}
-        <div className="event-container">
-            <div className="event-date">
-                <div className="date-number">
-                    <h1>16</h1>
-                </div>
-                <div className="month">
-                    <h2>April</h2>
-                </div>
-            </div>
-            <div className="event-title">
-                <h1>Calgary Flames Game</h1>
-                <p>7:00pm - 10:00pm</p>
-                <p>Scotiabank Saddledome | Calgary, AB</p>
-            </div>
-            <button className="details-button">View</button>
-        </div>
-
-        <div className="event-container">
-            <div className="event-date">
-                <div className="date-number">
-                    <h1>16</h1>
-                </div>
-                <div className="month">
-                    <h2>April</h2>
-                </div>
-            </div>
-            <div className="event-title">
-                <h1>Calgary Flames Game</h1>
-                <p>7:00pm - 10:00pm</p>
-                <p>Scotiabank Saddledome | Calgary, AB</p>
-            </div>
-            <button className="details-button">View</button>
-        </div>
-
-        <div className="event-container">
-            <div className="event-date">
-                <div className="date-number">
-                    <h1>16</h1>
-                </div>
-                <div className="month">
-                    <h2>April</h2>
-                </div>
-            </div>
-            <div className="event-title">
-                <h1>Calgary Flames Game</h1>
-                <p>7:00pm - 10:00pm</p>
-                <p>Scotiabank Saddledome | Calgary, AB</p>
-            </div>
-            <button className="details-button">View</button>
-        </div>
-
+          );
+        })}
       </div>
     </div>
   );

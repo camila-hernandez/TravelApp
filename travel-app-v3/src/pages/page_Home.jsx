@@ -40,7 +40,7 @@ export default function page_Home() {
                 WeatherNetwork.ca
             </button>
         </div>
-        <div className="help-field" style={spaceBetweenStyle}>
+        <div class="help-field" style={spaceBetweenStyle}>
             <button style = {helpButtonStyle}>
                 Help
             </button>

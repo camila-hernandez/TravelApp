@@ -1,7 +1,7 @@
 import {useState} from "react";
-import whereLogo from '../assets/WhereLogoGreen.png';
-import weatherImage from '../assets/WeatherPic.png';
-import backgroundImage from '../assets/CalgaryBackground.png';
+import whereLogo from '../../assets/WhereLogoGreen.png';
+import weatherImage from '../../assets/WeatherPic.png';
+import backgroundImage from '../../assets/CalgaryBackground.png';
 
 export default function homePage() {
     const containerStyle = {

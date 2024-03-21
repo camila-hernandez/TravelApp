@@ -44,35 +44,43 @@
 
 /* ALL BUTTONS  */
 /* Style for button hover */
-.footer-button button:hover {
+/* .footer-button button:hover {
   background-color: white;
   color: black;
-}
+} */
 
 /* FOOTER RELATED  */
 /* Style for the buttons */
 .footer-button {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  background-color: #f0f0f0; /* Set background color for the footer */
 }
 
 .footer-button button {
   width: calc(384px/4); /* Adjust width as needed */
   height: 50px;
-  background-color: transparent;
+  background-color: lightslategray;
   border: 1px solid white; /* White border */
   color: black;
   font-size: 13px;
   cursor: pointer;
-}
-
-.footer-button-with-image {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+.footer-button button.active {
+  color: white; /* Set text color for active button */
+  background-color: red; /* Set text color for active button */
+}
+
+.footer-button button img {
+  width: 30px;
+  height: auto;
+  margin-bottom: 5px; /* Add margin below the image */
+}
 
 
 

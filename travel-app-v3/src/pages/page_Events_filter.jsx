@@ -34,7 +34,7 @@ export default function page_Events_filter() {
   };
 
   const [exclusiveFilters, setExclusiveFilters] = useState({
-    when: "Today",
+    // when: "Today",
     // what: "All",
     where: "All",
     ages: "All Ages",
@@ -67,8 +67,6 @@ export default function page_Events_filter() {
         <div className="filter-type">
             <h1>WHEN</h1>
             <div className="filter-list">
-
-
             <u className={exclusiveFilters.when === "Today" ? "active" : ""}        onClick={() => handleFilterClick("when", "Today")}>Today</u>
             <u className={exclusiveFilters.when === "Tomorrow" ? "active" : ""}        onClick={() => handleFilterClick("when", "Tomorrow")}>Tomorrow</u>
             <u className={exclusiveFilters.when === "This Week" ? "active" : ""}        onClick={() => handleFilterClick("when", "This Week")}>This Week</u>
@@ -120,8 +118,6 @@ export default function page_Events_filter() {
             </div>
         </div>
       </div>
-
-
     </div>
   );
 }

@@ -12,8 +12,16 @@ export default function Page_Events() {
   const [locationFilter, setLocationFilter] = useState(null); // State to store the selected location filter
 
   const events = [
-    { date: '13', month: 'April', title: 'Open Mic Event', time: '8:00pm - 8:30pm', location: 'Koi Bar | Calgary, AB' },
-    { date: '14', month: 'April', title: 'Calgary Tower Tour', time: '2:00pm - 3:00pm', location: 'Calgary Tower | Calgary, AB' },
+    { date: '13', month: 'Apr', title: 'CPSC481 Demonstration', time: '7:00pm - 9:30pm', location: 'University of Calgary', quadrant: 'NW', city: 'Calgary'},
+    { date: '14', month: 'Apr', title: 'Free Public Skating', time: '9:00am - 3:00pm', location: 'Bowness Community Association', quadrant: 'NW', city: 'Calgary'},
+    { date: '25', month: 'Apr', title: 'I-See-Food: the Musical', time: '2:00pm - 3:00pm', location: '3320 Sunridge Way NE', quadrant: 'NE', city: 'Calgary'},
+    { date: '16', month: 'Apr', title: 'Guest Speaker: Ted Lasso', time: '2:00pm - 4:00pm', location: 'Marlborough Mall', quadrant: 'NE', city: 'Calgary'},
+    { date: '17', month: 'Apr', title: 'Calgary Tower Tour', time: '2:00pm - 3:00pm', location: 'Calgary Tower', quadrant: 'Downtown', city: 'Calgary'},
+    { date: '18', month: 'Apr', title: 'Open Mic Event', time: '8:00pm - 9:00pm', location: 'Koi Bar', quadrant: 'Downtown', city: 'Calgary'},
+    { date: '19', month: 'Apr', title: 'Pre-Pre-Pre-Pre-Calgary Stampede', time: 'All Day', location: 'Big Four, Stampede Grounds', quadrant: 'SW', city: 'Calgary'},
+    { date: '20', month: 'Apr', title: 'Free Food Giveaway (NOT A SCAM)', time: '2:00pm - 3:00pm', location: 'Sue Higgins Park', quadrant: 'SE', city: 'Calgary'},
+    { date: '21', month: 'Apr', title: 'Shawnessy Festival', time: '10:00pm - 7:00pm', location: '22 Midlake Blvd SE', quadrant: 'SW', city: 'Calgary'},
+    { date: '22', month: 'Apr', title: 'Hoods Up: Vintage Cars', time: 'April 22 - May 16', location: 'Heritage Park', quadrant: 'SW', city: 'Calgary'},   
     // Add more events here...
   ];
 
@@ -67,7 +75,7 @@ export default function Page_Events() {
               <div className="event-title">
                 <h1>{event.title}</h1>
                 <p>{event.time}</p>
-                <p>{event.location}</p>
+                <p>{event.location} | {event.quadrant}</p>
               </div>
               <button className="details-button">View</button>
             </div>

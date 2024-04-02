@@ -1,0 +1,225 @@
+.search {
+    margin-left: 10px;
+    width: 95%;
+    display: inline-flex;
+    margin-top: 5px;
+  }
+  
+  .searchTerm {
+    margin-top: 10px;
+    width: 100%;
+    border-radius: 25px;
+    border: 3px solid #ffffff;
+    height: 30px;
+    background-color: #ffffff;
+    margin-right: 10px;
+    padding-left: 10px;
+    outline: none;
+  }
+  
+  .searchTerm:focus {
+    color: #501b1d;
+  }
+  
+  .searchButton {
+    width: 50px;
+    height: 40px;
+    border: 1px solid #ffffff;
+    background: #ffffff;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .searchButton:hover {
+    border: 1px solid #ffffff;
+  }
+  
+  .searchIcon {
+    color: #501b1d;
+  }
+  
+  .event-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 15px;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: #501b1d;
+    font-family: "DM-Sans", sans-serif;
+    padding: 10px;
+  }
+  
+  .event-date {
+    text-align: center;
+    margin-left: 10px;
+  }
+  
+  .event-date h1 {
+    font-size: 25px;
+    font-weight: 400;
+    margin-bottom: 0;
+  }
+  
+  .event-date h2 {
+    font-size: 14px;
+    margin-top: 0;
+  }
+  
+  .month {
+    font-size: 16px;
+  }
+  
+  .event-title {
+    text-align: center; /* Align event title text to the left */
+    flex-grow: 1; /* Allow the event title to expand and fill the available space */
+    margin-left: 10px;
+    margin-right: 10px;
+    width: calc(100% - 110px);
+  }
+  .event-title h1 {
+    font-size: 20px;
+    margin: 2px; /* Remove default margin */
+  }
+  
+  .event-title p {
+    color: #501b1d;
+    font-size: 14px;
+    margin: 0; /* Remove default margin */
+  }
+  
+  .details-button {
+    height: 40px;
+    width: 50px; /* Fixed width for the button */
+    padding: 0px;
+    background-color: #501b1d;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid #501b1d;
+  }
+  
+  .add-event {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px;
+  }
+  
+  .add-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    background-color: #501b1d;
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .add-button:hover {
+    border: 1px solid #501b1d;
+  }
+  
+  .filter-container {
+    text-align: left;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #2e1114;
+    position: absolute;
+    z-index: 1; /* Ensure it's above other elements */
+    width:300px;
+  }
+  
+  .filter-container h1 {
+    color: white;
+    font-size: medium;
+    margin-top: -10px;
+  }
+  
+  .filter-type {
+    margin-top: 20px;
+  }
+  
+  .filter-type h1 {
+    margin-bottom: 5px;
+  }
+  
+  .filter-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    
+  }
+
+  .filter-list u {
+    cursor: pointer;
+    text-decoration: none;
+    margin-right: 15px;
+    color: white;
+    font-size: small;
+
+  }
+  
+  .filter-list u.active {
+    background-color: red;
+    color: white;
+    border-radius: 5px; /* Adjust the value as needed for the desired curve */
+  }
+  
+  
+  .filter-button-container {
+    display: flex;
+    justify-content: flex-start;
+    margin: 10px;
+  }
+  
+  .filter-button {
+    padding: 10px;
+    color: #501b1d;
+    background-color: white;
+    font-size: 15px;
+    border: 1px solid white;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .events-wrapper {
+    max-height: 525px;
+    overflow-y: auto;
+  }
+  
+  /* Styles for the scrollbar */
+  .events-wrapper::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+  }
+  
+  /* Track */
+  .events-wrapper::-webkit-scrollbar-track {
+    background: transparent; /* Make the track transparent */
+  }
+  
+  /* Handle */
+  .events-wrapper::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2); /* Color of the scrollbar handle */
+    border-radius: 5px; /* Rounded corners for the scrollbar handle */
+  }
+  
+  /* Handle on hover */
+  .events-wrapper::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.4); /* Darker color on hover */
+  }
+
+
+  

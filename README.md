@@ -1,4 +1,19 @@
-# CPSC481
+# Travel App 
+
+
+## EDIT FOR AFTER OVERVIEW - INSTALL THE FOLLOWING
+
+> npm install --save @fortawesome/react-fontawesome
+
+> npm install --save @fortawesome/free-solid-svg-icons
+
+> npm install react-modal
+
+
+
+
+
+
 
 ## Overview
 
@@ -60,10 +75,11 @@ If it doesn't open automatically, you can manually visit link provided.
 NOTE 1: When you make changes + save, it should reflect in the website!
 NOTE 2: if your react crashes,run this in new terminal
 
-CTRL-C to stop 
+CTRL-C to stop
+
 > npm run dev
 
-END //
+
 
 ## How to set up own screens
 

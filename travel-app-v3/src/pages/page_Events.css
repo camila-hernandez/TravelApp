@@ -125,6 +125,7 @@
     color: #fff;
     border-radius: 50%;
     cursor: pointer;
+    border: 1px solid #501b1d;
   }
   
   .add-button:hover {
@@ -198,6 +199,58 @@
   .events-wrapper {
     max-height: 525px;
     overflow-y: auto;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Darkened background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+  }
+
+  .confirmation-message {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-family: "DM-Sans", sans-serif;
+  }
+
+  .confirmation-message p {
+    margin-bottom: 20px;
+    color: #501B1D;
+  }
+  
+  .confirmation-box button {
+    margin: 0 10px;
+    height: 20px;
+  }
+
+  .confirm-button {
+    color: #ffffff;
+    background-color: #501B1D;
+    border: 1px solid #501B1D;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .cancel-button {
+    color: #ffffff;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .confirmation-box {
+    height: 90px;
+    width: 250px;
   }
   
   /* Styles for the scrollbar */

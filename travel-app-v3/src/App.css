@@ -12,7 +12,7 @@
   width: 384px;
   height: 700px;
   padding: 0; /* Remove padding */
-  background-color: grey; /* White background inside the box */
+  background-color: #eeeee4; /* White background inside the box */
   display: flex;
   flex-direction: column;
 }
@@ -27,12 +27,19 @@
 
 .header-container {
   background-color: #154c79; 
-  height: 50px; 
+  height: 50px;
+  font-family: "DM-Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 12px;
 }
 
 .body-container {
   background-color:#eeeee4; 
-  height: 600px; 
+  height: 600px;
+  margin-bottom:50px;
 }
 
 .footer-container {
@@ -62,7 +69,7 @@
   width: calc(384px/4); /* Adjust width as needed */
   height: 50px;
   background-color: lightslategray;
-  border: 1px solid white; /* White border */
+  border: 1px solid black; /* White border */
   color: black;
   font-size: 13px;
   cursor: pointer;
@@ -73,7 +80,7 @@
 
 .footer-button button.active {
   color: white; /* Set text color for active button */
-  background-color: red; /* Set text color for active button */
+  background-color: #501B1D; /* Set text color for active button */
 }
 
 .footer-button button img {

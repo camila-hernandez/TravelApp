@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMagnifyingGlass, faArrowDownShortWide} from "@fortawesome/free-solid-svg-icons";
+import { faMagnifyingGlass, faArrowDownShortWide, faPlus } from "@fortawesome/free-solid-svg-icons";
 import "./page_Events.css";
 import PageEventsSearch from './page_Events_filter'; // Import the component containing search content
 
@@ -11,6 +11,8 @@ export default function Page_Events() {
   const [eventsWrapperOverflow, setEventsWrapperOverflow] = useState('auto'); // Default overflow
   const [locationFilter, setLocationFilter] = useState(null); // State to store the selected location filter
   const [searchQuery, setSearchQuery] = useState(''); // State to store the search query
+  const [showPopup, setShowPopup] = useState(false); // State to manage popup visibility
+  const [selectedEvent, setSelectedEvent] = useState(null);
 
   const events = [
     { date: '13', month: 'Apr', title: 'CPSC481 Demonstration', time: '7:00pm - 9:30pm', location: 'University of Calgary', quadrant: 'NW', city: 'Calgary'},
@@ -46,15 +48,21 @@ export default function Page_Events() {
     setSearchQuery(value);
   };
 
+  const handleAddEventClick = (event) => {
+    // Show popup when add button is clicked
+    setShowPopup(true);
+    setSelectedEvent(event);
+  };
+
   return (
     <div>
       <div className="search">
-        <input 
-          type="text" 
-          className="searchTerm" 
-          placeholder="Search..." 
+        <input
+          type="text"
+          className="searchTerm"
+          placeholder="Search..."
           value={searchQuery}
-          onChange={handleSearchInputChange} 
+          onChange={handleSearchInputChange}
         />
         <button type="submit" className="searchButton">
           <FontAwesomeIcon icon={faMagnifyingGlass} className="searchIcon" />
@@ -62,8 +70,8 @@ export default function Page_Events() {
       </div>
       <div className="filter-button-container">
         <button type="submit" className="filter-button" onClick={toggleSearchContainer}>
-            Filter&nbsp;
-            <FontAwesomeIcon icon={faArrowDownShortWide} />
+          Filter&nbsp;
+          <FontAwesomeIcon icon={faArrowDownShortWide} />
         </button>
       </div>
       {/* Conditionally render the search container based on state */}
@@ -87,6 +95,11 @@ export default function Page_Events() {
                 <div className="month">
                   <h2>{event.month}</h2>
                 </div>
+                <div className="add-event">
+                  <button className="add-button" onClick={() => handleAddEventClick(event)}>
+                    <FontAwesomeIcon icon={faPlus} className="plusIcon" />
+                  </button>
+                </div>
               </div>
               <div className="event-title">
                 <h1>{event.title}</h1>
@@ -97,6 +110,18 @@ export default function Page_Events() {
             </div>
           ))}
       </div>
+      {/* Popup component */}
+      {showPopup && (
+        <div className="overlay">
+          <div className="confirmation-message">
+            <div className="confirmation-box">
+                <p>Are you sure you want to add "{selectedEvent.title}" to your calendar?</p>
+                <button class="confirm-button">Confirm</button>
+                <button onClick={() => setShowPopup(false)} class="cancel-button">Cancel</button>
+            </div>
+        </div>
+    </div>
+      )}
     </div>
   );
 }

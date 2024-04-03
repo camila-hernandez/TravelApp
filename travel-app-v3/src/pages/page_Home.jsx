@@ -10,7 +10,7 @@ export default function page_Home() {
         backgroundSize: 'cover', // Adjust as needed
         backgroundPosition: 'center', // Adjust as needed
         position: 'relative', // Required for z-index to work
-        height: '600px'
+        height: '650px'
     };
 
     return (

@@ -60,7 +60,7 @@ export default function page_Events_filter() {
     }
   };
   
-  
+
   return (
     <div>
       <div className="filter-container">

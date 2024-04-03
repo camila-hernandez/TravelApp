@@ -139,8 +139,9 @@
     border-radius: 10px;
     background-color: #2e1114;
     position: absolute;
-    z-index: 1; /* Ensure it's above other elements */
+    z-index: 1;
     width:300px;
+    font-family: "DM-Sans", sans-serif;
   }
   
   .filter-container h1 {
@@ -174,9 +175,9 @@
   }
   
   .filter-list u.active {
-    background-color: red;
     color: white;
     border-radius: 5px; /* Adjust the value as needed for the desired curve */
+    text-decoration: underline;
   }
   
   

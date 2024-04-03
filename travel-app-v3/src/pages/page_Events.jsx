@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass, faArrowDownShortWide, faPlus } from "@fortawesome/free-solid-svg-icons";
 import "./page_Events.css";
@@ -13,20 +13,28 @@ export default function Page_Events() {
   const [searchQuery, setSearchQuery] = useState(''); // State to store the search query
   const [showPopup, setShowPopup] = useState(false); // State to manage popup visibility
   const [selectedEvent, setSelectedEvent] = useState(null);
+  const [events, setEvents] = useState(() => {
+    // Retrieve events from localStorage or use default events if not available
+    const storedEvents = localStorage.getItem('events');
+    return storedEvents ? JSON.parse(storedEvents) : [
+      { date: '13', month: 'Apr', title: 'CPSC481 Demonstration', time: '7:00pm - 9:30pm', location: 'University of Calgary', quadrant: 'NW', city: 'Calgary'},
+      { date: '14', month: 'Apr', title: 'Free Public Skating', time: '9:00am - 3:00pm', location: 'Bowness Community Association', quadrant: 'NW', city: 'Calgary'},
+      { date: '25', month: 'Apr', title: 'I-See-Food: the Musical', time: '2:00pm - 3:00pm', location: '3320 Sunridge Way NE', quadrant: 'NE', city: 'Calgary'},
+      { date: '16', month: 'Apr', title: 'Guest Speaker: Ted Lasso', time: '2:00pm - 4:00pm', location: 'Marlborough Mall', quadrant: 'NE', city: 'Calgary'},
+      { date: '17', month: 'Apr', title: 'Calgary Tower Tour', time: '2:00pm - 3:00pm', location: 'Calgary Tower', quadrant: 'Downtown', city: 'Calgary'},
+      { date: '18', month: 'Apr', title: 'Open Mic Event', time: '8:00pm - 9:00pm', location: 'Koi Bar', quadrant: 'Downtown', city: 'Calgary'},
+      { date: '19', month: 'Apr', title: 'Pre-Pre-Pre-Pre-Calgary Stampede', time: 'All Day', location: 'Big Four, Stampede Grounds', quadrant: 'SW', city: 'Calgary'},
+      { date: '20', month: 'Apr', title: 'Free Food Giveaway (NOT A SCAM)', time: '2:00pm - 3:00pm', location: 'Sue Higgins Park', quadrant: 'SE', city: 'Calgary'},
+      { date: '21', month: 'Apr', title: 'Shawnessy Festival', time: '10:00pm - 7:00pm', location: '22 Midlake Blvd SE', quadrant: 'SW', city: 'Calgary'},
+      { date: '22', month: 'Apr', title: 'Hoods Up: Vintage Cars', time: 'April 22 - May 16', location: 'Heritage Park', quadrant: 'SW', city: 'Calgary'},   
+      // Add more events here...
+    ];
+  });
 
-  const events = [
-    { date: '13', month: 'Apr', title: 'CPSC481 Demonstration', time: '7:00pm - 9:30pm', location: 'University of Calgary', quadrant: 'NW', city: 'Calgary'},
-    { date: '14', month: 'Apr', title: 'Free Public Skating', time: '9:00am - 3:00pm', location: 'Bowness Community Association', quadrant: 'NW', city: 'Calgary'},
-    { date: '25', month: 'Apr', title: 'I-See-Food: the Musical', time: '2:00pm - 3:00pm', location: '3320 Sunridge Way NE', quadrant: 'NE', city: 'Calgary'},
-    { date: '16', month: 'Apr', title: 'Guest Speaker: Ted Lasso', time: '2:00pm - 4:00pm', location: 'Marlborough Mall', quadrant: 'NE', city: 'Calgary'},
-    { date: '17', month: 'Apr', title: 'Calgary Tower Tour', time: '2:00pm - 3:00pm', location: 'Calgary Tower', quadrant: 'Downtown', city: 'Calgary'},
-    { date: '18', month: 'Apr', title: 'Open Mic Event', time: '8:00pm - 9:00pm', location: 'Koi Bar', quadrant: 'Downtown', city: 'Calgary'},
-    { date: '19', month: 'Apr', title: 'Pre-Pre-Pre-Pre-Calgary Stampede', time: 'All Day', location: 'Big Four, Stampede Grounds', quadrant: 'SW', city: 'Calgary'},
-    { date: '20', month: 'Apr', title: 'Free Food Giveaway (NOT A SCAM)', time: '2:00pm - 3:00pm', location: 'Sue Higgins Park', quadrant: 'SE', city: 'Calgary'},
-    { date: '21', month: 'Apr', title: 'Shawnessy Festival', time: '10:00pm - 7:00pm', location: '22 Midlake Blvd SE', quadrant: 'SW', city: 'Calgary'},
-    { date: '22', month: 'Apr', title: 'Hoods Up: Vintage Cars', time: 'April 22 - May 16', location: 'Heritage Park', quadrant: 'SW', city: 'Calgary'},   
-    // Add more events here...
-  ];
+  useEffect(() => {
+    // Update localStorage whenever events change
+    localStorage.setItem('events', JSON.stringify(events));
+  }, [events]);
 
   const toggleSearchContainer = () => {
     setShowSearchContainer(prevState => !prevState);
@@ -52,6 +60,14 @@ export default function Page_Events() {
     // Show popup when add button is clicked
     setShowPopup(true);
     setSelectedEvent(event);
+  };
+
+  const handleConfirmAddEvent = () => {
+    // Remove selected event from events array
+    const updatedEvents = events.filter(ev => ev !== selectedEvent);
+    setEvents(updatedEvents);
+    // Close popup
+    setShowPopup(false);
   };
 
   return (
@@ -116,11 +132,11 @@ export default function Page_Events() {
           <div className="confirmation-message">
             <div className="confirmation-box">
                 <p>Are you sure you want to add "{selectedEvent.title}" to your calendar?</p>
-                <button class="confirm-button">Confirm</button>
-                <button onClick={() => setShowPopup(false)} class="cancel-button">Cancel</button>
+                <button className="confirm-button" onClick={handleConfirmAddEvent}>Confirm</button>
+                <button onClick={() => setShowPopup(false)} className="cancel-button">Cancel</button>
             </div>
+          </div>
         </div>
-    </div>
       )}
     </div>
   );

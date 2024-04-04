@@ -5,11 +5,18 @@ import "./page_Events.css";
 import PageEventsSearch from './page_Events_filter'; // Import the component containing search content
 
 export default function Page_Events() {
+  const [inclusiveFilters, setInclusiveFilters] = useState({
+    when: [],
+    what: [],
+    where: [],
+    ages: [],
+    admission: []
+  });
   const [showSearchContainer, setShowSearchContainer] = useState(false);
   const [showEventsWrapper, setShowEventsWrapper] = useState(true); // Initially set to true
   const [eventsWrapperMaxHeight, setEventsWrapperMaxHeight] = useState('525px'); // Default max-height
   const [eventsWrapperOverflow, setEventsWrapperOverflow] = useState('auto'); // Default overflow
-  const [locationFilter, setLocationFilter] = useState(null); // State to store the selected location filter
+  const [locationFilter, setLocationFilter] = useState("All"); // State to store the selected location filter (Default: All)
   const [searchQuery, setSearchQuery] = useState(''); // State to store the search query
   const [showPopup, setShowPopup] = useState(false); // State to manage popup visibility
   const [selectedEvent, setSelectedEvent] = useState(null);
@@ -69,7 +76,7 @@ export default function Page_Events() {
     // Close popup
     setShowPopup(false);
   };
-
+console.log(inclusiveFilters);
   return (
     <div>
       <div className="search">
@@ -91,14 +98,12 @@ export default function Page_Events() {
         </button>
       </div>
       {/* Conditionally render the search container based on state */}
-      {showSearchContainer && <PageEventsSearch handleLocationFilter={handleLocationFilter} />}
+      {showSearchContainer && <PageEventsSearch 
+          inclusiveFilters={inclusiveFilters}
+          setInclusiveFilters={setInclusiveFilters}/>}
       <div className="events-wrapper" style={{ maxHeight: eventsWrapperMaxHeight, overflow: eventsWrapperOverflow }}>
         {events
           .filter(event => {
-            // Filter by location if location filter is set
-            if (locationFilter && !event.location.includes(locationFilter)) {
-              return false;
-            }
             // Filter by search query
             return event.title.toLowerCase().includes(searchQuery.toLowerCase());
           })

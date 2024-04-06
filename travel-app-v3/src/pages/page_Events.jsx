@@ -242,6 +242,17 @@ export default function Page_Events() {
             </div>
           ))}
       </div>
+        {events.filter(event => {
+      return event.title.toLowerCase().includes(searchQuery.toLowerCase()) &&
+        (!startDate || new Date(event.month + ' ' + event.date + ', 2024') >= new Date(startDate)) &&
+        (!endDate || new Date(event.month + ' ' + event.date + ', 2024') <= new Date(endDate)) &&
+        (selectedQuadrant === "All" || event.quadrant === selectedQuadrant) &&
+        (selectedType === "All" || event.type === selectedType);
+    }).length === 0 && (
+      <div className="no-events-message">
+        <p>Sorry, there are no events that match your search. Please try again.</p>
+      </div>
+    )}
       {/* Popup component */}
       {showPopup && (
         <div className="overlay">

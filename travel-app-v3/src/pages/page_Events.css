@@ -332,6 +332,14 @@
     text-align: center;
     width: 100px;
   }
+
+  .no-events-message {
+    text-align: center; /* Center the text horizontally */
+    padding: 10px; /* Add padding around the message */
+    color: #501B1D;
+    font-family: "DM-Sans", sans-serif;
+  }
+
   /* Styles for the scrollbar */
   .events-wrapper::-webkit-scrollbar {
     width: 10px; /* Width of the scrollbar */

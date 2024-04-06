@@ -27,7 +27,6 @@
     border: 1px solid #ffffff;
     background: #ffffff;
     border-radius: 12px;
-    cursor: pointer;
     font-size: 20px;
     display: flex;
     align-items: center;
@@ -253,7 +252,86 @@
     height: 90px;
     width: 250px;
   }
+
+  .date-range {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
   
+  .date-range input[type="date"] {
+    padding: 8px;
+    margin: 0 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+  
+  .calendar-icon,
+  .arrow-right {
+    margin: 0 5px;
+    color: #501B1D;
+    font-size: 20px;
+  }
+
+  .dropdown-filters {
+    text-align: left;
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
+
+  .dropdown-icon {
+    color: white;
+  }
+
+  .dropdown-button {
+    height: 30px;
+    width: 70px; /* Fixed width for the button */
+    padding: 0px;
+    background-color: #501b1d;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid #501b1d;
+    text-align: center;
+  }
+
+  .dropdown-content {
+    margin-top: 5px;
+    margin-right: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #501B1D;
+    color: white;
+    font-family: "DM-Sans", sans-serif;
+    padding: 10px;
+    font-size: small;
+  }
+
+  .quadrant-filter {
+    margin-bottom: 10px;
+  }
+
+  .filter-label,
+  .quadrant-label {
+    margin-right: 10px; /* Adjust the value as needed */
+  }
+  .sort-by {
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
+  .sort-button {
+    height: 30px;
+    width: 70px; /* Fixed width for the button */
+    padding: 0px;
+    background-color: #501b1d;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid #501b1d;
+    text-align: center;
+    width: 100px;
+  }
   /* Styles for the scrollbar */
   .events-wrapper::-webkit-scrollbar {
     width: 10px; /* Width of the scrollbar */

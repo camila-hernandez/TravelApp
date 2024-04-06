@@ -11,9 +11,11 @@
 .mobile-container {
   width: 384px;
   height: 700px;
+  max-height: 700px;
   padding: 0; /* Remove padding */
   background-color: #eeeee4; /* White background inside the box */
   display: flex;
+  height: 100%;
   flex-direction: column;
 }
 
@@ -39,7 +41,7 @@
 .body-container {
   background-color:#eeeee4; 
   height: 600px;
-  margin-bottom:50px;
+  
 }
 
 .footer-container {

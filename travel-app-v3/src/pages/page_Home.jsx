@@ -10,12 +10,12 @@ export default function page_Home() {
         backgroundSize: 'cover', // Adjust as needed
         backgroundPosition: 'center', // Adjust as needed
         position: 'relative', // Required for z-index to work
-        height: '650px'
+        height: '600px'
     };
 
     return (
          <div className="helpPage-container" style = {containerStyle}>
-            <div className="logo-field">
+            <div className="logo-field-main">
                 <img src={whereLogo} alt="whereLogo" className="whereLogo" />
             </div>
             <div className="weather-image-field">

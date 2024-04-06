@@ -197,7 +197,7 @@
   }
   
   .events-wrapper {
-    max-height: 525px;
+    height: 425px;
     overflow-y: auto;
   }
 
@@ -342,7 +342,7 @@
 
   /* Styles for the scrollbar */
   .events-wrapper::-webkit-scrollbar {
-    width: 10px; /* Width of the scrollbar */
+    width: 0px; /* Width of the scrollbar */
   }
   
   /* Track */

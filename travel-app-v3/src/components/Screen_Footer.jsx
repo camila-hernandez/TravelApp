@@ -43,7 +43,7 @@ const Screen_Footer = ({ onHomeClick, onEventsClick, onCalendarClick, onAccountC
       </button>
 
       <button onClick={() => handleButtonClick('CALENDAR')} className={activeButton === 'CALENDAR' ? "footer-button-with-image active" : "footer-button-with-image"}>
-        <span>CALENDAR</span>
+        <span>LANDMARKS</span>
         <img src={EventsLogo} style={{ width: '45px', height: 'auto' }} alt="Calendar" />
       </button>
 

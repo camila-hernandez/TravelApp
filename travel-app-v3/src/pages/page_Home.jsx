@@ -15,7 +15,7 @@ export default function page_Home() {
 
     return (
          <div className="helpPage-container" style = {containerStyle}>
-            <div className="logo-field">
+            <div className="logo-field-main">
                 <img src={whereLogo} alt="whereLogo" className="whereLogo" />
             </div>
             <div className="weather-image-field">

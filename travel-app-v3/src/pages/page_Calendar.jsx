@@ -1,7 +1,7 @@
 // pages/Page_Calendar.jsx
 import React, { useState, useRef } from 'react';
 import '../pages/page_Calendar.css'; // Import your CSS file for styling
-import CalgaryMap from '../assets/CalgaryMap2.jpg';
+import CalgaryMap from '../assets/CalgaryMap35.png';
 import whereLogo from '../assets/CurrentLocationBlack.png';
 
 const Page_Calendar = () => {
@@ -60,39 +60,39 @@ const Page_Calendar = () => {
     // Adjust the offsetX and offsetY to center the map on the specified location
     switch (location) {
       case 'NE':
-        const locX_NE = -90;
-        const locY_NE = 90;
+        const locX_NE = -65;
+        const locY_NE = 135;
         setOffsetX(locX_NE);
         setOffsetY(locY_NE);
-        setZoomLevel(2.5);
+        setZoomLevel(3);
         break;
       case 'SE':
-        const locX_SE = -90
-        const locY_SE = -110
+        const locX_SE = -60
+        const locY_SE = -50
         setOffsetX(locX_SE);
         setOffsetY(locY_SE);
-        setZoomLevel(2.25);
+        setZoomLevel(2.5);
         break;
       case 'SW':
         const locX_SW = 45;
-        const locY_SW = -110;
+        const locY_SW = -50;
         setOffsetX(locX_SW);
         setOffsetY(locY_SW);
         setZoomLevel(2.5);
         break;
       case 'NW':
-        const locX_NW = 90;
-        const locY_NW = 90;
+        const locX_NW = 45;
+        const locY_NW = 135;
         setOffsetX(locX_NW);
         setOffsetY(locY_NW);
-        setZoomLevel(2.5);
+        setZoomLevel(3);
         break;
       case 'Downtown':
-        const locX_Downtown = -10;
-        const locY_Downtown = 25;
+        const locX_Downtown = -20;
+        const locY_Downtown = 50;
         setOffsetX(locX_Downtown);
         setOffsetY(locY_Downtown);
-        setZoomLevel(6);
+        setZoomLevel(7);
         break;
       default:
         // Do nothing

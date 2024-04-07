@@ -34,16 +34,9 @@ const Page_Account = ({ onLogout }) => {
 
   return (
     <div>
-      <h1>Welcome to Account Page</h1>
+      <h1 className="account-header">My Account</h1>
 
       <div className="accountOptions-container">
-        <div className="accountOptions-field-details">
-          <div className="details-container">
-            <h3>Account Details</h3>
-            <br />
-            <p>Email: john.smith@ucalgary.ca</p>
-          </div>
-        </div>
 
         <div className="accountOptions-field-changePassword">
           <button>

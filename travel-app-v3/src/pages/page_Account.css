@@ -1,4 +1,4 @@
-/* page_Account.css */
+/* page_Account.c */
 .accountOptions-container {
     color: grey;
     display: flex;
@@ -289,3 +289,21 @@
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
     z-index: 1; /* Ensure the overlay is on top of other elements */
 }
+
+/* Account Header */
+.account-header {
+  color: #501b1d;
+  font-family: "DM-Sans", sans-serif;
+  margin: 0 auto;
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  font-size: 22.5px;
+  font-weight: bold;
+}
+
+
+
+

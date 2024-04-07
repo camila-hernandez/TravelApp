@@ -159,15 +159,15 @@
 
 /* Optional: add margin between the fields */
   }
-  
+
   .captcha-field label {
     color: white; /* Set text color for the label */
   }
-  
+
   .captcha-field input {
     margin-right: 5px; /* Optional: add space between checkbox and label */
   }
-  
+
   .create-account-field button {
     background-color: #2e1114; /* Dark red color, adjust as needed */
     color: white; /* Set text color for the button */
@@ -178,7 +178,7 @@
     border-radius: 3px; /* Optional: add border-radius for rounded corners */
     font-size: 16px; /* Adjust the font size as needed */
   }
-  
+
   .create-account-field button:hover {
     background-color: red; /* Change color on hover, adjust as needed */
   }

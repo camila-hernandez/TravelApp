@@ -36,10 +36,6 @@ const Page_Account = ({ onLogout }) => {
     <div>
       <h1>Welcome to Account Page</h1>
 
-      <button onClick={openLogOutModal}>
-        Log Out
-      </button>
-
       <div className="accountOptions-container">
         <div className="accountOptions-field-details">
           <div className="details-container">
@@ -58,6 +54,12 @@ const Page_Account = ({ onLogout }) => {
         <div className="accountOptions-field-deleteAccount">
           <button onClick={openDeleteModal}>
             Delete Account
+          </button>
+        </div>
+
+        <div className="accountOptions-field-logOut">
+          <button onClick={openLogOutModal}>
+            Log Out
           </button>
         </div>
       </div>
@@ -84,6 +86,5 @@ const Page_Account = ({ onLogout }) => {
     </div>
   );
 };
-
 
 export default Page_Account;

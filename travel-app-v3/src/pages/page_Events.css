@@ -340,6 +340,19 @@
     font-family: "DM-Sans", sans-serif;
   }
 
+  .reset-button {
+    margin-top: 10px;
+    height: 25px;
+    width: 50px; /* Fixed width for the button */
+    padding: 0px;
+    background-color: white;
+    color: #501B1D;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid #501b1d;
+    text-align: center;
+  }
+
   /* Styles for the scrollbar */
   .events-wrapper::-webkit-scrollbar {
     width: 0px; /* Width of the scrollbar */

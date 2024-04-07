@@ -34,7 +34,14 @@ const Page_Account = ({ onLogout }) => {
 
   return (
     <div>
-      <h1 className="account-header">My Account</h1>
+      <h1 className="account-header">Account Settings</h1>
+
+      <div className="user-info">
+        <h2>Personal Information</h2>
+        <p><b>First Name:</b> John</p>
+        <p><b>Last Name:</b> Smith</p>
+        <p><b>Email:</b> john.smith123@gmail.com</p>
+      </div>
 
       <div className="accountOptions-container">
 

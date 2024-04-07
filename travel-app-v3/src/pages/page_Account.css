@@ -1,107 +1,4 @@
 /* page_Account.c */
-.accountOptions-container {
-    color: grey;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.details-container {
-    background-color: grey; /* Change color as needed */
-    padding: 10px; /* Adjust padding as needed */
-    border-radius: 5px; /* Optional: add border-radius for rounded corners */
-    font-size: 23px;
-}
-
-.accountOptions-field-details {
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 30px;
-    margin-bottom: 25px;
-}
-
-.accountOptions-field-changePassword,
-.accountOptions-field-deleteAccount,
-.accountOptions-field-logOut {
-    padding: 10px;
-    margin-bottom: 10px;
-}
-
-/* Updated styles for the "Change Password" button */
-.accountOptions-field-changePassword button,
-.accountOptions-field-deleteAccount button {
-    width: 300px;
-    font-size: 20px;
-    align-self: center;
-}
-
-.accountOptions-field-logOut button {
-    width: 300px;
-    font-size: 20px;
-    align-self: center;
-    background-color: darkred; /* Change color as needed */
-}
-
-.accountOptions-field-changePassword button:hover,
-.accountOptions-field-deleteAccount button:hover,
-.accountOptions-field-logOut button:hover {
-    background-color: white; /* Change color on hover, adjust as needed */
-    color: black;
-  }
-
-
-/* changePASSWORD */
-
-.changePassword-container{
-    color: #501B1D;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.change-password-header {
-    color: white;
-    font-size: 28px;
-    font-weight: 400;
-    margin-top: 50px;
-}
-
-.change-password-instructions {
-    color: white;
-    font-size: 14px;
-    margin-top: 70px;
-    margin-bottom: 25px;
-}
-
-.changePassword-field-description{
-    color: white;
-    text-emphasis-color: white;
-
-}
-
-.current-password-box-password1,
-.changePassword-box-password1 {
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 10px 80px 10px 10px;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-
-}
-
-.changePassword-field-sendLink{
-    font-size: 14px;
-    color: white;
-    padding: 10px;
-    margin-top: 20px;
-}
-
-
-
 /* CREATE ACCOUNT */
 
 
@@ -290,7 +187,7 @@
     z-index: 1; /* Ensure the overlay is on top of other elements */
 }
 
-/* Account Header */
+/* Account Settings */
 .account-header {
   color: #501b1d;
   font-family: "DM-Sans", sans-serif;
@@ -299,11 +196,76 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 10px;
+  margin-top: 20px;
   font-size: 22.5px;
   font-weight: bold;
 }
 
+.user-info {
+  color: #501b1d;
+  font-family: "DM-Sans", sans-serif;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
 
+.user-info h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
 
+.user-info p {
+  margin: 15px 0;
+  font-size: 16px;
+}
 
+.accountOptions-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.accountOptions-field-changePassword,
+.accountOptions-field-deleteAccount,
+.accountOptions-field-logOut {
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.accountOptions-field-changePassword button,
+.accountOptions-field-deleteAccount button {
+  font-family: "DM-Sans", sans-serif;
+  width: 300px;
+  font-size: 18px;
+  align-self: center;
+  background-color: #154c79;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.accountOptions-field-changePassword button:hover,
+.accountOptions-field-deleteAccount button:hover {
+  background-color: #1b5a8e;
+}
+
+.accountOptions-field-logOut button {
+  width: 300px;
+  font-size: 18px;
+  align-self: center;
+  background-color: #632426;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.accountOptions-field-logOut button:hover {
+  background-color: #7d3034;
+  color: white;
+}

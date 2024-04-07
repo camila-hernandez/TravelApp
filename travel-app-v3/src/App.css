@@ -32,10 +32,18 @@
   height: 50px;
   font-family: "DM-Sans", sans-serif;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   color: white;
   font-size: 12px;
+}
+
+.whereLogo{
+  margin-left: 60px;
+}
+
+.mini-weather-logo{
+  margin-left: -14px;
 }
 
 .body-container {

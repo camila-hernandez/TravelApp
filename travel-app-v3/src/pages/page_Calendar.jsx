@@ -2,7 +2,7 @@
 import React, { useState, useRef } from 'react';
 import '../pages/page_Calendar.css'; // Import your CSS file for styling
 import CalgaryMap from '../assets/CalgaryMap2.jpg';
-import whereLogo from '../assets/WhereLogoGreen.png';
+import whereLogo from '../assets/CurrentLocationBlack.png';
 
 const Page_Calendar = () => {
   const [zoomLevel, setZoomLevel] = useState(2);
@@ -135,6 +135,7 @@ const Page_Calendar = () => {
           <button onClick={() => handleLocationButtonClick('SE')}>SE</button>
           <button onClick={() => handleLocationButtonClick('Downtown')}>Downtown</button>
         </div>
+        
       </div>
     </div>
   );

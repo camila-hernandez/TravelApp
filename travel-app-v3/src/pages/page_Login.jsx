@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import whereLogo from '../assets/WhereLogoGreen.png';
 import "./page_Account.css";
-import "../App.css"
 
 const Login = ({ onLogin }) => {
   const [username, setUsername] = useState('');
@@ -14,12 +13,15 @@ const Login = ({ onLogin }) => {
     if (username && password) {
       onLogin(); // Call the onLogin function passed as a prop
     } else {
-      setError('Please enter both username and password');
+      setError('Please enter both email and password');
     }
   };
 
   return (
     <div className="login-container">
+      <div className="header-container">
+        <h1 className="header-title">Where Calgary</h1>
+      </div>
       <div className="login-field-logo">
         <img src={whereLogo} alt="whereLogo" className="whereLogo" style={{ width: '100px', height: 'auto' }} />
       </div>

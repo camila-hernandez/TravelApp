@@ -66,21 +66,25 @@ const Page_Account = ({ onLogout }) => {
 
       {/* Render the delete account confirmation */}
       {isDeleteModalOpen && (
-        <div>
-          <h2>Delete Account</h2>
-          <p>Are you sure you want to delete your account?</p>
-          <button onClick={confirmDelete}>Yes, delete my account</button>
-          <button onClick={closeDeleteModal}>Cancel</button>
+        <div className="modal-overlay">
+          <div className="modal">
+            <h2>Delete Account</h2>
+            <p>Are you sure you want to delete your account?</p>
+            <button onClick={confirmDelete}>Yes, delete my account</button>
+            <button onClick={closeDeleteModal}>Cancel</button>
+          </div>
         </div>
       )}
 
       {/* Render the log out confirmation */}
       {isLogOutModalOpen && (
-        <div>
-          <h2>Log Out</h2>
-          <p>Are you sure you want to log out?</p>
-          <button onClick={confirmLogOut}>Yes, log me out</button>
-          <button onClick={closeLogOutModal}>Cancel</button>
+        <div className="modal-overlay">
+          <div className="modal">
+            <h2>Log Out</h2>
+            <p>Are you sure you want to log out?</p>
+            <button onClick={confirmLogOut}>Yes, log me out</button>
+            <button onClick={closeLogOutModal}>Cancel</button>
+          </div>
         </div>
       )}
     </div>

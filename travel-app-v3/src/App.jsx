@@ -5,6 +5,7 @@ import Page_Home from './pages/page_Home';
 import Page_Events from './pages/page_Events';
 import Page_Calendar from './pages/page_Calendar';
 import Page_Account from './pages/page_Account';
+import MiniWeather from './assets/MiniWeather.png';
 import whereLogo from './assets/WhereLogoGreen.png';
 import './App.css';
 
@@ -26,10 +27,13 @@ const App = () => {
     <div className='outer-container'>
       <div className='mobile-container'>
         <div className='header-container'>
-            <div className="logo-field">
-                <img src={whereLogo} alt="whereLogo" className="where-logo" style={{ width: '30px', height: 'auto', marginRight: '10px', marginBottom: '12px'}}/>
-            </div>
+          <div className="logo-field">
+            <img src={whereLogo} alt="whereLogo" className="where-logo" style={{ width: '30px', height: 'auto', marginRight: '10px', marginBottom: '12px'}}/>
+          </div>
           <Header pageTitle={'Where Calgary'}></Header>
+          <div className="second-logo-field">
+            <img src={MiniWeather} alt="miniWeather" className="mini-weather-logo" style={{ height: '40px', width: 'auto'}}/>
+          </div>
         </div>
 
         <div className='body-container'>

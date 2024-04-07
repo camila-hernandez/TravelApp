@@ -1,7 +1,7 @@
 // pages/Page_Calendar.jsx
 import React, { useState, useRef } from 'react';
 import '../pages/page_Calendar.css'; // Import your CSS file for styling
-import CalgaryMap from '../assets/CalgaryMap35.png';
+import CalgaryMap from '../assets/CalgaryMap3.png';
 import whereLogo from '../assets/CurrentLocationBlack.png';
 
 const Page_Calendar = () => {
@@ -50,7 +50,7 @@ const Page_Calendar = () => {
   };
 
   const handleResetZoom = () => {
-    setZoomLevel(1);
+    setZoomLevel(2);
     setOffsetX(0);
     setOffsetY(0);
   };
@@ -94,6 +94,13 @@ const Page_Calendar = () => {
         setOffsetY(locY_Downtown);
         setZoomLevel(7);
         break;
+      case 'All':
+        const locX_All = 0;
+        const locY_All = 0;
+        setOffsetX(locX_All);
+        setOffsetY(locY_All);
+        setZoomLevel(0.5);
+        break;
       default:
         // Do nothing
         break;
@@ -134,8 +141,35 @@ const Page_Calendar = () => {
           <button onClick={() => handleLocationButtonClick('SW')}>SW</button>
           <button onClick={() => handleLocationButtonClick('SE')}>SE</button>
           <button onClick={() => handleLocationButtonClick('Downtown')}>Downtown</button>
+          <button onClick={() => handleLocationButtonClick('All')}>All</button>
         </div>
         
+        <div className="checkbox-container">
+          <div className="checkbox-item">
+            <input type="checkbox" id="check1" />
+            <label htmlFor="check1">Item 1</label>
+          </div>
+          <div className="checkbox-item">
+            <input type="checkbox" id="check2" />
+            <label htmlFor="check2">Item 2</label>
+          </div>
+          <div className="checkbox-item">
+            <input type="checkbox" id="check3" />
+            <label htmlFor="check3">Item 3</label>
+          </div>
+          <div className="checkbox-item">
+            <input type="checkbox" id="check4" />
+            <label htmlFor="check4">Item 4</label>
+          </div>
+          <div className="checkbox-item">
+            <input type="checkbox" id="check5" />
+            <label htmlFor="check5">Item 5</label>
+          </div>
+          <div className="checkbox-item">
+            <input type="checkbox" id="check6" />
+            <label htmlFor="check6">Item 6</label>
+          </div>
+        </div>
       </div>
     </div>
   );

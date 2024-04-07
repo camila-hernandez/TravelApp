@@ -1,41 +1,84 @@
 import React, { useState } from 'react';
-import '../App.css'; // Import your CSS file for styling
+import './page_Account.css'; // Import your CSS file for styling
 
 const Page_Account = ({ onLogout }) => {
-  const [showLogoutPanel, setShowLogoutPanel] = useState(false);
+  const [isDeleteModalOpen, setDeleteModalOpen] = useState(false);
+  const [isLogOutModalOpen, setLogOutModalOpen] = useState(false);
 
-  const handleLogout = () => {
-    setShowLogoutPanel(true);
+  const openDeleteModal = () => {
+    setDeleteModalOpen(true);
   };
 
-  const handleCancel = () => {
-    setShowLogoutPanel(false);
+  const closeDeleteModal = () => {
+    setDeleteModalOpen(false);
   };
 
-  const handleConfirm = () => {
-    // Call the onLogout function passed as a prop
-    onLogout();
+  const confirmDelete = () => {
+    console.log('Account deleted!');
+    closeDeleteModal();
+  };
+
+  const openLogOutModal = () => {
+    setLogOutModalOpen(true);
+  };
+
+  const closeLogOutModal = () => {
+    setLogOutModalOpen(false);
+  };
+
+  const confirmLogOut = () => {
+    console.log('User logged out!');
+    closeLogOutModal();
+    onLogout(); // Call the onLogout function passed as a prop
   };
 
   return (
     <div>
       <h1>Welcome to Account Page</h1>
 
-      <button onClick={handleLogout}>
+      <button onClick={openLogOutModal}>
         Log Out
       </button>
 
-      {/* Logout panel */}
-      {showLogoutPanel && (
-        <div className="logout-panel">
-          <div className="overlay"></div>
-          <div className="panel">
-            <h2>Are you sure you want to log out?</h2>
-            <div className="buttons">
-              <button onClick={handleCancel}>Cancel</button>
-              <button onClick={handleConfirm}>Confirm</button>
-            </div>
+      <div className="accountOptions-container">
+        <div className="accountOptions-field-details">
+          <div className="details-container">
+            <h3>Account Details</h3>
+            <br />
+            <p>Email: john.smith@ucalgary.ca</p>
           </div>
+        </div>
+
+        <div className="accountOptions-field-changePassword">
+          <button>
+            Change Password
+          </button>
+        </div>
+
+        <div className="accountOptions-field-deleteAccount">
+          <button onClick={openDeleteModal}>
+            Delete Account
+          </button>
+        </div>
+      </div>
+
+      {/* Render the delete account confirmation */}
+      {isDeleteModalOpen && (
+        <div>
+          <h2>Delete Account</h2>
+          <p>Are you sure you want to delete your account?</p>
+          <button onClick={confirmDelete}>Yes, delete my account</button>
+          <button onClick={closeDeleteModal}>Cancel</button>
+        </div>
+      )}
+
+      {/* Render the log out confirmation */}
+      {isLogOutModalOpen && (
+        <div>
+          <h2>Log Out</h2>
+          <p>Are you sure you want to log out?</p>
+          <button onClick={confirmLogOut}>Yes, log me out</button>
+          <button onClick={closeLogOutModal}>Cancel</button>
         </div>
       )}
     </div>

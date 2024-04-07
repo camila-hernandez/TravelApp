@@ -349,6 +349,25 @@ export default function Page_Events() {
               ></input>
               <label htmlFor="price2">Price High to Low</label>
               <br></br>
+              <input
+                type="radio"
+                id="date"
+                name="date"
+                value="Date1"
+                checked={sortOption === "Date1"}
+                onChange={handleSortOptionChange}
+              ></input>
+              <label htmlFor="date1">Date (Earliest to Latest)</label>
+              <br></br>
+              <input
+                type="radio"
+                id="date"
+                name="date"
+                value="Date2"
+                checked={sortOption === "Date2"}
+                onChange={handleSortOptionChange}
+              ></input>
+              <label htmlFor="date2">Date (Latest to Earliest)</label>
             </div>
           </div>
         )}
@@ -383,8 +402,19 @@ export default function Page_Events() {
             // Sort by price based on the selected option
             if (sortOption === "Low-High") {
               return a.price - b.price;
-            } else {
+            } else if (sortOption === "High-Low") {
               return b.price - a.price;
+            } else if (sortOption === "Date1") {
+              // Custom comparator function for sorting by date
+              const dateA = new Date(a.month + " " + a.date + ", 2024");
+              const dateB = new Date(b.month + " " + b.date + ", 2024");
+              return dateA - dateB;
+            }
+            else if (sortOption === "Date2") {
+              // Custom comparator function for sorting by date
+              const dateA = new Date(a.month + " " + a.date + ", 2024");
+              const dateB = new Date(b.month + " " + b.date + ", 2024");
+              return dateB - dateA;
             }
           })
           .map((event, index) => (

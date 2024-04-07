@@ -43,11 +43,11 @@ export default function AccountOptionsPage() {
   return (
     <div className="accountOptions-container">
       <div className="accountOptions-field-details">
-        <button>
-          <h3> Account Details</h3>
+        <div className="details-container">
+          <h3>Account Details</h3>
           <br />
-          <h4> Email: john.smith@ucalgary.ca</h4>
-        </button>
+          <p>Email: john.smith@ucalgary.ca</p>
+        </div>
       </div>
 
       <div className="accountOptions-field-changePassword">
@@ -62,7 +62,7 @@ export default function AccountOptionsPage() {
         </button>
       </div>
 
-      <div className=".accountOptions-field-logOut">
+      <div className="accountOptions-field-logOut">
         <button onClick={openLogOutModal}>
           <b>LOG OUT</b>
         </button>

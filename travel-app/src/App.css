@@ -1,3 +1,23 @@
+/* Style for the outer container */
+.OuterContainer {
+  background-color: black; /* Black background outside the box */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 0; /* Remove padding */
+}
+
+/* Style for the inner container */
+.OuterContainer {
+  background-color: grey; /* White background inside the box */
+  width: 384px; /* Set width to 384px */
+  height: 700px; /* Set height to 700px */
+  padding: 0; /* Remove padding */
+  display: flex; /* Add display flex to align items */
+  flex-direction: column; /* Stack items vertically */
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;

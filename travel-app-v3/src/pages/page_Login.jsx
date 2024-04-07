@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import whereLogo from '../assets/WhereLogoGreen.png';
 import "./page_Account.css";
+import "../App.css"
 
 const Login = ({ onLogin }) => {
   const [username, setUsername] = useState('');

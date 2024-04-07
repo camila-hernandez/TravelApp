@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Footer from './components/Screen_Footer';
 import Header from './components/Screen_Header';
-import Login from './pages/page_Login'; // Import your Login component
+import Page_Login from './pages/page_Login'; // Import your Login component
 import Page_Home from './pages/page_Home';
 import Page_Events from './pages/page_Events';
 import Page_Calendar from './pages/page_Calendar';
@@ -11,7 +11,7 @@ import whereLogo from './assets/WhereLogoGreen.png';
 import './App.css';
 
 const App = () => {
-  const [currentPage, setCurrentPage] = useState('home'); // Start with login page
+  const [currentPage, setCurrentPage] = useState('login'); // Start with login page
 
   const handlePageChange = (pageName) => {
     setCurrentPage(pageName.toLowerCase());

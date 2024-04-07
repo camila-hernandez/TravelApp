@@ -15,20 +15,13 @@ export default function page_Home() {
 
     return (
          <div className="helpPage-container" style = {containerStyle}>
-            <div className="logo-field-main">
-                <img src={whereLogo} alt="whereLogo" className="whereLogo" />
-            </div>
+
             <div className="weather-image-field">
                 <img src={weatherImage} alt="weatherImage" className="weatherImage" />
             </div>
             <div className="weather-button-field">
                 <button>
-                    WeatherNetwork.ca
-                </button>
-            </div>
-            <div className="help-field">
-                <button>
-                    Help
+                    Go to WeatherNetwork.ca
                 </button>
             </div>
         </div>

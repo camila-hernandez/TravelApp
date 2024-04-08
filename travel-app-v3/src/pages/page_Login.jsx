@@ -5,16 +5,27 @@ import "./page_Account.css";
 const Login = ({ onLogin }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
+  const [error, setError] = useState(null); // Initialize error as null
 
   const handleLogin = () => {
+    // Reset error message
+    setError(null);
+
+    // Check for empty fields
+    if (!username || !password) {
+      setError('Please enter both email and password');
+      return;
+    }
+
+    // Check for invalid credentials
+    if (username !== 'john.smith123@gmail.com' || password !== '$Password123') {
+        setError('Incorrect email or password');
+        return;
+    }
+
     // Perform authentication logic here (e.g., call an API)
     // For simplicity, let's assume authentication succeeds if username and password are not empty
-    if (username && password) {
-      onLogin(); // Call the onLogin function passed as a prop
-    } else {
-      setError('Please enter both email and password');
-    }
+    onLogin(); // Call the onLogin function passed as a prop
   };
 
   return (
@@ -24,6 +35,14 @@ const Login = ({ onLogin }) => {
       </div>
       <div className="login-field-logo">
         <img src={whereLogo} alt="whereLogo" className="whereLogo" style={{ width: '100px', height: 'auto' }} />
+      </div>
+      {/* Render error message container with fixed height */}
+      <div className="error-message-container">
+        {error && (
+          <div className="login-field-error">
+            <div className="error-message">{error}</div>
+          </div>
+        )}
       </div>
       <div className="login-field-email">
         <input
@@ -60,3 +79,4 @@ const Login = ({ onLogin }) => {
 };
 
 export default Login;
+

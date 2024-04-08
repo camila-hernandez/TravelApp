@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import Footer from './components/Screen_Footer';
 import Header from './components/Screen_Header';
-import Page_Login from './pages/page_Login'; // Import your Login component
+import Page_Login from './pages/page_Login';
+import Page_SignUp from './pages/page_SignUp';
 import Page_Home from './pages/page_Home';
 import Page_Events from './pages/page_Events';
 import Page_Calendar from './pages/page_Calendar';
@@ -23,6 +24,10 @@ const App = () => {
 
   const handleGuestLogin = () => {
     setCurrentPage('home'); // Redirect to home page after guest login
+  }
+
+  const handleSignUp = () => {
+    setCurrentPage('sign-up'); // Redirect to home page after sign-up
   }
 
   const handleLogout = () => {
@@ -48,7 +53,8 @@ const App = () => {
         <div className='body-container'>
           <main>
             {/* Render different pages based on currentPage */}
-            {currentPage === 'login' && <Page_Login onLogin={handleLogin} />}
+            {currentPage === 'login' && <Page_Login onLogin={handleLogin}/>}
+            {currentPage === 'sign-up' && <Page_SignUp/>}
             {currentPage === 'home' && <Page_Home />}
             {currentPage === 'events' && <Page_Events />}
             {currentPage === 'calendar' && <Page_Calendar />}

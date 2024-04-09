@@ -39,7 +39,7 @@
     
   .location-buttons {
     position: absolute;
-    margin-left: 30px;
+    margin-left:0px;
   }
   
   .location-buttons button {
@@ -49,4 +49,21 @@
   .map-button {
     position: absolute;
     /* Adjust the button styles as needed */
+  }
+
+
+  .checkbox-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    font-size: 11px;
+    border: 2px solid #000;
+    margin: 10px;
+  }
+  .checkbox-item {
+    display: flex;
+    align-items: center;
+  }
+  .checkbox-item input[type="checkbox"] {
+    margin-right: 10px;
   }

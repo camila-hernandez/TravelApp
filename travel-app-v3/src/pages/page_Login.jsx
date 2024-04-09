@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import whereLogo from '../assets/WhereLogoGreen.png';
 import "./page_Account.css";
 
-const Login = ({ onLogin }) => {
+const Login = ({ onLogin, onSignUp }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null); // Initialize error as null
@@ -72,7 +72,7 @@ const Login = ({ onLogin }) => {
       </div>
       <div className="login-field-signUp">
         <div className="sign-up-text">Don't have an account?</div>
-        <a href="/sign-up" className="sign-up-link">Sign Up</a>
+        <button className="signup-button" onClick={onSignUp}>Sign Up</button>
       </div>
     </div>
   );

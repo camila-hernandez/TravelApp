@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import "./page_Account.css";
 
-const SignUp = ({ onSignUp }) => {
+const SignUp = ({ onSignup }) => {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');

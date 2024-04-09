@@ -23,11 +23,7 @@ const App = () => {
   };
 
   const handleSignUp = () => {
-    setCurrentPage('sign-up'); // Redirect to home page after sign-up
-  }
-
-  const handleDeleteAccount = () => {
-    setCurrentPage('login'); //Redirect to login page after deleting account
+    setCurrentPage('signup'); // Redirect to signup page after sign-up
   }
 
   const handleLogout = () => {
@@ -53,8 +49,8 @@ const App = () => {
         <div className='body-container'>
           <main>
             {/* Render different pages based on currentPage */}
-            {currentPage === 'login' && <Page_Login onLogin={handleLogin}/>}
-            {currentPage === 'sign-up' && <Page_SignUp/>}
+            {currentPage === 'login' && <Page_Login onLogin={handleLogin} onSignUp={handleSignUp}/>}
+            {currentPage === 'signup' && <Page_SignUp />}
             {currentPage === 'home' && <Page_Home />}
             {currentPage === 'events' && <Page_Events />}
             {currentPage === 'calendar' && <Page_Calendar />}
@@ -63,7 +59,7 @@ const App = () => {
         </div>
 
         {/* Conditionally render footer */}
-        {currentPage !== 'login' && (
+        {currentPage !== 'login' && currentPage !== 'signup' && (
           <div className='footer-container'>
             <Footer
               onHomeClick={() => handlePageChange('Home')}

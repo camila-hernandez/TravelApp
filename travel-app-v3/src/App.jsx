@@ -71,7 +71,7 @@ const App = () => {
           <main>
             {/* Render different pages based on currentPage */}
             {currentPage === 'login' && <Page_Login onLogin={handleLogin} onSignUp={handleSignUp} onForgotPassword={handleForgotPassword}/>}
-            {currentPage === 'signup' && <Page_SignUp onCreateAccount={handleLogin}/>}
+            {currentPage === 'signup' && <Page_SignUp onCreateAccount={handleLogin} onBack={handleLogout}/>}
             {currentPage === 'home' && <Page_Home />}
             {currentPage === 'events' && <Page_Events />}
             {currentPage === 'calendar' && <Page_Calendar />}

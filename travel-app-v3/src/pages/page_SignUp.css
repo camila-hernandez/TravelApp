@@ -10,7 +10,7 @@
     margin-top: -20px;
     margin-bottom: 5px;
   }
-  
+
   /* Base styles for input fields to ensure they don't overflow */
   input[type="text"],
   input[type="password"],
@@ -21,7 +21,7 @@
     border: 1px solid #000000; /* Border styling */
     border-radius: 5px; /* Rounded corners for the inputs */
   }
-  
+
   /* Base styles for the buttons */
   button {
     padding: 12px; /* Uniform padding */
@@ -31,7 +31,7 @@
     cursor: pointer; /* Cursor indication for button */
     transition: background-color 0.3s; /* Transition for hover effect */
   }
-  
+
   /* Styles for the Sign Up button specifically */
   .create-account-field button {
      font-size: 14px;
@@ -45,12 +45,12 @@
      border-radius: 5px; /* Add border radius */
      cursor: pointer;
   }
-  
+
   /* Hover effect for buttons */
   .create-account-field button:hover {
     background-color: #501b1d; /* Darken the button color on hover */
   }
-  
+
   /* Container for the sign up form */
   .createAccount-container {
     max-width: 400px; /* Maximum width of the form */
@@ -58,13 +58,13 @@
     padding: 0 10px; /* Padding on the sides */
     margin: auto; /* Centers the container */
   }
-  
+
   /* Responsive design adjustments for smaller screens */
   @media (max-width: 480px) {
     .createAccount-container {
       padding: 0 5px; /* Smaller padding on very small screens */
     }
-  
+
     input[type="text"],
     input[type="password"],
     input[type="email"] {
@@ -76,7 +76,7 @@
     color: black; /* Change the color to your desired color */
     margin-bottom: 20px;
   }
-  
+
   /* Styles for other text outside the text fields */
   .sign-up-header {
     color: black; /* Change the color to your desired color */
@@ -108,4 +108,3 @@
 .required{
     color: red;
   }
-  

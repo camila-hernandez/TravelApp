@@ -454,6 +454,7 @@
 
   .detailsAddToCalendar {
     background-color: #ffffff;
+    margin-top: 14px;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -481,7 +482,7 @@
 
   .detailsOutlookButton, .detailsGoogleButton, .detailsAppleButton {
     position: relative;
-    bottom: 10px;
+    bottom: 18px;
     height: 30px;
     width: 62px; /* Fixed width for the button */
     padding: 0px;

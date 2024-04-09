@@ -401,15 +401,14 @@
   .backButton {
     margin-left: 10px;
     height: 30px;
-    width: 70px; /* Fixed width for the button */
     padding: 0px;
     background-color: #501b1d;
     color: #fff;
-    border-radius: 5px;
+    border-radius: 100%;
     cursor: pointer;
     border: 1px solid #501b1d;
     text-align: center;
-    width: 100px;
+    width: 30px;
   }
 
   .detailsBody {
@@ -446,4 +445,62 @@
     width: 379px;
     height: 200px;
     border-radius: 5px;
+  }
+
+  .detailsExport {
+    display: inline-flex;
+    justify-content: center;
+  }
+
+  .detailsAddToCalendar {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    font-size: small;
+    margin: 2px;
+    width: 188px;
+    border-radius: 5px;
+    height: 50px;
+  }
+
+  .detailsMap {
+    background-image: url("../assets/CalgaryTowerMap.png");
+    background-size: 120%;
+    background-position-y: -85px;
+    background-position-x: -30px;
+    display: flex;
+    justify-content: center;
+    font-size: small;
+    margin: 2px;
+    width: 379px;
+    height: 145px;
+    border-radius: 5px;
+  }
+
+  .detailsOutlookButton, .detailsGoogleButton, .detailsAppleButton {
+    position: relative;
+    bottom: 10px;
+    height: 30px;
+    width: 62px; /* Fixed width for the button */
+    padding: 0px;
+    background-color: #501b1d;
+    color: #fff;
+    cursor: pointer;
+    border: 2px solid #000000;
+    text-align: center;
+  }
+
+  .detailsShareEventPage {
+    background-color: #501b1d;
+    color: white;
+    border: 1px solid #501b1d;
+    cursor: pointer;
+    text-align: center;
+    font-size: small;
+    margin: 2px;
+    width: 188px;
+    border-radius: 5px;
+    height: 50px;
   }

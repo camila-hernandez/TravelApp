@@ -273,7 +273,7 @@ export default function Page_Events() {
       {showDetailsScreen ? (
         <div className="detailsWrapper">
           <div className="detailsHeader">
-            <button onClick={handleBackToEvents} className="backButton"><FontAwesomeIcon icon={faArrowLeft} /> Event Listings</button>
+            <button onClick={handleBackToEvents} className="backButton"><FontAwesomeIcon icon={faArrowLeft} /></button>
             <h1>{selectedEvent.title}</h1>
           </div>
           <div className="detailsBody">
@@ -288,8 +288,20 @@ export default function Page_Events() {
               dangerouslySetInnerHTML={{
               __html: selectedEvent.description.replace(/\n/g, "<br>")
               }}
-      /></p>
+            /></p>
           </div>
+            <div className="detailsExport">
+              <div className="detailsAddToCalendar">
+                <p><b>Add Event to Calendar</b></p><br/>
+                <div className="detailsButtonWrapper">
+                  <button className="detailsOutlookButton">Outlook</button>
+                  <button className="detailsGoogleButton">Google</button>
+                  <button className="detailsAppleButton">Apple</button>
+                </div>
+              </div>
+            <button className="detailsShareEventPage">Share Event Page</button>
+          </div>
+          <div className="detailsMap"></div>
         </div>
       ) : (
         <div>

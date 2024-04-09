@@ -18,7 +18,7 @@ const Login = ({ onLogin }) => {
     }
 
     // Check for invalid credentials
-    if (username !== 'john.smith123@gmail.com' || password !== '$Password123') {
+    if (username !== 'john.smith123@gmail.com' || password !== '$Password123' || password !== '12345678') {
         setError('Incorrect email or password');
         return;
     }

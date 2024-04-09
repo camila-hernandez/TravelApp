@@ -398,3 +398,8 @@
   background-color: #eaeaea;
 }
 
+.error-message {
+  color: red; /* Change the color to red */
+  font-size: 14px; /* Optionally adjust font size */
+}
+

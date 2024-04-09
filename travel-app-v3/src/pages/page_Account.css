@@ -54,7 +54,8 @@
   font-weight: bold; /* Make the text bold */
 }
 
-.login-button {
+.login-button,
+.signup-button {
   font-weight: bold;
   width: 100%; /* Set the button width to 100% */
   padding: 12px; /* Add padding */
@@ -66,18 +67,12 @@
   cursor: pointer;
 }
 
-.sign-up-text,
-.sign-up-link,
-.or-text {
+.sign-up-text {
   padding: 5px;
   font-size: 14px;
   color: black;
   margin-top: 10px; /* Adjust margin */
   text-decoration: none; /* Remove underline */
-}
-
-.sign-up-link {
-  font-weight: bold; /* Make the text bold */
 }
 
 .guest-button {
@@ -397,5 +392,10 @@
 
 .button-second:hover {
   background-color: #eaeaea;
+}
+
+.error-message {
+  color: red; /* Change the color to red */
+  font-size: 14px; /* Optionally adjust font size */
 }
 

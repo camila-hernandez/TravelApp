@@ -1,13 +1,21 @@
 import React, { useState } from 'react';
 import './page_Account.css'; // Import your CSS file for styling
 
-const Page_Account = ({ onLogout }) => {
+const Page_Account = ({ onLogout, onDelete }) => {
   const [isDeleteModalOpen, setDeleteModalOpen] = useState(false);
   const [isLogOutModalOpen, setLogOutModalOpen] = useState(false);
   const [isChangePasswordModalOpen, setChangePasswordModalOpen] = useState(false);
   const [currentPassword, setCurrentPassword] = useState('');
   const [newPassword, setNewPassword] = useState('');
   const [confirmNewPassword, setConfirmNewPassword] = useState('');
+  const [error, setError] = useState('');
+
+  const clearFields = () => {
+    setCurrentPassword('');
+    setNewPassword('');
+    setConfirmNewPassword('');
+    setError('');
+  };
 
   const openDeleteModal = () => {
     setDeleteModalOpen(true);
@@ -20,6 +28,7 @@ const Page_Account = ({ onLogout }) => {
   const confirmDelete = () => {
     console.log('Account deleted!');
     closeDeleteModal();
+    onDelete();
   };
 
   const openLogOutModal = () => {
@@ -38,15 +47,44 @@ const Page_Account = ({ onLogout }) => {
 
   const openChangePasswordModal = () => {
     setChangePasswordModalOpen(true);
+    clearFields();
   };
 
   const closeChangePasswordModal = () => {
     setChangePasswordModalOpen(false);
+    setError(''); // Reset error message when closing modal
+  };
+
+  const validatePassword = () => {
+    if (currentPassword === '' || newPassword === '' || confirmNewPassword === '') {
+      setError('One or more fields are empty.');
+      return false;
+    }
+    if (currentPassword !== '$Password123') {
+        setError('Incorrect current password.');
+        return false;
+    }
+    if (newPassword.length < 8) {
+      setError('Password must be at least 8 characters.');
+      return false;
+    }
+    if (newPassword === currentPassword) {
+      setError('New password must be different.');
+      return false;
+    }
+    if (newPassword !== confirmNewPassword) {
+      setError('Passwords do not match.');
+      return false;
+    }
+
+    return true;
   };
 
   const confirmChangePassword = () => {
-    console.log('Password changed!');
-    closeChangePasswordModal();
+    if (validatePassword()) {
+      console.log('Password changed!');
+      closeChangePasswordModal();
+    }
   };
 
   return (
@@ -84,10 +122,11 @@ const Page_Account = ({ onLogout }) => {
         <div className="modal-overlay">
           <div className="modal">
             <h2>Change Password</h2>
+            {error && <p className="error-message">{error}</p>}
             <p>Fill out the following fields:</p>
-            <input type="password" placeholder="Current Password" />
-            <input type="password" placeholder="New Password" />
-            <input type="password" placeholder="Confirm New Password" />
+            <input type="password" placeholder="Current Password" value={currentPassword} onChange={e => setCurrentPassword(e.target.value)} />
+            <input type="password" placeholder="New Password" value={newPassword} onChange={e => setNewPassword(e.target.value)} />
+            <input type="password" placeholder="Confirm New Password" value={confirmNewPassword} onChange={e => setConfirmNewPassword(e.target.value)} />
             <div className="button-container">
               <button className="button-first" onClick={confirmChangePassword}>Change Password</button>
               <button className="button-second" onClick={closeChangePasswordModal}>Cancel</button>

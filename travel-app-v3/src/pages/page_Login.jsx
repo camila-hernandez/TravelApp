@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import whereLogo from '../assets/WhereLogoGreen.png';
 import "./page_Account.css";
 
-const Login = ({ onLogin }) => {
+const Login = ({ onLogin, onSignUp, onForgotPassword }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null); // Initialize error as null
@@ -18,19 +18,18 @@ const Login = ({ onLogin }) => {
     }
 
     // Check for invalid credentials
-    if (username !== 'john.smith123@gmail.com' || password !== '$Password123') {
+    if (
+        username !== 'john.smith123@gmail.com' ||
+        (password !== '$Password123' && password !== '12345678') // Update the condition to check for either of the two valid passwords
+      ) {
         setError('Incorrect email or password');
         return;
-    }
+      }
 
     // Perform authentication logic here (e.g., call an API)
     // For simplicity, let's assume authentication succeeds if username and password are not empty
     onLogin(); // Call the onLogin function passed as a prop
   };
-
-  const handleLGuestLogin = () => {
-      onLogin(); // Call the onLogin function passed as a prop
-    };
 
   return (
     <div className="login-container">
@@ -67,7 +66,8 @@ const Login = ({ onLogin }) => {
         />
       </div>
       <div className="login-field-forgotPassword">
-        <a href="/forgot-password" className="forgot-password-link">
+        {/* Update the link to point to the Forgot Password route */}
+        <a href="#" className="forgot-password-link" onClick={onForgotPassword}>
           Forgot Password?
         </a>
       </div>
@@ -76,11 +76,7 @@ const Login = ({ onLogin }) => {
       </div>
       <div className="login-field-signUp">
         <div className="sign-up-text">Don't have an account?</div>
-        <a href="/sign-up" className="sign-up-link">Sign Up</a>
-        <div className="or-text">Or</div>
-      </div>
-      <div className="login-field-guestbutton">
-        <button className="guest-button" onClick={handleLGuestLogin}>Continue as Guest</button>
+        <button className="signup-button" onClick={onSignUp}>Sign Up</button>
       </div>
     </div>
   );

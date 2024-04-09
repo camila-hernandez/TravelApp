@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import "./page_Account.css";
 
-const SignUp = ({ onSignUp }) => {
+const SignUp = ({ onCreateAccount }) => {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
@@ -32,6 +32,8 @@ const SignUp = ({ onSignUp }) => {
       email,
       password: password1 // Assuming you only need one password field
     });
+
+    onCreateAccount();
   };
 
   return (
@@ -113,7 +115,7 @@ const SignUp = ({ onSignUp }) => {
       </div>
 
       <div className="create-account-field">
-        <button onClick={handleCreateAccount}>CREATE ACCOUNT</button>
+        <button onClick={handleCreateAccount}>Create Account</button>
       </div>
 
       {/* Error message */}

@@ -76,7 +76,7 @@ const App = () => {
             {currentPage === 'events' && <Page_Events />}
             {currentPage === 'calendar' && <Page_Calendar />}
             {currentPage === 'account' && <Page_Account onLogout={handleLogout} onDelete={handleLogout}/>}
-            {currentPage === 'forgot-password' && <Page_ForgotPassword />}
+            {currentPage === 'forgot-password' && <Page_ForgotPassword onResetPassword={handleLogout} onCancel={handleLogout} />}
           </main>
         </div>
 

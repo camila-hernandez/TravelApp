@@ -4,13 +4,24 @@ import {
   faMagnifyingGlass,
   faCalendar,
   faArrowRight,
+  faArrowLeft,
   faPlus,
   faArrowDownShortWide,
 } from "@fortawesome/free-solid-svg-icons";
 import "./page_Events.css";
 import PageEventsSearch from "./page_Events_filter"; // Import the component containing search content
+import CalgaryTowerEventHeader from "../assets/CalgaryTowerEventHeader.jpg";
+import CalgaryTowerMap from "../assets/CalgaryTowerMap.png";
 
 export default function Page_Events() {
+  const containerStyle = {
+    backgroundImage: `url(${CalgaryTowerEventHeader})`,
+    backgroundSize: 'cover', // Adjust as needed
+    backgroundPosition: 'center', // Adjust as needed
+    position: 'relative', // Required for z-index to work
+    height: '600px'
+  };
+
   const [inclusiveFilters, setInclusiveFilters] = useState({
     when: [],
     what: [],
@@ -151,6 +162,7 @@ export default function Page_Events() {
   const [showDropdownFilters, setShowDropdownFilters] = useState(false);
   const [showSortFilters, setSortFilters] = useState(false);
   const [sortOption, setSortOption] = useState("Low-High"); // State to store the selected sorting option
+  const [showDetailsScreen, setShowDetailsScreen] = useState(false); // State to manage details screen visibility
 
   useEffect(() => {
     // Update localStorage whenever events change
@@ -234,263 +246,286 @@ export default function Page_Events() {
     // You can add similar statements for other fields if needed
   };
 
+  // Handles clicking the view button of a specific event
+  const handleDetailsButtonClick = (event) => {
+    setSelectedEvent(event);
+    setShowDetailsScreen(true);
+  };
+
+  // Returns to events page when back button is pressed on events details page
+  const handleBackToEvents = () => {
+    setShowDetailsScreen(false);
+    setSelectedEvent(null); // Reset selected event
+  };
+
   return (
     <div>
-      <div className="search">
-        <input
-          type="text"
-          className="searchTerm"
-          placeholder="Search..."
-          value={searchQuery}
-          onChange={handleSearchInputChange}
-        />
-        <button type="submit" className="searchButton">
-          <FontAwesomeIcon icon={faMagnifyingGlass} className="searchIcon" />
-        </button>
-      </div>
-      <div className="filters">
-        <div className="date-range">
-          <FontAwesomeIcon icon={faCalendar} className="calendar-icon" />
-          <input
-            type="date"
-            id="start-date"
-            name="start-date"
-            onChange={handleStartDateChange}
-          />
-          <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
-          <input
-            type="date"
-            id="end-date"
-            name="end-date"
-            onChange={handleEndDateChange}
-          />
+      {showDetailsScreen ? (
+        <div className="detailsWrapper">
+          <div className="detailsHeader">
+            <button onClick={handleBackToEvents} className="backButton"><FontAwesomeIcon icon={faArrowLeft} /> Event Listings</button>
+            <h1>{selectedEvent.title}</h1>
+          </div>
+          
         </div>
-        <div className="dropdown-filters">
-          <button className="dropdown-button" onClick={toggleDropdownFilters}>
-            Filters
-          </button>
-          {showDropdownFilters && (
-            <div className="dropdown-content">
-              <div className="quadrant-filter">
-                <label htmlFor="quadrant-filter" className="quadrant-label">
-                  Quadrant:
-                </label>
-                <select
-                  id="quadrant-filter"
-                  value={selectedQuadrant}
-                  onChange={handleQuadrantFilterChange}
-                >
-                  <option value="All">All</option>
-                  <option value="NW">NW</option>
-                  <option value="NE">NE</option>
-                  <option value="SW">SW</option>
-                  <option value="SE">SE</option>
-                  <option value="Downtown">Downtown</option>
-                </select>
-              </div>
-              <div className="type-filter">
-                <label htmlFor="type-filter" className="filter-label">
-                  Type:
-                </label>
-                <select
-                  id="type-filter"
-                  value={selectedType}
-                  onChange={handleTypeFilterChange}
-                >
-                  <option value="All">All</option>
-                  <option value="Sports & Recreation">
-                    Sports & Recreation
-                  </option>
-                  <option value="Theatre, Comedy & Performing Arts">
-                    Theatre, Comedy & Performing Arts
-                  </option>
-                  <option value="Museums, Galleries & Exhibitions">
-                    Museums, Galleries & Exhibitions
-                  </option>
-                  <option value="Music">Music</option>
-                  <option value="Festivals & Special Events">
-                    Festivals & Special Events
-                  </option>
-                  <option value="Food & Drinks">Food & Drinks</option>
-                  <option value="Family">Family</option>
-                  <option value="Other">Other</option>
-                </select>
-              </div>
-              <button onClick={handleReset} className="reset-button">Reset</button>
+      ) : (
+        <div>
+          <div className="search">
+            <input
+              type="text"
+              className="searchTerm"
+              placeholder="Search..."
+              value={searchQuery}
+              onChange={handleSearchInputChange}
+            />
+            <button type="submit" className="searchButton">
+              <FontAwesomeIcon icon={faMagnifyingGlass} className="searchIcon" />
+            </button>
+          </div>
+          <div className="filters">
+            <div className="date-range">
+              <FontAwesomeIcon icon={faCalendar} className="calendar-icon" />
+              <input
+                type="date"
+                id="start-date"
+                name="start-date"
+                onChange={handleStartDateChange}
+              />
+              <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
+              <input
+                type="date"
+                id="end-date"
+                name="end-date"
+                onChange={handleEndDateChange}
+              />
             </div>
-          )}
-        </div>
-      </div>
-      <div className="sort-by">
-        <button className="sort-button" onClick={toggleSortFilters}>
-          Sort By{" "}
-          <FontAwesomeIcon icon={faArrowDownShortWide} className="sort-icon" />
-        </button>
-        {showSortFilters && (
-          <div className="dropdown-content">
-            <div className="price-sort">
-              <input
-                type="radio"
-                id="price1"
-                name="price"
-                value="Low-High"
-                checked={sortOption === "Low-High"}
-                onChange={handleSortOptionChange}
-              ></input>
-              <label htmlFor="price1">Price Low to High</label>
-              <br></br>
-              <input
-                type="radio"
-                id="price2"
-                name="price"
-                value="High-Low"
-                checked={sortOption === "High-Low"}
-                onChange={handleSortOptionChange}
-              ></input>
-              <label htmlFor="price2">Price High to Low</label>
-              <br></br>
-              <input
-                type="radio"
-                id="date"
-                name="date"
-                value="Date1"
-                checked={sortOption === "Date1"}
-                onChange={handleSortOptionChange}
-              ></input>
-              <label htmlFor="date1">Date (Earliest to Latest)</label>
-              <br></br>
-              <input
-                type="radio"
-                id="date"
-                name="date"
-                value="Date2"
-                checked={sortOption === "Date2"}
-                onChange={handleSortOptionChange}
-              ></input>
-              <label htmlFor="date2">Date (Latest to Earliest)</label>
+            <div className="dropdown-filters">
+              <button className="dropdown-button" onClick={toggleDropdownFilters}>
+                Filters
+              </button>
+              {showDropdownFilters && (
+                <div className="dropdown-content">
+                  <div className="quadrant-filter">
+                    <label htmlFor="quadrant-filter" className="quadrant-label">
+                      Quadrant:
+                    </label>
+                    <select
+                      id="quadrant-filter"
+                      value={selectedQuadrant}
+                      onChange={handleQuadrantFilterChange}
+                    >
+                      <option value="All">All</option>
+                      <option value="NW">NW</option>
+                      <option value="NE">NE</option>
+                      <option value="SW">SW</option>
+                      <option value="SE">SE</option>
+                      <option value="Downtown">Downtown</option>
+                    </select>
+                  </div>
+                  <div className="type-filter">
+                    <label htmlFor="type-filter" className="filter-label">
+                      Type:
+                    </label>
+                    <select
+                      id="type-filter"
+                      value={selectedType}
+                      onChange={handleTypeFilterChange}
+                    >
+                      <option value="All">All</option>
+                      <option value="Sports & Recreation">
+                        Sports & Recreation
+                      </option>
+                      <option value="Theatre, Comedy & Performing Arts">
+                        Theatre, Comedy & Performing Arts
+                      </option>
+                      <option value="Museums, Galleries & Exhibitions">
+                        Museums, Galleries & Exhibitions
+                      </option>
+                      <option value="Music">Music</option>
+                      <option value="Festivals & Special Events">
+                        Festivals & Special Events
+                      </option>
+                      <option value="Food & Drinks">Food & Drinks</option>
+                      <option value="Family">Family</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+                  <button onClick={handleReset} className="reset-button">Reset</button>
+                </div>
+              )}
             </div>
           </div>
-        )}
-      </div>
-      <div
-        className="events-wrapper"
-        style={{
-          maxHeight: eventsWrapperMaxHeight,
-          overflow: eventsWrapperOverflow,
-        }}
-      >
-        {events
-          .filter((event) => {
-            // Filter by search query, date range, quadrant, and type
-            console.log(events);
-            return (
-              (event.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-              event.location.toLowerCase().includes(searchQuery.toLowerCase()) ||
-              event.quadrant.toLowerCase().includes(searchQuery.toLowerCase())) &&
-              (!startDate ||
-                new Date(event.month + " " + event.date + ", 2024") >=
-                  new Date(startDate)) &&
-              (!endDate ||
-                new Date(event.month + " " + event.date + ", 2024") <=
-                  new Date(endDate)) &&
-              (selectedQuadrant === "All" ||
-                event.quadrant === selectedQuadrant) &&
-              (selectedType === "All" || event.type === selectedType)
-            );
-          })
-          .sort((a, b) => {
-            // Sort by price based on the selected option
-            if (sortOption === "Low-High") {
-              return a.price - b.price;
-            } else if (sortOption === "High-Low") {
-              return b.price - a.price;
-            } else if (sortOption === "Date1") {
-              // Custom comparator function for sorting by date
-              const dateA = new Date(a.month + " " + a.date + ", 2024");
-              const dateB = new Date(b.month + " " + b.date + ", 2024");
-              return dateA - dateB;
-            }
-            else if (sortOption === "Date2") {
-              // Custom comparator function for sorting by date
-              const dateA = new Date(a.month + " " + a.date + ", 2024");
-              const dateB = new Date(b.month + " " + b.date + ", 2024");
-              return dateB - dateA;
-            }
-          })
-          .map((event, index) => (
-            <div className="event-container" key={index}>
-              <div className="event-date">
-                <div className="date-number">
-                  <h1>{event.date}</h1>
+          <div className="sort-by">
+            <button className="sort-button" onClick={toggleSortFilters}>
+              Sort By{" "}
+              <FontAwesomeIcon icon={faArrowDownShortWide} className="sort-icon" />
+            </button>
+            {showSortFilters && (
+              <div className="dropdown-content">
+                <div className="price-sort">
+                  <input
+                    type="radio"
+                    id="price1"
+                    name="price"
+                    value="Low-High"
+                    checked={sortOption === "Low-High"}
+                    onChange={handleSortOptionChange}
+                  ></input>
+                  <label htmlFor="price1">Price Low to High</label>
+                  <br></br>
+                  <input
+                    type="radio"
+                    id="price2"
+                    name="price"
+                    value="High-Low"
+                    checked={sortOption === "High-Low"}
+                    onChange={handleSortOptionChange}
+                  ></input>
+                  <label htmlFor="price2">Price High to Low</label>
+                  <br></br>
+                  <input
+                    type="radio"
+                    id="date"
+                    name="date"
+                    value="Date1"
+                    checked={sortOption === "Date1"}
+                    onChange={handleSortOptionChange}
+                  ></input>
+                  <label htmlFor="date1">Date (Earliest to Latest)</label>
+                  <br></br>
+                  <input
+                    type="radio"
+                    id="date"
+                    name="date"
+                    value="Date2"
+                    checked={sortOption === "Date2"}
+                    onChange={handleSortOptionChange}
+                  ></input>
+                  <label htmlFor="date2">Date (Latest to Earliest)</label>
                 </div>
-                <div className="month">
-                  <h2>{event.month}</h2>
-                </div>
-                {/* <div className="add-event">
-                  <button className="add-button" onClick={() => handleAddEventClick(event)}>
-                    <FontAwesomeIcon icon={faPlus} className="plusIcon" />
-                  </button>
-                </div> */}
               </div>
-              <div className="event-title">
-                <h1>{event.title}</h1>
-                <p>{event.time}</p>
+            )}
+          </div>
+          <div
+            className="events-wrapper"
+            style={{
+              maxHeight: eventsWrapperMaxHeight,
+              overflow: eventsWrapperOverflow,
+            }}
+          >
+            {/* Render events here */}
+            {events
+              .filter((event) => {
+                // Filter by search query, date range, quadrant, and type
+                console.log(events);
+                return (
+                  (event.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                    event.location.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                    event.quadrant.toLowerCase().includes(searchQuery.toLowerCase())) &&
+                  (!startDate ||
+                    new Date(event.month + " " + event.date + ", 2024") >=
+                      new Date(startDate)) &&
+                  (!endDate ||
+                    new Date(event.month + " " + event.date + ", 2024") <=
+                      new Date(endDate)) &&
+                  (selectedQuadrant === "All" ||
+                    event.quadrant === selectedQuadrant) &&
+                  (selectedType === "All" || event.type === selectedType)
+                );
+              })
+              .sort((a, b) => {
+                // Sort by price based on the selected option
+                if (sortOption === "Low-High") {
+                  return a.price - b.price;
+                } else if (sortOption === "High-Low") {
+                  return b.price - a.price;
+                } else if (sortOption === "Date1") {
+                  // Custom comparator function for sorting by date
+                  const dateA = new Date(a.month + " " + a.date + ", 2024");
+                  const dateB = new Date(b.month + " " + b.date + ", 2024");
+                  return dateA - dateB;
+                } else if (sortOption === "Date2") {
+                  // Custom comparator function for sorting by date
+                  const dateA = new Date(a.month + " " + a.date + ", 2024");
+                  const dateB = new Date(b.month + " " + b.date + ", 2024");
+                  return dateB - dateA;
+                }
+              })
+              .map((event, index) => (
+                <div className="event-container" key={index}>
+                  <div className="event-date">
+                    <div className="date-number">
+                      <h1>{event.date}</h1>
+                    </div>
+                    <div className="month">
+                      <h2>{event.month}</h2>
+                    </div>
+                    {/* <div className="add-event">
+                      <button className="add-button" onClick={() => handleAddEventClick(event)}>
+                        <FontAwesomeIcon icon={faPlus} className="plusIcon" />
+                      </button>
+                    </div> */}
+                  </div>
+                  <div className="event-title">
+                    <h1>{event.title}</h1>
+                    <p>{event.time}</p>
+                    <p>
+                      {event.location} | {event.quadrant}
+                    </p>
+                  </div>
+                  <button className="details-button" onClick={() => handleDetailsButtonClick(event)}>View</button>
+                </div>
+              ))}
+            {events.filter((event) => {
+              return (
+                (event.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                  event.location.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                  event.quadrant.toLowerCase().includes(searchQuery.toLowerCase())) &&
+                (!startDate ||
+                  new Date(event.month + " " + event.date + ", 2024") >=
+                    new Date(startDate)) &&
+                (!endDate ||
+                  new Date(event.month + " " + event.date + ", 2024") <=
+                    new Date(endDate)) &&
+                (selectedQuadrant === "All" ||
+                  event.quadrant === selectedQuadrant) &&
+                (selectedType === "All" || event.type === selectedType)
+              );
+            }).length === 0 && (
+              <div className="no-events-message">
                 <p>
-                  {event.location} | {event.quadrant}
+                  Sorry, there are no events that match your search. Please try
+                  again.
                 </p>
               </div>
-              <button className="details-button">View</button>
-            </div>
-          ))}
-        {events.filter((event) => {
-          return (
-            (event.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            event.location.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            event.quadrant.toLowerCase().includes(searchQuery.toLowerCase())) &&
-            (!startDate ||
-              new Date(event.month + " " + event.date + ", 2024") >=
-                new Date(startDate)) &&
-            (!endDate ||
-              new Date(event.month + " " + event.date + ", 2024") <=
-                new Date(endDate)) &&
-            (selectedQuadrant === "All" ||
-              event.quadrant === selectedQuadrant) &&
-            (selectedType === "All" || event.type === selectedType)
-          );
-        }).length === 0 && (
-          <div className="no-events-message">
-            <p>
-              Sorry, there are no events that match your search. Please try
-              again.
-            </p>
+            )}
           </div>
-        )}
-      </div>
-      {/* Popup component */}
-      {/* {showPopup && (
-        <div className="overlay">
-          <div className="confirmation-message">
-            <div className="confirmation-box">
-              <p>
-                Are you sure you want to add "{selectedEvent.title}" to your
-                calendar?
-              </p>
-              <button
-                className="confirm-button"
-                onClick={handleConfirmAddEvent}
-              >
-                Confirm
-              </button>
-              <button
-                onClick={() => setShowPopup(false)}
-                className="cancel-button"
-              >
-                Cancel
-              </button>
+          {/* Popup component */}
+          {/* {showPopup && (
+            <div className="overlay">
+              <div className="confirmation-message">
+                <div className="confirmation-box">
+                  <p>
+                    Are you sure you want to add "{selectedEvent.title}" to your
+                    calendar?
+                  </p>
+                  <button
+                    className="confirm-button"
+                    onClick={handleConfirmAddEvent}
+                  >
+                    Confirm
+                  </button>
+                  <button
+                    onClick={() => setShowPopup(false)}
+                    className="cancel-button"
+                  >
+                    Cancel
+                  </button>
+                </div>
+              </div>
             </div>
-          </div>
+          )} */}
         </div>
-      )} */}
+      )}
     </div>
-  );
-}
+  )};

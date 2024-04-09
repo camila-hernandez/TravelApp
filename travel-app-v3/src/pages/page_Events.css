@@ -374,5 +374,41 @@
     background: rgba(0, 0, 0, 0.4); /* Darker color on hover */
   }
 
+  .detailsWrapper {
+    background-color: #ffffff;
+    color: #501b1d;
+    font-family: "DM-Sans", sans-serif;
+  }
 
+  .detailsHeader {
+    background-image: url("../assets/CalgaryTowerEventHeader.jpg");
+    background-position-x: -478px;
+    background-position-y: -200px;
+    position: relative;
+    height: 125px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
   
+  .detailsHeader h1 {
+    align-self: center;
+    justify-self: center;
+    color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #501b1d;
+  }
+
+  .backButton {
+    margin-left: 10px;
+    height: 30px;
+    width: 70px; /* Fixed width for the button */
+    padding: 0px;
+    background-color: #501b1d;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid #501b1d;
+    text-align: center;
+    width: 100px;
+  }

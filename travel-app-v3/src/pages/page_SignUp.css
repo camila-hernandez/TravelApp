@@ -85,8 +85,8 @@
 
   /* Styles for the back button */
 .back-button {
-    margin-left: 110px;
-    margin-top: 35px;
+    margin-left: 500px;
+    margin-top: 42px;
     font-weight: bold;
     padding: 8px; /* Adjust padding as needed */
     width: auto; /* Allow button width to adjust based on content */

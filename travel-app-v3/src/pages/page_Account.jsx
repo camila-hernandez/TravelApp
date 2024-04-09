@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './page_Account.css'; // Import your CSS file for styling
 
-const Page_Account = ({ onLogout }) => {
+const Page_Account = ({ onLogout, onDelete }) => {
   const [isDeleteModalOpen, setDeleteModalOpen] = useState(false);
   const [isLogOutModalOpen, setLogOutModalOpen] = useState(false);
   const [isChangePasswordModalOpen, setChangePasswordModalOpen] = useState(false);
@@ -28,6 +28,7 @@ const Page_Account = ({ onLogout }) => {
   const confirmDelete = () => {
     console.log('Account deleted!');
     closeDeleteModal();
+    onDelete();
   };
 
   const openLogOutModal = () => {

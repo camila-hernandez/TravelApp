@@ -22,12 +22,12 @@ const App = () => {
     setCurrentPage('home'); // Redirect to home page after login
   };
 
-  const handleGuestLogin = () => {
-    setCurrentPage('home'); // Redirect to home page after guest login
-  }
-
   const handleSignUp = () => {
     setCurrentPage('sign-up'); // Redirect to home page after sign-up
+  }
+
+  const handleDeleteAccount = () => {
+    setCurrentPage('login'); //Redirect to login page after deleting account
   }
 
   const handleLogout = () => {
@@ -58,7 +58,7 @@ const App = () => {
             {currentPage === 'home' && <Page_Home />}
             {currentPage === 'events' && <Page_Events />}
             {currentPage === 'calendar' && <Page_Calendar />}
-            {currentPage === 'account' && <Page_Account onLogout={handleLogout}/>}
+            {currentPage === 'account' && <Page_Account onLogout={handleLogout} onDelete={handleLogout}/>}
           </main>
         </div>
 

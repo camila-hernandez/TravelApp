@@ -50,7 +50,7 @@ const App = () => {
           <main>
             {/* Render different pages based on currentPage */}
             {currentPage === 'login' && <Page_Login onLogin={handleLogin} onSignUp={handleSignUp}/>}
-            {currentPage === 'signup' && <Page_SignUp />}
+            {currentPage === 'signup' && <Page_SignUp onCreateAccount={handleLogin}/>}
             {currentPage === 'home' && <Page_Home />}
             {currentPage === 'events' && <Page_Events />}
             {currentPage === 'calendar' && <Page_Calendar />}

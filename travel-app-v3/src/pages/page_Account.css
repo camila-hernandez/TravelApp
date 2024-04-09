@@ -28,13 +28,20 @@
   margin-bottom: 45px; /* Adjust margin */
 }
 
+/* CSS for error message container */
 .error-message-container {
-  margin-bottom: 10px;
-  font-size: 13px;
-  color: red;
-  height: 20px; /* Set a fixed height for the error message container */
-  overflow: hidden; /* Hide overflow content */
+  height: 20px; /* Adjust height as needed */
 }
+
+/* CSS for error message */
+.login-field-error {
+  color: red; /* Color for error message text */
+}
+
+.error-message {
+  font-size: 14px; /* Font size for error message */
+}
+
 
 .emailField,
 .passwordField {
@@ -336,7 +343,7 @@
 .modal {
   font-family: "DM-Sans", sans-serif;
   background-color: white;
-  padding: 20px;
+  padding: 40px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
   display: flex;
@@ -348,7 +355,7 @@
 .modal h2 {
   color: #501b1d;
   font-size: 20px;
-  margin-bottom: 0px;
+  margin-bottom: 35px;
 }
 
 .modal p {
@@ -398,4 +405,3 @@
   color: red; /* Change the color to red */
   font-size: 14px; /* Optionally adjust font size */
 }
-

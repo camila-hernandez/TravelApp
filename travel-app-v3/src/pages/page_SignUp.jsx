@@ -109,7 +109,7 @@ const SignUp = ({ onCreateAccount, onBack }) => {
         <input
           type="text"
           className="newAccountEmailField"
-          placeholder="Email"
+          placeholder="Email (eg.johndoe@example.com)"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
@@ -122,7 +122,7 @@ const SignUp = ({ onCreateAccount, onBack }) => {
         <input
           type="password"
           className="newAccountPassword1"
-          placeholder="Password"
+          placeholder="Password (at least 8 characters long)"
           value={password1}
           onChange={(e) => setPassword1(e.target.value)}
         />

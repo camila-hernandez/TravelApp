@@ -34,9 +34,16 @@
   
   /* Styles for the Sign Up button specifically */
   .create-account-field button {
-    background-color: #632426; /* Dark red color for the button */
-    color: white; /* White text on the button */
-    margin-top: 15px; /* Spacing above the button */
+     font-size: 14px;
+     font-weight: bold;
+     width: 100%; /* Set the button width to 100% */
+     padding: 12px; /* Add padding */
+     margin-top: 15px;
+     background-color: #632426; /* Button color */
+     color: white; /* Text color */
+     border: none; /* Remove border */
+     border-radius: 5px; /* Add border radius */
+     cursor: pointer;
   }
   
   /* Hover effect for buttons */

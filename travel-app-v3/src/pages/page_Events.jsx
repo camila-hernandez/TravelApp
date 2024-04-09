@@ -52,6 +52,7 @@ export default function Page_Events() {
         city: "Calgary",
         type: "Other",
         price: 0,
+        description: "PLACEHOLDER DESCRIPTION"
       },
       {
         date: "14",
@@ -63,6 +64,7 @@ export default function Page_Events() {
         city: "Calgary",
         type: "Sports & Recreation",
         price: 10,
+        description: "PLACEHOLDER DESCRIPTION"
       },
       {
         date: "25",
@@ -74,6 +76,7 @@ export default function Page_Events() {
         city: "Calgary",
         type: "Theatre, Comedy & Performing Arts",
         price: 70,
+        description: "PLACEHOLDER DESCRIPTION"
       },
       {
         date: "16",
@@ -85,6 +88,7 @@ export default function Page_Events() {
         city: "Calgary",
         type: "Theatre, Comedy & Performing Arts",
         price: 50,
+        description: "PLACEHOLDER DESCRIPTION"
       },
       {
         date: "17",
@@ -96,6 +100,7 @@ export default function Page_Events() {
         city: "Calgary",
         type: "Museums, Galleries & Exhibitions",
         price: 30,
+        description: "Come one, come all, and explore the building that's defined the Calgary skyline for over 50 years!\n\nOn this guided tour you'll get to visit one of Canada's most iconic buildings while also learning about the rich history of its construction.\n\nPrices of admission:\nFree for children 5 and under\n$15 for youths aged 6-17\n$30 for adults aged 18-59\nFree for seniors aged 60 and above"
       },
       {
         date: "18",
@@ -107,6 +112,7 @@ export default function Page_Events() {
         city: "Calgary",
         type: "Music",
         price: 0,
+        description: "PLACEHOLDER DESCRIPTION"
       },
       {
         date: "19",
@@ -118,6 +124,7 @@ export default function Page_Events() {
         city: "Calgary",
         type: "Festivals & Special Events",
         price: 10,
+        description: "PLACEHOLDER DESCRIPTION"
       },
       {
         date: "20",
@@ -129,6 +136,7 @@ export default function Page_Events() {
         city: "Calgary",
         type: "Food & Drinks",
         price: 0,
+        description: "PLACEHOLDER DESCRIPTION"
       },
       {
         date: "21",
@@ -140,6 +148,7 @@ export default function Page_Events() {
         city: "Calgary",
         type: "Festivals & Special Events",
         price: 0,
+        description: "PLACEHOLDER DESCRIPTION"
       },
       {
         date: "22",
@@ -151,6 +160,7 @@ export default function Page_Events() {
         city: "Calgary",
         type: "Festivals & Special Events",
         price: 10,
+        description: "PLACEHOLDER DESCRIPTION"
       },
       // Add more events here...
     ]
@@ -266,7 +276,20 @@ export default function Page_Events() {
             <button onClick={handleBackToEvents} className="backButton"><FontAwesomeIcon icon={faArrowLeft} /> Event Listings</button>
             <h1>{selectedEvent.title}</h1>
           </div>
-          
+          <div className="detailsBody">
+            <div className="detailsDate"><p>
+              <b>Date:</b> {selectedEvent.month} {selectedEvent.date} <br/>
+              <b>Time:</b> {selectedEvent.time}
+            </p></div>
+            <div className="detailsLocation"><p><b>Location:</b><br/>{selectedEvent.location} | {selectedEvent.quadrant}</p></div>
+          </div>
+          <div className="detailsDescription">
+            <p>{" "}<span
+              dangerouslySetInnerHTML={{
+              __html: selectedEvent.description.replace(/\n/g, "<br>")
+              }}
+      /></p>
+          </div>
         </div>
       ) : (
         <div>

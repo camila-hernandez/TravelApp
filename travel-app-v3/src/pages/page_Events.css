@@ -375,7 +375,6 @@
   }
 
   .detailsWrapper {
-    background-color: #ffffff;
     color: #501b1d;
     font-family: "DM-Sans", sans-serif;
   }
@@ -411,4 +410,40 @@
     border: 1px solid #501b1d;
     text-align: center;
     width: 100px;
+  }
+
+  .detailsBody {
+    display: inline-flex;
+    justify-content: center;
+  }
+
+  .detailsDate {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    font-size: small;
+    margin: 2px;
+    width: 188px;
+    border-radius: 5px;
+  }
+
+  .detailsLocation {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    font-size: small;
+    margin: 2px;
+    width: 188px;
+    border-radius: 5px;
+  }
+
+  .detailsDescription {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    font-size: small;
+    margin: 2px;
+    width: 379px;
+    height: 200px;
+    border-radius: 5px;
   }

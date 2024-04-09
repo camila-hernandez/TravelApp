@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import whereLogo from '../assets/WhereLogoGreen.png';
 import "./page_Account.css";
 
-const Login = ({ onLogin, onSignUp }) => {
+const Login = ({ onLogin, onSignUp, onForgotPassword }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null); // Initialize error as null
@@ -18,10 +18,13 @@ const Login = ({ onLogin, onSignUp }) => {
     }
 
     // Check for invalid credentials
-    if (username !== 'john.smith123@gmail.com' || password !== '$Password123' || password !== '12345678') {
+    if (
+        username !== 'john.smith123@gmail.com' ||
+        (password !== '$Password123' && password !== '12345678') // Update the condition to check for either of the two valid passwords
+      ) {
         setError('Incorrect email or password');
         return;
-    }
+      }
 
     // Perform authentication logic here (e.g., call an API)
     // For simplicity, let's assume authentication succeeds if username and password are not empty
@@ -63,7 +66,8 @@ const Login = ({ onLogin, onSignUp }) => {
         />
       </div>
       <div className="login-field-forgotPassword">
-        <a href="/forgot-password" className="forgot-password-link">
+        {/* Update the link to point to the Forgot Password route */}
+        <a href="#" className="forgot-password-link" onClick={onForgotPassword}>
           Forgot Password?
         </a>
       </div>

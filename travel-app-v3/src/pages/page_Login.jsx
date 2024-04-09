@@ -28,10 +28,6 @@ const Login = ({ onLogin }) => {
     onLogin(); // Call the onLogin function passed as a prop
   };
 
-  const handleLGuestLogin = () => {
-      onLogin(); // Call the onLogin function passed as a prop
-    };
-
   return (
     <div className="login-container">
       <div className="header-container">
@@ -77,10 +73,6 @@ const Login = ({ onLogin }) => {
       <div className="login-field-signUp">
         <div className="sign-up-text">Don't have an account?</div>
         <a href="/sign-up" className="sign-up-link">Sign Up</a>
-        <div className="or-text">Or</div>
-      </div>
-      <div className="login-field-guestbutton">
-        <button className="guest-button" onClick={handleLGuestLogin}>Continue as Guest</button>
       </div>
     </div>
   );

@@ -168,12 +168,16 @@ const Page_Calendar = () => {
       <div className="filters-container">
         <div className="location-buttons">
           {/* Buttons for changing map locations */}
-          <button onClick={() => handleLocationButtonClick('NW')}>NW</button>
-          <button onClick={() => handleLocationButtonClick('NE')}>NE</button>
-          <button onClick={() => handleLocationButtonClick('SW')}>SW</button>
-          <button onClick={() => handleLocationButtonClick('SE')}>SE</button>
-          <button onClick={() => handleLocationButtonClick('Downtown')}>Downtown</button>
-          <button onClick={() => handleLocationButtonClick('All')}>All</button>
+          <div>
+            <button onClick={() => handleLocationButtonClick('NW')}>NW</button>
+            <button onClick={() => handleLocationButtonClick('NE')}>NE</button>
+            <button onClick={() => handleLocationButtonClick('SW')}>SW</button>
+          </div>
+          <div>
+            <button onClick={() => handleLocationButtonClick('SE')}>SE</button>
+            <button onClick={() => handleLocationButtonClick('Downtown')}>Downtown</button>
+            <button onClick={() => handleLocationButtonClick('All')}>All</button>
+          </div>
         </div>
         
         {/* Checkbox for filtering */}
